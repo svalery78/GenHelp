@@ -1,0 +1,130 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Содержание ЭС</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_rabota_s_gotovoj_aes_v_formate_htm_.htm?back','_predmetnyj_ukazatelq_aes_.htm?forw');synctoc('_soderzhanie_aes_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Работа с готовой ЭС в формате HTML " 
+				href="_rabota_s_gotovoj_aes_v_formate_htm_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Предметный Указатель ЭС " 
+				href="_predmetnyj_ukazatelq_aes_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_rabota_s_gotovoj_aes_v_formate_htm_.htm">Работа с готовой ЭС в формате HTML</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Содержание ЭС</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_soderzhanie_aes_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h3 >Содержание ЭС </h3>
+
+<p class=MsoNormal>GenHelp создает содержание ЭС в файле <span class=FileNameUnix>CHM_frame_toc.htm</span>. Необходимо учитывать, что в этом файле некоторые строки содержания могут не оказаться гиперссылками, т.к. это соответствует ситуации пустого подраздела. </p>
+
+<p class=MsoNormal>В процессе создания системы помощи возможна генерация содержания, имеющего &quot;плоскую&quot; структуру, или структуру &quot;дерева&quot;. </p>
+
+<p class=MsoNormal>На рисунке, следующем ниже, показано содержание, имеющее структуру &quot;дерева&quot;.</p>
+
+<table class=TableImageNormal border=0 cellspacing=0 cellpadding=0 widthdeleted535
+ >
+ <tr>
+  <td widthdeleted"100%" valign=top >
+  <p class=TableImageBody ><img border=0 widthdeleted534 height=211   src="DOCIMG_files/image034.jpg"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td widthdeleted"100%" valign=top >
+  <p class=TableImageCaption><em>Рисунок   </em><em>14</em><em>. </em><em>Содержание в структуре &quot;дерева&quot;</em></p>
+  </td>
+ </tr>
+</table>
+
+<p class=Gap>&nbsp;</p>
+
+<p class=MsoNormal><span class=DFN>Примечание</span>. Некоторые узлы дерева могут не иметь своего текста (пример - раздел <span class=DFN>Приложение</span>), такие разделы оформлены блеклым цветом.</p>
+
+<p class=Picture >Ниже следует рисунок, на котором показано то же содержание, имеющее &quot;плоскую&quot; структуру. Такой вариант содержания GenHelp записывает в файл <span class=FileNameUnix>CHM_frame_toc_notree.htm</span></p>
+
+<table class=TableImageNormal border=0 cellspacing=0 cellpadding=0 widthdeleted539
+ >
+ <tr>
+  <td widthdeleted"100%" valign=top >
+  <p class=TableImageBody ><img border=0 widthdeleted538 height=137   src="DOCIMG_files/image036.jpg"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td widthdeleted"100%" valign=top >
+  <p class=TableImageCaption><em>Рисунок   </em><em>15</em><em>. </em><em>Содержание в структуре &quot;плоского   списка&quot;</em></p>
+  </td>
+ </tr>
+</table>
+
+<p class=Gap>&nbsp;</p>
+
+<p class=MsoNormal>Если вас не устраивает наличие в ЭС пустых разделов содержания, то можно рассмотреть следующее решение. Вставьте в каждый &quot;пустой&quot; раздел список гиперссылок входящих в него подразделов (список выполните в виде гиперссылок) с предшествующим комментарием. Поскольку такой &quot;искусственный&quot; текст может оказаться неприемлемым в печатном варианте документации, то отметьте такой текст в первоисточнике закладкой, указывающей на принадлежность этого текста только к формату HTML (например, закладка может иметь имя <span class=CODE>GH_HTML_secoverview1</span>).</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_predmetnyj_ukazatelq_aes_.htm">Предметный Указатель ЭС</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_poisk_informatsii_sredstvami_aes_.htm">Поиск информации средствами ЭС</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

@@ -1,0 +1,138 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Построение предметного указателя</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_postroenie_soderzhaniya_.htm?back','_korrektirovka_giperssylok_.htm?forw');synctoc('_postroenie_predmetnogo_ukazatelya_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Построение содержания " 
+				href="_postroenie_soderzhaniya_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Корректировка гиперссылок " 
+				href="_korrektirovka_giperssylok_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_generatsiya_aes_.htm">Генерация ЭС</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_aetapy_generatsii_aes_v_formate_ht_.htm">Этапы генерации ЭС в формате HTML</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Построение предметного указателя</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_postroenie_predmetnogo_ukazatelya_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h4 > Построение предметного указателя</h4>
+
+<p class=MsoNormal> Параллельно с созданием генерируемых переменных для оглавления ЭС GenHelp формирует аналогичные переменные для индекса (предметного указателя):</p>
+
+<p class=MsoListBullet><span class=Code0> <span class=BulChar>&#149;   </span></span><span class=Code0>&lt;&lt;INDEX_HTM_TREE&gt;&gt;</span><span class=Code0>&nbsp;&#8209; </span>код для индекса в формате HTML (для варианта управления через дерево ссылок, этот код при подстановке помещается в файл <span class=FileNameUnix>CHM_frame_</span><span class=FileNameUnix>index.htm</span>).</p>
+
+<p class=MsoListBullet> <span class=BulChar>&#149;   </span><span class=Code0>&lt;&lt;INDEX_HTM_</span><span class=Code0>NO</span><span class=Code0>TREE&gt;&gt;</span><span class=Code0>&nbsp;&#8209; </span>код для оглавления ЭС в формате HTML (для варианта управления через плоский список ссылок), этот код при подстановке помещается в файл <span class=FileNameUnix>CHM_frame_</span><span class=FileNameUnix>index_notree.htm</span>).</p>
+
+<p class=MsoListBullet> <span class=BulChar>&#149;   </span><span class=Code0>&lt;&lt;INDEX_HHK&gt;&gt;</span>&nbsp;&#8209; код для индекса ЭС в формате CHM (подставляется в файл <span class=FileNameUnix>Index.hh</span><span class=FileNameUnix>k</span>)</p>
+
+<p class=MsoNormal>Файл <span class=FileNameUnix>CHM_frame_</span><span class=FileNameUnix>index_notree.htm</span><span class=FileNameUnix>,</span> используется в ЭС формата HTML в том случае, когда размер индекса большой, так как с ростом объема содержания вариант &quot;дерево&quot; становится сложным и его поддержка требует значительных ресурсов процессора.</p>
+
+<p class=MsoNormal>GenHelp обрабатывает как обычные индексные поля Word (XE), так и модифицированные (XE с ключом <span class=CODE>bsi</span>).</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Стандартный формат XE</p>
+
+<p class=MsoListContinue >    </span>{ XE &quot;Уровень1:уровень 2&quot; }</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Нестандартный формат XE-BSI</p>
+
+<p class=MsoListContinue >    </span>{ XE &quot;Уровень2 %уровень 1a %уровень 1b … %уровень 1n&quot; \f &quot;bsi&quot; }</p>
+
+<p class=MsoNormal>Формат XE-BSI позволяет быстро разработать и отладить в документе предметный указатель. К тому же документ с такими полями занимает меньше места, чес с эквивалентным набором полей XE стандартного формата (за счет числа полей и экономии на отсутствии повторяющегося текста). Во время генерации ЭС GenHelp перерабатывает поля XE-BSI в обычные поля XE. Пример переработки полей из формата XE-BSI в обычный формат XE (для формата DOC) приведен в разделе &quot;<a href="_polutchenie_dokumenta_v_formate_do_.htm#_Получение_документа_в">Получение документа в формате DOC</a>&quot;). Алгоритм переработки полей XE-BSI в поля XE для форматов HTML и CHM такой же.</p>
+
+<p class=MsoNormal>Порядок разработки ПУ с использованием макросов, поддерживающих формат XE-BSI, освещен в документе <span class=FileNameUnix>PSTD-DOC-04-(Правила_Разработки_ПУ)</span>.</p>
+
+<p class=MsoNormal>Если документ не содержит полей XE, то в папке <span class=FileNameUnix>Output</span> сохраняется заготовка для пустого индекса (файл CHM_<span class=FileNameUnix>frame_index.htm</span>)<span class=FileNameUnix>,</span> содержащий сообщение о том, что индекс для ЭС не разработан: <span class=CODE>The Index was not developed for this Help</span>).</p>
+
+<p class=MsoNormal>При обработке полей XE (как имеющихся в тексте, так и из полученных из формата XE-BSI) для форматов HTML и CHM действуют следующие правила:</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Если в поле XE имеется только статья первого уровня, то GenHelp формирует статью второго уровня равной статье первого уровня. В полученной ЭС это смотрится неуклюже (дублирование информации). </p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Если в поле XE имеются стать третьего и ниже уровней, то они отображаются в ЭС в составе статьи второго уровня. При этом они отделены друг от друга двоеточием.</p>
+
+<p class=MsoNormal>Эти трудности могут быть легко преодолены, если предметный указатель разрабатывается как двухуровневый с использованием формата полей XE-BSI или XE. Двухуровневый предметный указатель не сложен в разработке и достаточен для подготовки большинства технических руководств.</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_proverka_parametrov_.htm">Проверка параметров</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_peresozdanie_papki_rezulqtata_.htm">Пересоздание папки результата</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_zapusk_word_.htm">Запуск Word</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_preobrazovanie_numerovannyh_spisko_.htm">Преобразование нумерованных списков в текст</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_udalenie_teksta__pometchennogo_k_u_.htm">Удаление текста, помеченного к удалению с помощью закладок</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_udalenie_i_zamena_teksta__formatir_.htm">Удаление и замена текста, форматированного некоторыми стилями и замена стилей</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_korrektirovka_urovnej_paragrafov_.htm">Корректировка уровней параграфов</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vyzov_polqzovatelqskogo_makrosa_ob_.htm">Вызов пользовательского макроса обработки текста перед разметкой документа</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_razmetka_dokumenta_.htm">Разметка документа</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_postroenie_polnotekstovoj_bazy_poi_.htm">Построение полнотекстовой базы поиска</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_postroenie_soderzhaniya_.htm">Построение содержания</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_korrektirovka_giperssylok_.htm">Корректировка гиперссылок</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sohranenie_monolitnogo_html_fajla_.htm">Сохранение монолитного HTML-файла</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sozdanie_perehodov_mezhdu_stranits_.htm">Создание переходов между страницами</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_generatsiya_protchih_peremennyh_.htm">Генерация прочих переменных</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_kopirovanie_shablonov_i_fajlov_zam_.htm">Копирование шаблонов и файлов замен</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vypolnenie_zamen_.htm">Выполнение замен</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sohranenie_topikov_i_fajlov_posle__.htm">Сохранение топиков и файлов после замен</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vypolnenie_kompilyatsii_fajla_stil_.htm">Выполнение компиляции файла стилей</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_zavershenie_sozdaniya_help_.htm">Завершение создания Help</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

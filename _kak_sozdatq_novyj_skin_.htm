@@ -1,0 +1,138 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Как создать новый скин</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_poryadok_nastrojki_vneshnego_vida__.htm?back','_vypolnenie_genhelp_v_paketnom_rezh_.htm?forw');synctoc('_kak_sozdatq_novyj_skin_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Порядок настройки внешнего вида ЭС " 
+				href="_poryadok_nastrojki_vneshnego_vida__.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Выполнение GenHelp в пакетном режиме " 
+				href="_vypolnenie_genhelp_v_paketnom_rezh_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Как создать новый скин</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_kak_sozdatq_novyj_skin_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h2 >  Как создать новый скин</h2>
+
+<p class=MsoNormal>Скин нужно создавать в том случае, когда вам необходимо провести разработку серии ЭС для формата HTML, причем к этим ЭС заказчиком предъявляются особые требования по внешнему виду (или функциональности) ЭС. Другой причиной может быть потребность в создании ЭС в совершенно новом виде.</p>
+
+<p class=MsoListNumber >1.     <span class=DFN>Требования к скину.</span> Изучите требования к внешнему виду/функциональности ЭС. Для этого ознакомьтесь с существующими ЭС заказчика или созданных для него приложений, изучите особенности представления информации на Web-сайте заказчика. Запросите, если возможно, файлы логотипов и каскадных стилей, уже используемых заказчиком.</p>
+
+<p class=MsoListNumber >2.     <span class=DFN>Описатель скина.</span> Добавьте в файл <span class=FileNameUnix>App\Skins\skin.ini</span> строку описателя нового скина, по приведенному в файле образцу. Далее в текущем разделе мы будем использовать для нового скина имя <span class=CODE>NewSkin</span>.</p>
+
+<p class=MsoNormal ><span class=CODE>[Skins]</span></span></p>
+
+<p class=MsoNormal ><span class=CODE>. . .</span></span></p>
+
+<p class=MsoNormal ><span class=CODE>4=Mars_eng</span></span></p>
+
+<p class=MsoNormal ><span class=CODE>5=Mars_rus</span></span></p>
+
+<p class=MsoNormal ><span class=CODE><b>6=NewSkin</span></b></span></p>
+
+<p class=MsoNormal ><span class=CODE><b>&nbsp;</span></b></span></p>
+
+<p class=MsoListNumber >3.     <span class=DFN>Папка скина.</span> Создайте в папке <span class=FileNameUnix>App\Skins</span> папку <span class=FileNameUnix>NewSkin</span>.</p>
+
+<p class=MsoListNumber >4.     <span class=DFN>Начальный состав скина.</span> Изучите структуру и состав папок скинов, входящих в GenHelp (см. папку <span class=FileNameUnix>App\Skins</span>). Папки скинов построены единообразно. Рекомендуется взять в качестве шаблона один из существующих скинов. Если вам необходимо создать локализованный скин, то выберите исходный скин, уже отвечающий целевому языку (если такой исходный скин уже имеется). Затем скопируйте файлы выбранного в качестве шаблона скина в папку <span class=FileNameUnix>App\Skins\NewSkin.</span></p>
+
+<p class=MsoListNumber >5.     <span class=DFN>Шаблоны.</span> Отредактируйте все шаблоны для нового скина в необходимом вам виде, учитывая размещение генерируемых и определяемых переменных.</p>
+
+<p class=MsoListNumber >6.     <span class=DFN>Файл&nbsp;каскадных&nbsp;стилей&nbsp;скина&nbsp;</span><span class=FileNameUnix>c</span><span class=FileNameUnix>ss_skin.</span><span class=FileNameUnix>less</span><span class=DFN>.</span>Отредактируйте файл <span class=FileNameUnix>c</span><span class=FileNameUnix>ss_skin.</span><span class=FileNameUnix>less </span>с учетом потребностей ЭС.</p>
+
+<p class=MsoListNumber >7.     <span class=DFN>Элементы управления ЭС.</span> Если вы предполагаете реализацию элементов управления ЭС графическим (a не текстовым) способом, то разработайте соответствующие файлы для различных случаев обработки каждого элемента управления. Например, вид кнопки <span class=DFN>Contents</span> может быть подготовлен для случаев, когда курсор мыши наведен на эту кнопку, либо когда пользователь щелкает на кнопке и т.п. Исправьте шаблон меню <span class=FileNameUnix>CHM_frame_menu.htm</span> с учетом реализации кнопок в графисечком виде. Выполните, если необходимо, замену графики для дерева (в папке <span class=FileNameUnix>dtree_img</span>)и для самого скина (в папке <span class=FileNameUnix>template_img</span>).</p>
+
+<p class=MsoListNumber >8.     <span class=DFN>Переменные и замены</span>. Дополните, если необходимо, файл <span class=FileNameUnix>specified_vars.ini</span> и файл <span class=FileNameUnix>skinrep_1.ini</span>. Если вы вводите новые определяемые переменные, то разместите их в соответствующих шаблонах.</p>
+
+<p class=MsoListNumber >9.     <span class=DFN>Отладка скина</span><span class=DFN> на тестовом документе.</span> Для отладки скина создайте тестовый проект на основе отлаживаемого скина и проведите генерацию и отладку тестовой ЭС со стандартным первоисточником. В качестве первоисточника для проекта используйте файлы <span class=FileNameUnix>abc_eng.doc</span> или <span class=FileNameUnix>abc_rus.doc</span> (они находятся в папке приложения и включены в дистрибутив программы GenHelp). </p>
+
+<p class=MsoListContinue>Вам необходимо будет проводить пересоздание проекта каждый раз перед очередным отладочным прогоном (см. также примечание). Проверьте внешний вид полученной ЭС, для чего запустите стартовый файл <span class=FileNameUnix>CHM_frame_index_search_main.htm. </span>Внесите необходимые корректуры <em>в полученные файлы ЭС</em> в папке <span class=FileNameUnix>Output</span>. Когда ЭС в <span class=FileNameUnix>Output</span> примет надлежащий вид, перенесите скорректированные файлы или решения по коррекции файлов в соответствующие исходные файлы или в файлы замен.</p>
+
+<p class=MsoListContinue><span class=DFN>Примечание. </span>Во время отладки скина периодически создавайте новый проект на основе отлаживаемого скина. Проекты нумеруйте последовательно (например, <span class=CODE>NewSkin01</span>, <span class=CODE>NewSkin02</span> и т.д.). Это позволит вам, в случае необходимости, вернуться на предыдущий вариант скина. После полной отладки нового скина восстановите файл проектов.</p>
+
+<p class=MsoListNumber >10.  <span class=DFN>Дополнительная обработка HTML.</span> Вы можете расширить файл <span class=FileNameUnix>complete.bat </span>командами на вызов программы <span class=FileNameUnix>ufrex</span>или <span class=FileNameUnix>genh_sr</span> с целью дополнительной обработки файлов HTML целевой ЭС пользователя. Это может быть необходимо в том случае, когда Word при экспорте в HTML разделов стандартного первоисточника порождает одинаковые ошибки форматирования в тексте HTML. </p>
+
+<p class=MsoListContinue>Происходить это может по разным причинам, в том случае и по причине неконсистентного использования стилей при подготовке первоисточника. Примером может служить изменение &quot;вручную&quot; свойств параграфа, уже отформатированного каким-либо стилем, например, стилем для нумерованных или маркированных списков. В результате во время создания HTML Word, реализуя сделанные вами &quot;ручные&quot; правки стиля, может добавлять свой тэг <span class=CODE>&lt;style&gt;</span> внутрь тэга <span class=CODE>&lt;class&gt;</span> для такого параграфа. При просмотре этого текста в браузере может исказиться внешний вид соответствующих параграфов. Это искажение происходит потому, что разметка для одноименных классов, описанная в файле <span class=FileNameUnix>chm.css</span>, перекрывается разметкой, вставленной Word. </p>
+
+<p class=MsoListNumber >11.  <span class=DFN>Создание примеров внешнего вида скина</span><span class=DFN>.</span> После того, как скин отлажен, создайте полноценный пример внешнего вида нового скина. Во время просмотра результата генерации на новом скине в браузере (в полноэкранном режиме) сделайте снимок экрана готового скина, затем преобразуйте его к размеру 320 на 240 пикселей и сохраните в папку <span class=FileNameUnix>New</span><span class=FileNameUnix>Skin</span>с именем <span class=FileNameUnix>skin_shot.gif. </span>Запустите GenHelp и убедитесь, что выбор нового скина проходит успешно при создании проекта и при генерации ЭС.</p>
+
+<p class=MsoListNumber >12.  <span class=DFN>Публикация скина</span><span class=DFN>.</span> Отлаженный скин разместите в репозитории для общего доступа. Разработайте bat-файл для копирования в папку <span class=FileNameUnix>App\Skins</span> всех ваших скинов, не входящих в состав дистрибутива GenHelp. Это позволит вам получать доступ к вашим скинам в случае переустановки GenHelp.</p>
+
+<p class=Gap>&nbsp;</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sozdanie_novogo_proekta_.htm">Создание нового проекта</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vybor_suschestvuyuschego_proekta_.htm">Выбор существующего проекта</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_nastrojka_parametrov_generatsii_pr_.htm">Настройка параметров генерации проекта</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_generatsiya_aes_.htm">Генерация ЭС</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_rabota_s_gotovoj_aes_v_formate_htm_.htm">Работа с готовой ЭС в формате HTML</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_rabota_s_gotovoj_aes_v_formate_chm_.htm">Работа с готовой ЭС в формате CHM</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_nastrojka_vneshnego_vida_aes_v_for_.htm">Настройка внешнего вида ЭС в формате HTML</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vypolnenie_genhelp_v_paketnom_rezh_.htm">Выполнение GenHelp в пакетном режиме</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

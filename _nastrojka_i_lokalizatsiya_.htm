@@ -1,0 +1,105 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Настройка и локализация</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_papka_genhelp_documentation_eng_.htm?back','_nastrojka_brauzera_.htm?forw');synctoc('_nastrojka_i_lokalizatsiya_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Папка GenHelp_Documentation_eng " 
+				href="_papka_genhelp_documentation_eng_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Настройка браузера " 
+				href="_nastrojka_brauzera_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_natchalo_raboty_.htm">Начало работы</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Настройка и локализация</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_nastrojka_i_lokalizatsiya_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h2 >    Настройка и локализация</h2>
+
+<p class=MsoNormal>Сама по себе программа не нуждается в дополнительной настройке, за исключением случая локализации программы, порядок которой изложен в настоящем разделе. Настройка параметров проекта изложена в разд. &quot;<a href="_rabota_s_genhelp_.htm#_Работа_с_GenHelp">Работа с GenHelp</a>&quot;.</p>
+
+<p class=MsoNormal>Программа GenHelp разработана таким образом, что все сообщения программы, в том числе ее интерфейсные сообщения, выделены в отдельный файл <span class=FileNameUnix>genhelp_msg.ini</span><span class=FileNameUnix>,</span> расположенный в папке приложения. В дистрибутив GenHelp включены сообщения на английском языке. </p>
+
+<p class=MsoNormal>Для локализации программы надо:</p>
+
+<p class=MsoListNumber >1.     Перевести текст в файле <span class=FileNameUnix>genhelp_msg.ini</span> на необходимый язык. При этом следует учесть, что текст сообщения может содержать контексты подстановки (&quot;{1}&quot;, &quot;{2}&quot; и т.д.&nbsp;– их взаимное расположение можно менять с учетом грамматики целевого языка). Также необходимо помнить, что длина переведенного сообщения не должна превышать длину английского сообщения, иначе возможны интерфейсные искажения. </p>
+
+<p class=MsoListNumber >2.     После подготовки нового файла <span class=FileNameUnix>genhelp_msg.ini,</span> содержащего перевод сообщений,его надо скопировать с замещением на место одноименного файла в папку приложения.</p>
+
+<p class=MsoListNumber >3.     Подготовить средствами GenHelp на основе файла перевода файл помощи к программе в формате CHM. Указать путь к этому файлу в параметре <span class=CODE>HELPFILE</span> в секции <span class=CODE>[Messages]</span> файла <span class=FileNameUnix>genhelp.ini</span>. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_osnovnye_vozmozhnosti_genhelp_.htm">Основные возможности GenHelp</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_usloviya_ispolqzovaniya_genhelp_.htm">Условия использования GenHelp</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_ustanovka_genhelp_.htm">Установка GenHelp</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_naznatchenie_fajlov_genhelp_.htm">Назначение файлов GenHelp</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_nastrojka_brauzera_.htm">Настройка браузера</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_zapusk_genhelp_.htm">Запуск GenHelp</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_poryadok_razrabotki_aes_.htm">Порядок разработки ЭС</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

@@ -1,0 +1,302 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Папка Skins</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_papka_filter_.htm?back','_papka_hhw_.htm?forw');synctoc('_papka_skins_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Папка Filter " 
+				href="_papka_filter_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Папка HHW " 
+				href="_papka_hhw_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_natchalo_raboty_.htm">Начало работы</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_naznatchenie_fajlov_genhelp_.htm">Назначение файлов GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Папка Skins</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_papka_skins_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h3 >  Папка Skins</h3>
+
+<p class=MsoNormal>Папка содержит скины, поставляемые с GenHelp. Пользователь может разработать собственный скин.</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=539
+ >
+ <thead>
+  <tr >
+   <td width="28%" valign=top >
+   <p class=TableTitle >Файл</p>
+   </td>
+   <td width="71%" valign=top >
+   <p class=TableTitle >Назначение</p>
+   </td>
+  </tr>
+ </thead>
+ <tr >
+  <td width="28%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>skin.ini</span></p>
+  </td>
+  <td width="71%" valign=top >
+  <p class=TableNormal>Файл-описатель   всех скинов, имеющихся в составе GenHelp.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Далее приводится типовая структура папки скина. В качестве примера приведен скин <span class=DFN>Aero_eng</span>. Все файлы скина могут быть изменены или заменены пользователем (с соблюдением определенных правил, напр., копию файла следует поместить в папку <span class=FileNameUnix>Update</span>, затем внести в него необходимые изменения). В имене скина присутствует язык, для которого скин предназначен (напр., <span class=DFN>Aero_eng</span>&nbsp;&#8209; для генерации ЭС на английском языке).</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=539
+ >
+ <thead>
+  <tr >
+   <td width="38%" valign=top >
+   <p class=TableTitle >Файл</p>
+   </td>
+   <td width="61%" valign=top >
+   <p class=TableTitle >Назначение</p>
+   </td>
+  </tr>
+ </thead>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   </span><span   class=FileNameUnix>skin_shot.gif</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Графический   файл (320*240 пикселов), представляющий скин в окне демонстрации внешнего   вида скина. Программа GenHelp отображает этот файл при при выборе   пользователем скина в процессе создания нового проекта.</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Папка с   файлами скина.</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>   </span><span   class=FileNameUnix>dtree_img</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Папка с   иконками поддержки скрипта дерева оглавления</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>   template_img</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Папка с   иконками поддержки внешнего вида и элементов управления скина</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>CHM Project.hhp</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Шаблон   CHM-проекта</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>CHM_frame_help.htm</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Файл помощи   (язык текста соответствует скину).</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>CHM_frame_index.ht</span><span   class=FileNameUnix>m</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Шаблон   страницы индекса с управлением через дерево ссылок.</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>CHM_frame_index_n</span><span   class=FileNameUnix>otree.htm</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Шаблон   страницы индекса с управлением через плоский список (с отступами).</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>CHM_frame_index_search_main.htm</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Шаблон   стартового файла, содержащего описание включенных в ЭС фреймов.</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\CHM_frame_menu.htm</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Шаблон   меню ЭС.</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>CHM_frame_toc.htm</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Шаблон   оглавления ЭС с управлением через дерево ссылок.</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>CHM_frame_toc_not</span><span   class=FileNameUnix>ree.htm</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Шаблон   оглавления ЭС с управлением через плоский список (с отступами).</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>CHM_HTML_TOPIC_TEMPLATE.htm</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Шаблон   страницы топика (раздела ЭС)</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>CHM_sffound.htm</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Шаблон   страницы старта поиска.</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>css_skin.less</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Описатель   стилей скина в формате <span   class=FileNameUnix>.less</span>(http://lesscss.org/). Содержит компактные параметризованные   описания стилей. Переменные описания вынесены в начало файла. Во время   генерации ЭС GenHelp вызывает программу <span class=FileNameUnix>dotless.exe</span> для компиляции файла <span class=FileNameUnix>css_skin.</span>less   в файл <span   class=FileNameUnix>css_skin.</span><span   class=FileNameUnix>css</span>.</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>home.htm</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Шаблон   домашней страницы ЭС для формата HTML.</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>Index.hhk</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Шаблон   страницы индекса для формата CHM.</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>index_home.htm</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Шаблон   домашней страницы индекса для формата HTML.</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>skinrep_1.ini</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Файл   стандартных замен для скина. Пользователь может создать также файлы <span class=FileNameUnix>skinrep_</span><span class=FileNameUnix>2.ini</span>, <span   class=FileNameUnix>skinrep_</span><span   class=FileNameUnix>3.ini</span>  ... поместить их в папку <span class=FileNameUnix>Update&nbsp;&#8209;   </span>тогда они автоматически обработаются в указанном   порядке. </p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>specified_vars.ini</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Файл   описаний замен для определяемых переменных скина. Определяемые переменные   могут входить в шаблоны скина.</p>
+  </td>
+ </tr>
+ <tr >
+  <td width="38%" valign=top >
+  <p class=TableNormal><span class=FileNameUnix>Aero_eng\<br>   skin</span><span   class=FileNameUnix>_files\<br>TOC.hhc</span></p>
+  </td>
+  <td width="61%" valign=top >
+  <p class=TableNormal>Шаблон   оглавления для формата CHM.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_papka_app_.htm">Папка App</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_papka_project_0000_.htm">Папка Project_0000</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_papka_filter_.htm">Папка Filter</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_papka_hhw_.htm">Папка HHW</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_papka_genhelp_documentation_rus_.htm">Папка GenHelp_Documentation_rus</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_papka_genhelp_documentation_eng_.htm">Папка GenHelp_Documentation_eng</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

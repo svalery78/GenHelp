@@ -1,0 +1,120 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Сохранение монолитного HTML-файла</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_korrektirovka_giperssylok_.htm?back','_sozdanie_perehodov_mezhdu_stranits_.htm?forw');synctoc('_sohranenie_monolitnogo_html_fajla_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Корректировка гиперссылок " 
+				href="_korrektirovka_giperssylok_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Создание переходов между страницами " 
+				href="_sozdanie_perehodov_mezhdu_stranits_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_generatsiya_aes_.htm">Генерация ЭС</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_aetapy_generatsii_aes_v_formate_ht_.htm">Этапы генерации ЭС в формате HTML</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Сохранение монолитного HTML-файла</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_sohranenie_monolitnogo_html_fajla_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h4 >Сохранение монолитного HTML- файла</h4>
+
+<p class=MsoNormal>В GenHelp 4.00 порядок генерации HTML-файлов изменен: теперь весь документ сохраняется как монолитный html-файл, а затем этот файл считывается целиком и фильтруется, а также разделяется на разделы (топики). </p>
+
+<p class=MsoNormal>После считывания созданного монолитного HTML-файла GenHelp удаляет избыточные тэги HTML, порожденные внутренней программой Word для экспорта файлов в формат HTML. Файлы HTML, созданные в результате экспорта из Word средствами самого Word, наполнены специальными тэгами определения и применения стилей, текст которых включается программой экспорта в каждый файл HTML.</p>
+
+<p class=MsoNormal>Для устранения избыточности HTML-текста используется программа Microsoft Filter, распространяемая компанией Microsoft для пользователей MS Office. Это утилита командной строки. Для каждого созданного в результате экспорта из Word HTML-файла GenHelp исполняет следующую команду:</p>
+
+<p class=MsoListContinue ><span class=CODE>*    </span></span><span class=CODE><b>App</b></span><span class=CODE>\Filter\filter.exe -m -s -r -b -f -l abc.htm</span></p>
+
+<p class=MsoListContinue ><i>*    <em>где</em></i>&nbsp;<span class=CODE>abc.htm — </span>файл HTML.</p>
+
+<p class=MsoNormal>В результате размер HTML-файла уменьшается в 2-10 раз, что сказывается в лучшую сторону на размере (и поэтому на быстродействии) ЭС.</p>
+
+<p class=MsoNormal>При разделении HTML-кода на топики текст каждого топика сохраняется в индивидуальной генернируемой переменной и во время замены контекстов подставляется в шаблон топика <span class=FileNameUnix>CHM_HTML_TOPIC_TEMPLATE.htm</span>.</p>
+
+<p class=MsoNormal>Параллельно GenHelp создает структуру данных из соответствующих генерируемых переменных. В этой структуре имена целевых файлов HTML соответствуют именам разделов документа, с добавлением слева префикса в виде знака подчеркивания. </p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_proverka_parametrov_.htm">Проверка параметров</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_peresozdanie_papki_rezulqtata_.htm">Пересоздание папки результата</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_zapusk_word_.htm">Запуск Word</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_preobrazovanie_numerovannyh_spisko_.htm">Преобразование нумерованных списков в текст</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_udalenie_teksta__pometchennogo_k_u_.htm">Удаление текста, помеченного к удалению с помощью закладок</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_udalenie_i_zamena_teksta__formatir_.htm">Удаление и замена текста, форматированного некоторыми стилями и замена стилей</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_korrektirovka_urovnej_paragrafov_.htm">Корректировка уровней параграфов</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vyzov_polqzovatelqskogo_makrosa_ob_.htm">Вызов пользовательского макроса обработки текста перед разметкой документа</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_razmetka_dokumenta_.htm">Разметка документа</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_postroenie_polnotekstovoj_bazy_poi_.htm">Построение полнотекстовой базы поиска</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_postroenie_soderzhaniya_.htm">Построение содержания</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_postroenie_predmetnogo_ukazatelya_.htm">Построение предметного указателя</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_korrektirovka_giperssylok_.htm">Корректировка гиперссылок</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sozdanie_perehodov_mezhdu_stranits_.htm">Создание переходов между страницами</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_generatsiya_protchih_peremennyh_.htm">Генерация прочих переменных</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_kopirovanie_shablonov_i_fajlov_zam_.htm">Копирование шаблонов и файлов замен</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vypolnenie_zamen_.htm">Выполнение замен</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sohranenie_topikov_i_fajlov_posle__.htm">Сохранение топиков и файлов после замен</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vypolnenie_kompilyatsii_fajla_stil_.htm">Выполнение компиляции файла стилей</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_zavershenie_sozdaniya_help_.htm">Завершение создания Help</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

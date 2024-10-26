@@ -1,0 +1,1139 @@
+/* LESS Values for whole styles*/
+@main-font-family: verdana;
+@main-font-size: 12px;
+@main-text-color: black;
+@main-text-indent: -25px;
+@skin-links-color: #186287;
+@heading-color: #186287;
+@code-font-family: "Courier New";
+@unix-name-font-family: "Lucida Console";
+@left-frame-links-color: black;
+@left-frame-links-color-disable: grey;
+@logo-background: #124d67;
+@menu-background: #2bb7f5;
+@menu-link-color: white;
+@system-name-color: white;
+@system-logo-color: #9bb6bf;
+@left-frame-background: #a3e0ff;
+@selected-tree-item-background: #fff;
+@topic-heading-background: #a3e0ff;
+@topic-table-background: #a3e0ff;
+@topic-path-link-color: black;
+@topic-path-link-color-disable: grey;
+@left-frame-found-links: black;
+@see-also-link-color: #186287;
+@status-risk-color: red;
+@status-late-color: yellow;
+@status-normal-color: green;
+@status-proposed-color: blue;
+@main-letter-spacing: -0.25px;
+@search-box-background: white;
+@copy-see-also-background: snow;
+@copyright-text-color: DarkSlateGray;
+@block-quotation-head-background: silver;
+@block-quotation-background: #a3e0ff;
+@bf-background: yellow;
+@toc-list-margin-step: 15px;
+@mso-list-margin-step: 18px;
+@list-bul-margin-step: 28px;
+@table-list-margin-step: 10px;
+@opener-text-indent: 0;
+@copy-background: white;
+@menu-link-background: #1f9ad6;
+@menu-link-border-color: #fff;
+@menu-link-hover-color: #a2f1fe;
+@menu-link-hover-border-color: #777;
+@search-form-background: #29b0ec;
+/* End of LESS values*/
+
+body {
+    font-family: @main-font-family, verdana;
+	font-size: @main-font-size;
+}
+.MsoNormalTable p {
+	font-size: @main-font-size;
+}
+.WordSection1 {
+	color: @main-text-color;
+}
+/*************** Header Styles = Logo + Menu ********************/
+.SystemNameTable {
+    border-collapse: collapse;
+	font-size:@main-font-size;
+	background: @logo-background; 
+background: -moz-linear-gradient(top, #124d67 1%, #061e29 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#124d67), color-stop(100%,#061e29)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #124d67 1%,#061e29 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #124d67 1%,#061e29 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #124d67 1%,#061e29 100%); /* IE10+ */
+background: linear-gradient(to bottom, #124d67 1%,#061e29 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#124d67', endColorstr='#061e29',GradientType=0 ); /* IE6-9 */
+	text-align:left;
+	width: 100%;
+	position: relative;
+}
+tr.SystemNameRow {
+	font-size:@main-font-size + 8;
+}
+.SystemNameCell, .SystemLogoCell {
+	height: 50px; 
+	vertical-align: middle; 
+	position: relative;
+}
+.SystemNameText {
+	color:@system-name-color; 
+	font-weight:bold;
+	text-align: left; 
+	display: block;
+}
+.SystemNameLogoText {
+	color:@system-logo-color; 
+    display: block;
+    text-align: center;
+	padding: 0 40px;
+}
+/*------------------------------------- System Menu */
+.SystemMenuTable {
+	background:@menu-background; /* background color for menu table*/
+background: -moz-linear-gradient(top, #2bb7f5 0%, #26a3db 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2bb7f5), color-stop(100%,#26a3db)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #2bb7f5 0%,#26a3db 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #2bb7f5 0%,#26a3db 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #2bb7f5 0%,#26a3db 100%); /* IE10+ */
+background: linear-gradient(to bottom, #2bb7f5 0%,#26a3db 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2bb7f5', endColorstr='#26a3db',GradientType=0 ); /* IE6-9 */
+	text-align:left;
+	width: 100%;
+	position: relative;
+	font-size: @main-font-size;
+}
+.SystemMenuRow {
+	position: relative;
+}
+.SystemMenuCell {
+	vertical-align: top; 
+	padding-bottom: 0;
+	padding-top: 0;
+}
+.SystemMenuCellHide {
+	vertical-align: middle;  
+	background-color:@menu-background;
+}
+
+.SystemMenuCellSearchBox {
+	vertical-align: top; 
+	margin-top:5px; 
+	width: 100%;
+	background: @search-form-background;
+}
+.SystemMenuCellSearchBox input {
+	border: none;
+	height:22px; 
+    padding-left: 5px;
+    width: 170px;
+	line-height: 20px;
+	margin-right: 5px;
+	background:@search-box-background;
+	-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+.SystemMenuLink, #opener {
+	background: @menu-link-background;
+	border: 1px solid @menu-link-border-color;
+	font-weight:bold;
+	color:@menu-link-color; /* color of menu items */
+	text-decoration:none;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	margin: 4px 15px;
+	padding: 0 10px;
+	-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+.SystemMenuLink:hover {
+	font-weight:bold;
+
+}
+.SystemMenuLink:hover, #opener:hover {
+	color: @menu-link-hover-color;
+	border: 1px solid @menu-link-hover-border-color;
+}
+#opener {
+
+	font-size: @main-font-size + 3;
+	text-decoration:none;
+	text-indent: @opener-text-indent;
+	width: 25px;
+}
+.SystemMenuLinkClosed {
+	background: url("template_img/opn_bg.png") no-repeat 1px 4px;
+}
+.SystemMenuLinkOpened {
+	background: url("template_img/cls_bg.png") no-repeat 1px 4px;
+}
+#lbSearch {
+	border: 1px solid @search-box-background;
+    height: 20px;
+    line-height: 20px;
+    margin: 5px 0 0 0;
+	padding: 0 15px;
+}
+/*************** Left Frame Styles = dtree + search + tocind ********************/
+.dtree {
+	font-family:@main-font-family;
+	font-size:@main-font-size + 2;
+	color:@topic-path-link-color-disable;
+	white-space: nowrap;
+}
+.dtree img {
+	border:0px;
+	vertical-align:middle;
+}
+.dtree a {
+	color:@left-frame-links-color;
+	text-decoration:none;
+}
+.dtree a.node, .dtree a.nodeSel {
+	white-space:nowrap;
+	padding:1px 2px;
+}
+.dtree a.node:hover, .dtree a.nodeSel:hover {
+	color:@left-frame-links-color;
+	text-decoration:underline;
+}
+.dtree a.nodeSel {
+	background-color:@selected-tree-item-background;
+}
+.dtree .clip {
+	overflow:hidden;
+}
+.dtree p {
+	margin: 0;
+	padding: 7px 0;
+}
+.search_results_body {
+	font-family:@main-font-family;
+background:@left-frame-background;
+}
+p.TocFoundLine, p.TocFoundComment {
+	margin-left:10px;
+	margin-bottom:1px;
+	margin-top:4px;
+	letter-spacing:@main-letter-spacing;
+}
+p.TocFoundLine {
+	font-size:@main-font-size - 2;
+	color:@skin-links-color;
+}
+p.TocFoundComment {
+    font-size:@main-font-size;
+    font-weight:normal;
+    color:@main-text-color;
+}
+a.TocFoundLine {
+    font-size:@main-font-size - 2;
+    font-weight:normal;
+    font-style:normal;
+    color:@left-frame-found-links;
+    text-decoration:none;
+}
+.chm_frame_index_body, .chm_frame_index_notree_body, .chm_frame_toc_body, .chm_frame_toc_notree_body  {
+background:@left-frame-background;
+}
+.chm_frame_index_notree_body {
+	font-family: @main-font-family;
+}
+span.TOCTreeListHome {
+	letter-spacing:@main-letter-spacing;
+    color:@skin-links-color;
+}
+p.TocList1 a, p.TocList2 a, p.TocList3 a, p.TocList4 a, p.TocList5 a, p.TocList6 a {
+    color:@left-frame-links-color;
+}
+p.TocList1, p.TocListNoChildren1 {
+	margin: 4px 0 1px 10px;
+	font-size:@main-font-size;
+	font-weight:bold;
+}
+p.TocList2, p.TocListNoChildren2 {
+	margin: 3px 0 1px (10px + @toc-list-margin-step);
+	font-size:@main-font-size;
+}
+p.TocList3, p.TocListNoChildren3 {
+	margin: 2px 0 1px (10px + @toc-list-margin-step*2);
+	font-size:@main-font-size - 1;
+}
+p.TocList4, p.TocListNoChildren4 {
+	margin: 1px 0 1px (10px + @toc-list-margin-step*3);
+	font-size:@main-font-size - 2;
+}
+p.TocList5, p.TocListNoChildren5 {
+	margin: 1px 0 1px (10px + @toc-list-margin-step*4);
+	font-size:@main-font-size - 2;
+}
+p.TocList6, p.TocListNoChildren6 {
+	margin: 1px 0 1px 85px;
+	font-size:@main-font-size - 2;
+}
+a.TOCTreeListOpenCloseAll {
+	font-size:@main-font-size;
+	letter-spacing:@main-letter-spacing;
+	color:@skin-links-color;
+}
+a.TOCTreeListOpenCloseAll:hover {
+	text-decoration:underline;
+}
+span.TOCTreeList1, span.TOCTreeList2, span.TOCTreeList3, span.TOCTreeList4, span.TOCTreeList5, span.TOCTreeList6 {
+	letter-spacing:@main-letter-spacing;
+	color:@left-frame-links-color;    
+}
+span.TOCTreeList1, span.TOCTreeListNoChildren1, span.IndexTreeList1 {
+	font-size:@main-font-size + 2;       
+}
+span.TOCTreeList2, span.TOCTreeListNoChildren2, span.IndexTreeList2 {
+	font-size:@main-font-size;
+}
+span.TOCTreeList3, span.TOCTreeListNoChildren3 {
+	font-size:@main-font-size - 1;
+}
+span.TOCTreeList4, span.TOCTreeListNoChildren4, span.IndexTreeList3 {
+	font-size:@main-font-size - 2;
+}
+span.TOCTreeList5, span.TOCTreeListNoChildren5 {
+	font-size:@main-font-size - 3;
+}
+span.TOCTreeList6, span.TOCTreeListNoChildren6 {
+	font-size:@main-font-size - 4;
+}
+span.TOCTreeListNoChildren1, span.TOCTreeListNoChildren2, span.TOCTreeListNoChildren3, span.TOCTreeListNoChildren4, span.TOCTreeListNoChildren5, span.TOCTreeListNoChildren6 {
+	letter-spacing:@main-letter-spacing;
+	color:@left-frame-links-color-disable;
+}
+span.IndexTreeListHome{
+	font-size:@main-font-size + 2;
+	letter-spacing:@main-letter-spacing;
+	color:@skin-links-color;
+}
+span.IndexTreeList1, span.IndexTreeList2, span.IndexTreeList3 {
+	letter-spacing:@main-letter-spacing;
+}
+a.IndexTreeListOpenCloseAll {
+	font-size:@main-font-size;
+	letter-spacing:@main-letter-spacing;
+	color:@skin-links-color;
+}
+a.IndexTreeListOpenCloseAll:hover{
+	text-decoration:underline;
+}
+p.TocIndexList1 {
+	margin: 4px 0 1px @toc-list-margin-step;
+	font-size:@main-font-size;
+	font-weight:bold;
+}
+p.TocIndexList2 {
+	margin: 3px 0 1px (10px + @toc-list-margin-step);
+	font-size:@main-font-size;
+}
+
+p.TocIndexList3 {
+	margin: 2px 0 1px (10px + @toc-list-margin-step*2);
+	font-size:@main-font-size - 2;
+}
+a.TocIndexNotreeLink {
+	font-size:@main-font-size - 2;
+	letter-spacing:@main-letter-spacing;
+	color:@left-frame-links-color;
+}
+a.TocIndexNotreeLink:hover {
+	color:@skin-links-color;
+}
+/*************** Right Frame Styles = Topic ********************/
+
+.bf { 
+    background:@bf-background; 
+	font-weight:bold; 
+}
+td.TopicLinksCell {
+	vertical-align: middle;
+}
+.TopicBody {
+	font-family: @main-font-family;
+	color:@main-text-color;
+	font-size:@main-font-size;
+	letter-spacing:@main-letter-spacing;
+}
+.TopicBody a {
+	color: @skin-links-color;
+	text-decoration: none;
+	letter-spacing:0;
+}
+.TopicBody a:hover {
+	text-decoration: underline;
+}
+a.AddFavoriteLink, a.AddFavoriteLink:visited{
+	font-size:@main-font-size - 2;
+	letter-spacing:0;
+	font-weight:normal;
+	color:@main-text-color;
+	text-decoration:none;
+	margin: 0;
+}
+a.AddFavoriteLink:hover{
+	text-decoration:underline;
+}
+a.TopicPathLinkEnabled, a.TopicPathLinkDisabled, a.TopicSyncTOC, a.TopicLinkPrev, a.TopicLinkNext{
+	font-size:@main-font-size - 2;
+	letter-spacing:0;
+	font-weight:normal;
+	color:@topic-path-link-color;
+	text-decoration:none;
+}
+a.TopicPathLinkDisabled{
+	color:@topic-path-link-color-disable;
+}
+p.TopicLinksTopLeft, p.TopicLinksTopRight, p.TopicLinksBottom{
+	margin: 0;
+    text-align:left;
+	font-size:@main-font-size - 2;
+	letter-spacing:0;
+}
+p.TopicLinksTopRight{
+    text-align:right;
+}
+p.TopicLinksBottom{
+    text-align:center;
+}
+p.TopicLinksBottom a{
+	color:@main-text-color;
+}
+p.TopicSeeAlsoLabel{
+	margin: 0;
+	padding: 5px;
+    text-align:left;
+	font-size:@main-font-size + 4;
+	background: @topic-heading-background;
+}
+p.TopicSeeAlsoSiblingLine{
+	margin: 0;
+	padding: 5px;
+    text-align:left;
+	background: @copy-see-also-background;
+}
+a.TopicSeeAlsoSiblingLink{
+	background: url("template_img/topicline_bg.png") no-repeat 0 2px;
+	padding-left: 11px;
+	line-height: 15px;
+	font-weight:normal;
+	color:@see-also-link-color;
+	text-decoration:none;
+}
+a.TopicSeeAlsoSiblingLink:hover {
+	text-decoration:underline;
+}
+a.glossanchor {
+  color: black;
+  font-weight: bold;
+}
+a.glosslink {
+    border-bottom: 2px dotted #000000;
+    text-decoration: none;
+}
+p.copyrighttext{
+	margin: 0;
+    text-align:left;
+	font-size:@main-font-size - 4;
+	color:@copyright-text-color;
+	background: @copy-background;
+}
+table.TableImageNormal {
+	margin-left:@list-bul-margin-step*0;
+	border: 1px solid @main-text-color;
+}
+table.TableImage {
+	margin-left:@list-bul-margin-step*1;
+	border: 1px solid @main-text-color;
+}
+table.TableImage2 {
+	margin-left:@list-bul-margin-step*2;
+	border: 1px solid @main-text-color;
+}
+table.TableImage3 {
+	margin-left:@list-bul-margin-step*3;
+	border: 1px solid @main-text-color;
+}
+table.TableImage4 {
+	margin-left:@list-bul-margin-step*4;
+	border: 1px solid @main-text-color;
+}
+table.TableImage5 {
+	margin-left:@list-bul-margin-step*5;
+	border: 1px solid @main-text-color;
+}
+
+p.TableImageBody, p.TableImageBodyNormal, p.TableImageBody2, p.TableImageBody3, p.TableImageBody4, p.TableImageBody5{
+	margin: 0;
+	padding: 0;
+}
+
+p.TableImageCaption{
+	margin: 0;
+    text-align:left;
+	font-style:italic;
+	font-size: @main-font-size;
+	padding: 10px 2px;
+}
+span.BulChar, span.BulChar2, span.BulChar3, span.BulChar4, span.BulChar5 {
+	font-family:@main-font-family;
+	font-weight: normal;
+	letter-spacing:0;
+}
+span.BulChar {
+	font-size:@main-font-size + 4;
+}
+span.BulChar2 {
+	font-size:@main-font-size + 2;
+}
+span.BulChar3 {
+	font-size:@main-font-size;
+}
+span.BulChar4 {
+	font-size:@main-font-size - 1;
+}
+span.BulChar5 {
+	font-size:@main-font-size - 2;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: @heading-color;
+	margin:0 0 6px 0;
+	font-size:@main-font-size + 4;
+	font-family:@main-font-family;
+    background-color:@topic-heading-background;
+	padding: 5px;
+	letter-spacing:0;
+}
+p.MsoNormal, li.MsoNormal, div.MsoNormal{
+	margin:0 0 6px 0;
+}
+p.MsoList, li.MsoList, div.MsoList{
+	margin:0 0 6px @mso-list-margin-step*2;
+}
+p.MsoList2, li.MsoList2, div.MsoList2 {
+	margin:0 0 6px @mso-list-margin-step*3;
+}
+p.MsoList3, li.MsoList3, div.MsoList3 {
+	margin:0 0 6px @mso-list-margin-step*4;
+}
+p.MsoList4, li.MsoList4, div.MsoList4 {
+	margin:0 0 6px @mso-list-margin-step*5;
+}
+p.MsoList5, li.MsoList5, div.MsoList5 {
+	margin:0 0 6px @mso-list-margin-step*6;
+}
+p.MsoList6, li.MsoList6, div.MsoList6 {
+	margin:0 0 6px @mso-list-margin-step*7;
+}
+p.ListBul1, li.ListBul1, div.ListBul1, 
+p.ListBullet1, li.ListBullet1, div.ListBullet1, 
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet {
+	margin:0 0 6px @list-bul-margin-step;
+	text-indent:@main-text-indent + 1;
+}
+p.ListBul2, li.ListBul2, div.ListBul2, 
+p.ListBullet2, li.ListBullet2, div.ListBullet2, 
+p.MsoListBullet2, li.MsoListBullet2, div.MsoListBullet2 {
+	margin:0 0 6px @list-bul-margin-step*2;
+	text-indent:@main-text-indent + 2;
+}
+p.ListBul3, li.ListBul3, div.ListBul3, 
+p.ListBullet3, li.ListBullet3, div.ListBullet3, 
+p.MsoListBullet3, li.MsoListBullet3, div.MsoListBullet3 {
+	margin:0 0 6px @list-bul-margin-step*3;
+	text-indent:@main-text-indent + 2;
+}
+p.ListBul4, li.ListBul4, div.ListBul4, 
+p.ListBullet4, li.ListBullet4, div.ListBullet4, 
+p.MsoListBullet4, li.MsoListBullet4, div.MsoListBullet4 {
+	margin:0 0 6px @list-bul-margin-step*4;
+	text-indent:@main-text-indent + 2;
+}
+p.ListBul5, li.ListBul5, div.ListBul5, 
+p.ListBullet5, li.ListBullet5, div.ListBullet5, 
+p.MsoListBullet5, li.MsoListBullet5, div.MsoListBullet5 {
+	margin:0px 0 6px @list-bul-margin-step*5;
+	text-indent:@main-text-indent + 2;
+}
+p.ListBul6, li.ListBul6, div.ListBul6, 
+p.ListBullet6, li.ListBullet6, div.ListBullet6, 
+p.MsoListBullet6, li.MsoListBullet6, div.MsoListBullet6 {
+	margin:0 0 6px @list-bul-margin-step*6;
+	text-indent:@main-text-indent + 2;
+}
+p.ListNum1, li.ListNum1, div.ListNum1, 
+p.ListNumber1, li.ListNumber1, div.ListNumber1, 
+p.MsoListNumber, li.MsoListNumber, div.MsoListNumber {
+	margin:0 0 6px @list-bul-margin-step;
+	text-indent:@main-text-indent;
+}
+p.ListNumRusCap, li.ListNumRusCap, div.ListNumRusCap, 
+p.ListNumEngCap, li.ListNumEngCap, div.ListNumEngCap,
+p.ListNumRusCap1, li.ListNumRusCap1, div.ListNumRusCap1, 
+p.ListNumEngCap1, li.ListNumEngCap1, div.ListNumEngCap1 {
+	margin:0 0 6px @list-bul-margin-step;
+	text-indent:@main-text-indent + 5;
+}
+p.ListNumRusSmall, li.ListNumRusSmall, div.ListNumRusSmall, 
+p.ListNumEngSmall, li.ListNumEngSmall, div.ListNumEngSmall,
+p.ListNumRusSmall1, li.ListNumRusSmall1, div.ListNumRusSmall1, 
+p.ListNumEngSmall1, li.ListNumEngSmall1, div.ListNumEngSmall1 {
+	margin:0 0 6px @list-bul-margin-step;
+	text-indent:@main-text-indent;
+}
+p.ListNum2, li.ListNum2, div.ListNum2, 
+p.ListNumber2, li.ListNumber2, div.ListNumber2, 
+p.MsoListNumber2, li.MsoListNumber2, div.MsoListNumber2 {
+	margin:0 0 6px @list-bul-margin-step*2;
+	text-indent:@main-text-indent;
+}
+p.ListNumRusCap2, li.ListNumRusCap2, div.ListNumRusCap2, 
+p.ListNumEngCap2, li.ListNumEngCap2, div.ListNumEngCap2 {
+	margin:0 0 6px @list-bul-margin-step*2;
+	text-indent:@main-text-indent + 5;
+}
+p.ListNumRusSmall2, li.ListNumRusSmall2, div.ListNumRusSmall2, 
+p.ListNumEngSmall2, li.ListNumEngSmall2, div.ListNumEngSmall2 {
+	margin:0 0 6px @list-bul-margin-step*2;
+	text-indent:@main-text-indent;
+}
+p.ListNum3, li.ListNum3, div.ListNum3, 
+p.ListNumber3, li.ListNumber3, div.ListNumber3, 
+p.MsoListNumber3, li.MsoListNumber3, div.MsoListNumber3 {
+	margin:0 0 6px @list-bul-margin-step*3;
+	text-indent:@main-text-indent;
+}
+p.ListNumRusCap3, li.ListNumRusCap3, div.ListNumRusCap3, 
+p.ListNumEngCap3, li.ListNumEngCap3, div.ListNumEngCap3 {
+	margin:0 0 6px @list-bul-margin-step*3;
+	text-indent:@main-text-indent + 5;
+}
+p.ListNumRusSmall3, li.ListNumRusSmall3, div.ListNumRusSmall3, 
+p.ListNumEngSmall3, li.ListNumEngSmall3, div.ListNumEngSmall3 {
+	margin:0 0 6px @list-bul-margin-step*3;
+	text-indent:@main-text-indent;
+}
+p.ListNum4, li.ListNum4, div.ListNum4, 
+p.ListNumber4, li.ListNumber4, div.ListNumber4, 
+p.MsoListNumber4, li.MsoListNumber4, div.MsoListNumber4 {
+	margin-top:0 0 6px @list-bul-margin-step*4;
+	text-indent:@main-text-indent;
+}
+p.ListNumRusCap4, li.ListNumRusCap4, div.ListNumRusCap4, 
+p.ListNumEngCap4, li.ListNumEngCap4, div.ListNumEngCap4 {
+	margin:0 0 6px @list-bul-margin-step*4;
+	text-indent:@main-text-indent + 5;
+}
+p.ListNumRusSmall4, li.ListNumRusSmall4, div.ListNumRusSmall4, 
+p.ListNumEngSmall4, li.ListNumEngSmall4, div.ListNumEngSmall4 {
+	margin:0 0 6px @list-bul-margin-step*4;
+	text-indent:@main-text-indent;
+}
+p.ListNum5, li.ListNum5, div.ListNum5, 
+p.ListNumber5, li.ListNumber5, div.ListNumber5, 
+p.MsoListNumber5, li.MsoListNumber5, div.MsoListNumber5 {
+	margin: 0 0 6px @list-bul-margin-step*5;
+	text-indent:@main-text-indent;
+}
+p.ListNumRusCap5, li.ListNumRusCap5, div.ListNumRusCap5, 
+p.ListNumEngCap5, li.ListNumEngCap5, div.ListNumEngCap5 {
+	margin:0 0 6px @list-bul-margin-step*5;
+	text-indent:@main-text-indent + 5;
+}
+p.ListNumRusSmall5, li.ListNumRusSmall5, div.ListNumRusSmall5, 
+p.ListNumEngSmall5, li.ListNumEngSmall5, div.ListNumEngSmall5 {
+	margin:0 0 6px @list-bul-margin-step*5;
+	text-indent:@main-text-indent;
+}
+p.ListNum6, li.ListNum6, div.ListNum6, 
+p.ListNumber6, li.ListNumber6, div.ListNumber6, 
+p.MsoListNumber6, li.MsoListNumber6, div.MsoListNumber6 {
+	margin: 0 0 6px @list-bul-margin-step*6;
+	text-indent:@main-text-indent;
+}
+p.ListNumRusCap6, li.ListNumRusCap6, div.ListNumRusCap6, 
+p.ListNumEngCap6, li.ListNumEngCap6, div.ListNumEngCap6 {
+	margin:0 0 6px @list-bul-margin-step*6;
+	text-indent:@main-text-indent + 5;
+}
+p.ListNumRusSmall6, li.ListNumRusSmall6, div.ListNumRusSmall6, 
+p.ListNumEngSmall6, li.ListNumEngSmall6, div.ListNumEngSmall6 {
+	margin:0 0 6px @list-bul-margin-step*6;
+	text-indent:@main-text-indent;
+}
+p.ListCont1, li.ListCont1, div.ListCont1, 
+p.ListContinue1, li.ListContinue1, div.ListContinue1, 
+p.MsoListContinue, li.MsoListContinue, div.MsoListContinue {
+    margin:0 0 6px @list-bul-margin-step;
+}
+p.ListCont2, li.ListCont2, div.ListCont2, 
+p.ListContinue2, li.ListContinue2, div.ListContinue2, 
+p.MsoListContinue2, li.MsoListContinue2, div.MsoListContinue2 {
+    margin:0 0 6px @list-bul-margin-step*2;
+}
+p.ListCont3, li.ListCont3, div.ListCont3, 
+p.ListContinue3, li.ListContinue3, div.ListContinue3, 
+p.MsoListContinue3, li.MsoListContinue3, div.MsoListContinue3 {
+    margin:0 0 6px @list-bul-margin-step*3;
+}
+p.ListCont4, li.ListCont4, div.ListCont4, 
+p.ListContinue4, li.ListContinue4, div.ListContinue4, 
+p.MsoListContinue4, li.MsoListContinue4, div.MsoListContinue4 {
+    margin:0 0 6px @list-bul-margin-step*4;
+}
+p.ListCont5, li.ListCont5, div.ListCont5, 
+p.ListContinue5, li.ListContinue5, div.ListContinue5, 
+p.MsoListContinue5, li.MsoListContinue5, div.MsoListContinue5 {
+    margin:0 0 6px @list-bul-margin-step*5;
+}
+p.ListCont6, li.ListCont6, div.ListCont6, 
+p.ListContinue6, li.ListContinue6, div.ListContinue6, 
+p.MsoListContinue6, li.MsoListContinue6, div.MsoListContinue6 {
+    margin:0 0 6px @list-bul-margin-step*6;
+}
+p.BlockQuotation, li.BlockQuotation, div.BlockQuotation{
+	margin:0 24px 6px 24px;
+    background:@block-quotation-background;
+	font-weight:normal;
+}
+p.BlockQuotationFirst, li.BlockQuotationFirst, div.BlockQuotationFirst {
+	margin:0 24px;
+	text-indent:@main-text-indent + 28;
+    background:@block-quotation-head-background;
+	font-weight:bold;
+}
+p.Guidelines, li.Guidelines, div.Guidelines, p.Section, li.Section, div.Section, p.Subsection, li.Subsection, div.Subsection,
+p.Topicgroup, li.Topicgroup, div.Topicgroup, p.Topic, li.Topic, div.Topic, p.TableCaption, li.TableCaption, div.TableCaption {
+	margin:0 0 6px 0;
+	letter-spacing:0;
+}
+p.Guidelines, li.Guidelines, div.Guidelines {
+	color:@skin-links-color;
+}
+p.Section, li.Section, div.Section {
+	font-size:@main-font-size + 4;
+	font-weight:bold;
+	background-color:@topic-heading-background;
+}
+p.Subsection, li.Subsection, div.Subsection {
+	font-size:@main-font-size + 3;
+	font-weight:normal;
+	background-color:@topic-heading-background;	
+}
+p.Topicgroup, li.Topicgroup, div.Topicgroup{
+	font-size:@main-font-size + 2;
+	font-weight:bold;
+} 
+p.Topic, li.Topic, div.Topic{
+	font-weight:bold;
+}
+p.TableCaption, li.TableCaption, div.TableCaption {
+	font-size:@main-font-size - 3;
+	font-weight:bold;
+}
+p.TableHeading, li.TableHeading, div.TableHeading {
+	margin:4px;
+	font-size:@main-font-size - 2;
+	font-weight:bold;
+	letter-spacing:0;
+}
+p.TableSubHeading, li.TableSubHeading, div.TableSubHeading{
+	margin:4px;
+	font-size:@main-font-size - 2;
+	font-weight:normal;
+	letter-spacing:0;
+}
+.MsoNormalTable thead {
+	background-color:@topic-table-background;
+}
+p.TableTitle, li.TableTitle, div.TableTitle {
+	margin: 0;
+	text-align:center;
+	background-color:@topic-table-background;
+	font-weight:bold;
+	font-size:@main-font-size - 2;
+}
+p.TableNormal, li.TableNormal, div.TableNormal, p.NoteBody, 
+li.NoteBody, div.NoteBody, p.TableTopic, li.TableTopic, div.TableTopic,p.NoteHeading, li.NoteHeading, div.NoteHeading {
+	margin:4px;
+	font-size:@main-font-size - 2;
+	font-weight:normal;
+	letter-spacing:0;
+}
+p.TableTopic, li.TableTopic, div.TableTopic,p.NoteHeading, li.NoteHeading, div.NoteHeading {
+	font-weight:bold;
+}
+p.NoteHeading2, li.NoteHeading2, div.NoteHeading2,p.NoteBody2, li.NoteBody2, div.NoteBody2 {
+	margin:4px;
+	font-size:@main-font-size - 3;
+	font-weight:bold;
+	letter-spacing:0;
+}
+p.NoteBody2, li.NoteBody2, div.NoteBody2 {
+	font-weight:normal;
+}
+p.TableListNum, li.TableListNum, div.TableListNum, 
+p.TableListNumRusCap, li.TableListNumRusCap, div.TableListNumRusCap, 
+p.TableListNumEngCap, li.TableListNumEngCap, div.TableListNumEngCap, 
+p.TableListNumRusSmall, li.TableListNumRusSmall, div.TableListNumRusSmall, 
+p.TableListNumEngSmall, li.TableListNumEngSmall, div.TableListNumEngSmall,
+p.TableListNum1, li.TableListNum1, div.TableListNum1, 
+p.TableListNumRusCap1, li.TableListNumRusCap1, div.TableListNumRusCap1, 
+p.TableListNumEngCap1, li.TableListNumEngCap1, div.TableListNumEngCap1, 
+p.TableListNumRusSmall1, li.TableListNumRusSmall1, div.TableListNumRusSmall1, 
+p.TableListNumEngSmall1, li.TableListNumEngSmall1, div.TableListNumEngSmall1 {
+	margin:4px 4px 4px @table-list-margin-step*3;
+	text-indent:@main-text-indent + 5;
+	font-size:@main-font-size - 2;
+}
+p.TableListBul, li.TableListBul, div.TableListBul,
+p.TableListBul1, li.TableListBul1, div.TableListBul1 {
+	margin:4px 4px 4px @table-list-margin-step*3;
+	text-indent:@main-text-indent + 11;
+	font-size:@main-font-size - 2;
+}
+p.TableListCont, li.TableListCont, div.TableListCont,
+p.TableListCont1, li.TableListCont1, div.TableListCont1 {
+	margin:4px 4px 4px @table-list-margin-step*3;
+	text-indent:@main-text-indent + 25;
+	font-size:@main-font-size - 2;
+}
+p.TableListNum2, li.TableListNum2, div.TableListNum2, 
+p.TableListNumRusCap2, li.TableListNumRusCap2, div.TableListNumRusCap2, 
+p.TableListNumEngCap2, li.TableListNumEngCap2, div.TableListNumEngCap2, 
+p.TableListNumRusSmall2, li.TableListNumRusSmall2, div.TableListNumRusSmall2, 
+p.TableListNumEngSmall2, li.TableListNumEngSmall2, div.TableListNumEngSmall2 {
+	margin:4px 4px 4px @table-list-margin-step*5;
+	text-indent:@main-text-indent + 5;
+	font-size:@main-font-size - 2;
+}
+p.TableListBul2, li.TableListBul2, div.TableListBul2{
+	margin:4px 4px 4px @table-list-margin-step*5;
+	text-indent:@main-text-indent + 11;
+	font-size:@main-font-size - 2;
+}
+p.TableListCont2, li.TableListCont2, div.TableListCont2 {
+	margin:4px 4px 4px @table-list-margin-step*5;
+	text-indent:@main-text-indent + 25;
+	font-size:@main-font-size - 2;
+}
+p.TableListNum3, li.TableListNum3, div.TableListNum3, 
+p.TableListNumRusCap3, li.TableListNumRusCap3, div.TableListNumRusCap3, 
+p.TableListNumEngCap3, li.TableListNumEngCap3, div.TableListNumEngCap3, 
+p.TableListNumRusSmall3, li.TableListNumRusSmall3, div.TableListNumRusSmall3, 
+p.TableListNumEngSmall3, li.TableListNumEngSmall3, div.TableListNumEngSmall3 {
+	margin:4px 4px 4px @table-list-margin-step*7;
+	text-indent:@main-text-indent + 5;
+	font-size:@main-font-size - 2;
+}
+p.TableListBul3, li.TableListBul3, div.TableListBul3 {
+	margin:4px 4px 4px @table-list-margin-step*7;
+	text-indent:@main-text-indent + 11;
+	font-size:@main-font-size - 2;
+}
+p.TableListCont3, li.TableListCont3, div.TableListCont3 {
+	margin:4px 4px 4px @table-list-margin-step*7;
+	text-indent:@main-text-indent + 25;
+	font-size:@main-font-size - 2;
+}
+p.TableListNum4, li.TableListNum4, div.TableListNum4, 
+p.TableListNumRusCap4, li.TableListNumRusCap4, div.TableListNumRusCap4, 
+p.TableListNumEngCap4, li.TableListNumEngCap4, div.TableListNumEngCap4, 
+p.TableListNumRusSmall4, li.TableListNumRusSmall4, div.TableListNumRusSmall4, 
+p.TableListNumEngSmall4, li.TableListNumEngSmall4, div.TableListNumEngSmall4 {
+	margin:4px 4px 4px @table-list-margin-step*9;
+	text-indent:@main-text-indent + 5;
+	font-size:@main-font-size - 2;
+}
+p.TableListBul4, li.TableListBul4, div.TableListBul4 {
+	margin:4px 4px 4px @table-list-margin-step*9;
+	text-indent:@main-text-indent + 11;
+	font-size:@main-font-size - 2;
+}
+p.TableListCont4, li.TableListCont4, div.TableListCont4 {
+	margin:4px 4px 4px @table-list-margin-step*9;
+	text-indent:@main-text-indent + 25;
+	font-size:@main-font-size - 2;
+}
+p.TableListNum5, li.TableListNum5, div.TableListNum5, 
+p.TableListNumRusCap5, li.TableListNumRusCap5, div.TableListNumRusCap5, 
+p.TableListNumEngCap5, li.TableListNumEngCap5, div.TableListNumEngCap5, 
+p.TableListNumRusSmall5, li.TableListNumRusSmall5, div.TableListNumRusSmall5, 
+p.TableListNumEngSmall5, li.TableListNumEngSmall5, div.TableListNumEngSmall5 {
+	margin:4px 4px 4px @table-list-margin-step*11;
+	text-indent:@main-text-indent + 5;
+	font-size:@main-font-size - 2;
+}
+p.TableListBul5, li.TableListBul5, div.TableListBul5 {
+	margin:4px 4px 4px @table-list-margin-step*11;
+	text-indent:@main-text-indent + 11;
+	font-size:@main-font-size - 2;
+}
+p.TableListCont5, li.TableListCont5, div.TableListCont5{
+	margin:4px 4px 4px @table-list-margin-step*11;
+	text-indent:@main-text-indent + 25;
+	font-size:@main-font-size - 2;
+}
+p.TableListNum6, li.TableListNum6, div.TableListNum6, 
+p.TableListNumRusCap6, li.TableListNumRusCap6, div.TableListNumRusCap6, 
+p.TableListNumEngCap6, li.TableListNumEngCap6, div.TableListNumEngCap6, 
+p.TableListNumRusSmall6, li.TableListNumRusSmall6, div.TableListNumRusSmall6, 
+p.TableListNumEngSmall6, li.TableListNumEngSmall6, div.TableListNumEngSmall6 {
+	margin:4px 4px 4px @table-list-margin-step*13;
+	text-indent:@main-text-indent + 5;
+	font-size:@main-font-size - 2;
+}
+p.TableListBul6, li.TableListBul6, div.TableListBul6 {
+	margin:4px 4px 4px @table-list-margin-step*13;
+	text-indent:@main-text-indent + 11;
+	font-size:@main-font-size - 2;
+}
+p.TableListCont6, li.TableListCont6, div.TableListCont6 {
+	margin:4px 4px 4px @table-list-margin-step*13;
+	text-indent:@main-text-indent + 25;
+	font-size:@main-font-size - 2;
+}
+p.TableNormalTiny, li.TableNormalTiny, div.TableNormalTiny{
+	margin:4px;
+	font-size:@main-font-size - 4;
+	font-weight:normal;
+	letter-spacing:0;
+}
+p.TableListNumTiny1, li.TableListNumTiny1, div.TableListNumTiny1 {
+	margin:4px 4px 4px @table-list-margin-step*2;
+	text-indent:@main-text-indent + 10;
+	font-size:@main-font-size - 3;
+}
+p.TableListBulTiny1, li.TableListBulTiny1, div.TableListBulTiny1 {
+	margin:4px 4px 4px @table-list-margin-step*2;
+	text-indent:@main-text-indent + 17;
+	font-size:@main-font-size - 4;
+}
+p.TableListContTiny1, li.TableListContTiny1, div.TableListContTiny1 {
+	margin:4px 4px 4px @table-list-margin-step*2;
+	text-indent:@main-text-indent + 25;
+	font-size:@main-font-size - 4;
+}
+p.TableListNumTiny2, li.TableListNumTiny2, div.TableListNumTiny2 {
+	margin:4px 4px 4px @table-list-margin-step*3.5;
+	text-indent:@main-text-indent + 10;
+	font-size:@main-font-size - 4;
+}
+p.TableListBulTiny2, li.TableListBulTiny2, div.TableListBulTiny2 {
+	margin:4px 4px 4px @table-list-margin-step*3.5;
+	text-indent:@main-text-indent + 17;
+	font-size:@main-font-size - 4;
+}
+p.TableListContTiny2, li.TableListContTiny2, div.TableListContTiny2 {
+	margin:4px 4px 4px @table-list-margin-step*3.5;
+	text-indent:@main-text-indent + 25;
+	font-size:@main-font-size - 4;
+}
+p.TableListNumTiny3, li.TableListNumTiny3, div.TableListNumTiny3 {
+	margin:4px 4px 4px @table-list-margin-step*5;
+	text-indent:@main-text-indent + 10;
+	font-size:@main-font-size - 4;
+}
+p.TableListBulTiny3, li.TableListBulTiny3, div.TableListBulTiny3 {
+	margin:4px 4px 4px @table-list-margin-step*5;
+	text-indent:@main-text-indent + 17;
+	font-size:@main-font-size - 4;
+}
+p.TableListContTiny3, li.TableListContTiny3, div.TableListContTiny3 {
+	margin:4px 4px 4px @table-list-margin-step*5;
+	text-indent:@main-text-indent + 25;
+	font-size:@main-font-size - 4;
+}
+p.TableCellNum, li.TableCellNum, div.TableCellNum{
+	margin:4px;
+	font-size:@main-font-size - 2;
+	font-weight:normal;
+	letter-spacing:0;
+}
+p.MsoHeader, li.MsoHeader, div.MsoHeader, 
+p.MsoFooter, li.MsoFooter, div.MsoFooter {
+	margin:4px;
+	font-size:@main-font-size - 3;
+	font-weight:normal;
+	letter-spacing:0;
+}
+p.PageNumber {
+	margin:4px;
+	font-size:@main-font-size;
+	font-weight:bold;
+	letter-spacing:0;
+}
+p.GridCompactLeft, p.GridCompactCenter {
+	margin:2px;
+	font-size:@main-font-size - 6;
+    text-align:left;
+	letter-spacing:0;
+}
+p.GridCompactCenter {
+    text-align:center;
+}
+p.GridCompactRight {
+	margin:2px;
+	font-size:@main-font-size - 6;
+    text-align:right;
+	letter-spacing:0;
+}
+p.GridCompactJustify {
+	margin:2px;
+	font-size:@main-font-size - 6;
+    text-align:justify;
+	letter-spacing:0;
+}
+p.Gap, p.NoteIndent {
+	margin:0;
+	font-size: @main-font-size - 8;
+    text-align:left;
+	letter-spacing:0;
+}
+p.IndentFigure, li.IndentFigure, div.IndentFigure {
+	margin:0 0 0 36px;
+	text-indent:@main-text-indent + 25;
+	font-size:@main-font-size - 6;
+}
+p.FigureCaption, li.FigureCaption, div.FigureCaption {
+	margin:0 0 6px 72px;
+	text-indent:@main-text-indent + 25;
+}
+span.em, span.DFN, span.STRONG, span.FileName, span.CompanySlogan, span.CompanyAddress, span.DocDisclaimer, span.DocTitle,
+span.DocSubject, span.DocSummaryTopic, span.DocSummaryBodyText, span.FooterText, span.HeaderText, span.PageNumberText,
+span.DocComment, span.DocLegend, em, strong, span.emphasis, span.HeaderText, span.CODE, span.codesmall, span.Object,
+span.MsoHyperlink, span.ChapterLabel, span.FileName, span.FileNameUnix, span.GuidelinesText, span.StatusExpectedAtRisk, span.StatusExpectedLate,
+span.StatusExpectedNormal, span.StatusProposed, span.StatusResolvedInTime, span.StatusResolvedLate {
+	letter-spacing:0;
+}
+span.em {
+    font-style:italic;
+}
+span.DFN {
+	font-weight:bold;
+}
+span.STRONG {
+	font-weight:bold;
+	font-style:italic;
+}
+p.Simple, li.Simple, div.Simple {
+	margin:0px;
+}
+span.FileName {
+	font-size:@main-font-size;
+	font-style:normal;
+	font-variant:small-caps;
+}
+span.CompanySlogan {
+	font-size:@main-font-size + 2;
+	font-variant:small-caps;
+	font-style:italic;
+}
+span.CompanyAddress, span.DocDisclaimer{
+	font-size:@main-font-size - 2;
+}
+span.DocTitle{
+	font-size:@main-font-size + 8;
+	font-weight:bold;
+}
+span.DocSubject{
+	font-size:@main-font-size + 1;
+	font-weight:bold;
+}
+span.DocSummaryTopic, span.DocSummaryBodyText{
+	font-size:@main-font-size - 1;
+}
+span.FooterText, span.HeaderText{
+	font-size:@main-font-size - 3;
+}
+span.PageNumberText{
+	font-size:@main-font-size - 2;
+	font-weight:bold;
+}
+span.DocComment{
+	font-size:@main-font-size - 2;
+	font-style:italic;
+}
+span.DocLegend{
+	font-size:@main-font-size + 1;
+	text-transform:uppercase; 
+	text-decoration:underline;
+	font-weight:bold;
+}
+em{
+    font-style:italic;
+}
+strong{
+    font-style:italic;
+    font-weight:bold;
+}
+    
+span.emphasis{
+    font-style:italic;	
+}
+span.HeaderText{
+	font-size:@main-font-size - 3;
+    font-style:italic;
+}
+span.CODE, span.codesmall, span.Object, span.MsoHyperlink, span.ChapterLabel {
+	font-variant:normal;
+	font-style:normal;
+}
+span.CODE, span.CODE0{
+	font-family:@code-font-family;
+}
+span.codesmall{
+	font-family:@code-font-family;
+	font-size:@main-font-size - 3;
+}
+span.Object{
+    text-decoration:underline;
+}   
+span.MsoHyperlink{
+    text-decoration:underline;
+    color:@skin-links-color;
+}
+span.ChapterLabel{
+    font-size:@main-font-size + 28;
+}
+span.FileName{
+	font-style:normal;
+	font-variant:small-caps;
+}
+span.FileNameUnix{
+	font-family:@unix-name-font-family;
+	font-style:normal;
+	font-variant:small-caps;
+}
+span.GuidelinesText{
+	font-style:italic;
+	color:@skin-links-color;
+}
+span.StatusExpectedAtRisk{
+	background-color:@status-risk-color;
+}
+span.StatusExpectedLate{
+	background-color:@status-late-color;
+}
+span.StatusExpectedNormal{
+	background-color:@status-normal-color;
+}
+span.StatusProposed{
+	color:@status-proposed-color;
+}
+span.StatusResolvedInTime{
+	color:@status-normal-color;
+}
+span.StatusResolvedLate{
+	color:@status-risk-color;
+}

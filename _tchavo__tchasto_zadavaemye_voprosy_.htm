@@ -1,0 +1,194 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>ЧАВО (часто задаваемые вопросы)</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_primer_fajla_zamen__nastroennogo_p_.htm?back','NO_NEXT_FILE.htm?forw');synctoc('_tchavo__tchasto_zadavaemye_voprosy_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Пример файла замен, настроенного пользователем " 
+				href="_primer_fajla_zamen__nastroennogo_p_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="HIDENEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;NO_NEXT_NAME " 
+				href="NO_NEXT_FILE.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_prilozheniya_.htm">Приложения</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">ЧАВО (часто задаваемые вопросы)</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_tchavo__tchasto_zadavaemye_voprosy_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h2 >ЧАВО (часто задаваемые вопросы) </h2>
+
+<p class=MsoNormal><span class=DFN>Вопрос.</span> Во время работы GenHelp выдается сообщение, что файл такой-то занят и предлагается продолжить работу в различных режимах или отказаться лот обработки.</p>
+
+<p class=MsoListContinue><span class=DFN>Ответ. </span>Лучше завершить работу программы и затем закрыть все сеансы Word. Затем повторить генерацию. Возможно, вам придется перезагрузить компьютер.</p>
+
+<p class=MsoNormal><span class=DFN>Вопрос. </span>У меня во время работы GenHelp выдается сообщение об одной и той же ошибке при обработке одного и того же места в исходном файле.</p>
+
+<p class=MsoListContinue><span class=DFN>Ответ. </span>Проанализируйте лог работы программы (он формируется в файле<span class=FileNameUnix> GHtrace.log </span>в папке <span class=FileNameUnix>Output</span>). Выясните этап генерации, связанный с ошибкой. Попытайтесь понять, влияет ли текст в исходном файле на обработку. Проводите анализ в следующей последовательности.</p>
+
+<p class=MsoListNumber2>1.     Сохраните копию исходного файла в файле с другим именем.</p>
+
+<p class=MsoListNumber2>2.     В исходном файле найдите текст, связанный со сбойной ситуацией. Часто причиной сбоя является наличие в исходном тексте импортированных (из внешних источников) таблиц и других объектов.</p>
+
+<p class=MsoListNumber2>3.     Переформатируйте этот текст, либо удалите его, а затем наберите его вручную. При форматировании текста соблюдайте соответствующие стили и форматы полей.  Прогоните снова генерацию - вы должны устранить появление сообщения об ошибке.</p>
+
+<p class=MsoListNumber2>4.     Постепенно восстанавливайте исходный материал, до его полного восстановления или до появления этой же ошибки. Для более быстрой отладки текста вы можете скопировать проблемный текст в отдельный файл.</p>
+
+<p class=MsoListContinue>Такой подход позволит локализовать и исправить ошибку. В случае, если исправить ошибку не удается, обратитесь к разработчику (включите в письмо сам исходный файл и лог-файл генерации).</p>
+
+<p class=MsoNormal><span class=DFN>Вопрос. </span>Я указал в исходном документе закладку для удаления текста, но GenHelp не удаляет этот текст.</p>
+
+<p class=MsoListContinue><span class=DFN>Ответ. </span>Возможно, вы указали &quot;пустую&quot; закладку, то есть перед выдачей команды вставки закладки не выделили текст в документе. Если текст для удаления входит в границы фрейма, то закладку надо ставить на весь фрейм.</p>
+
+<p class=MsoNormal><span class=DFN>Вопрос. </span>В результате удаления текста, указанного мной в виде закладки, в содержании ЭС не формируется раздел.</p>
+
+<p class=MsoListContinue><span class=DFN>Ответ. </span>Возможно, вы включили в границы закладки параграф с заголовком раздела.</p>
+
+<p class=MsoNormal><span class=DFN>Вопрос. </span>В имена разделов, отображаемых в содержании ЭС, попадает &quot;мусор&quot;&nbsp;&#8209; тексты полей XE, ненужные разделы и т.п.</p>
+
+<p class=MsoListContinue><span class=DFN>Ответ. </span>Параграфы заголовков разделов в исходном документе не должны содержать полей XE. Перенесите эти поля в любой ближайший параграф. Что касается лишних разделов в содержании ЭС, то их надо удалять из исходного текста в процессе генерации (используя механизм префиксов закладок&nbsp;&#8209; см. разд.&quot;<a href="_podgotovka_ishodnogo_dokumenta_.htm#_Подготовка_исходного_документа">Подготовка исходного документа</a>&quot;).</p>
+
+<p class=MsoNormal><span class=DFN>Вопрос. </span>На форме <span class=DFN>GenHelp</span> пересекаются названия и границы полей.</p>
+
+<p class=MsoListContinue><span class=DFN>Ответ. </span>GenHelp рассчитан на исполнение в режиме &quot;small fonts&quot;. Это системная настройка Windows (размер шрифта в системных сообщениях). Если у вас установлена опция <span class=CODE>Large fonts</span>, то вам надо ее отменить. На форме свойств экрана выберите <span class=DFN>Settings &gt; </span><b>Advanced</span></b>и установите размер шрифта <span class=CODE>normal</span> (в Windows XP). Затем перезагрузите компьютер.</p>
+
+<p class=MsoNormal><span class=DFN>Вопрос. </span>При отображении Предметного указателя в ЭС система выдает сообщение, что время работы скрипта превышает допустимое значение и просит принять решение о прекращении работы скрипта.</p>
+
+<p class=MsoListContinue><span class=DFN>Ответ. </span>Надо дать указание продолжении работы скрипта. Такое сообщение выдается в случае отображения большого указателя в форме дерева. Такой указатель лучше отображать в форме плоского списка (см. разд. &quot;<a href="_poryadok_nastrojki_vneshnego_vida__.htm#_Порядок_настройки_внешнего">Порядок настройки внешнего вида ЭС</a>&quot;).</p>
+
+<p class=MsoNormal><span class=DFN>Вопрос. </span>Я задал стиль <span class=DFN>Cover Comment</span> в качестве допустимого стиля для формирования заголовка раздела уровня <span class=CODE>1</span>. Для этого на вкладке <span class=DFN>Headings </span>в поле <span class=DFN>Allowed Styles for Outline</span> я дополнил список допустимых стилей для уровня <span class=CODE>1</span> значением <span class=CODE>Cover Comment</span>, после чего список стал иметь значение <span class=CODE>Heading 1;Cover Comment;</span>. Я ожидаю, что GenHelp сформирует мне отдельный раздел уровня <span class=CODE>1</span>, причем использует в качестве заголовка текст параграфа, отформатированного стилем <span class=DFN>Cover Comment</span>. Однако GenHelp не генерирует в соответствующем месте ЭС раздел первого уровня.</p>
+
+<p class=MsoListContinue><span class=DFN>Ответ.</span> Вкладка <span class=DFN>Headings</span> предназначена для </p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span>обработки параграфов, <em>уже имеющих</em> уровень <span class=CODE>OutlineLevel</span>, отличающийся от <span class=CODE>Body text</span>. Если, например, некоторый стиль <span class=DFN>Main Note </span>определен как имеющий <span class=CODE>OutlineLevel</span> уровня <span class=CODE>1</span>, но при этом он не включен вами на вкладке <span class=DFN>Headings</span> в список допустимых стилей для уровня <span class=CODE>1</span>, то GenHelp проигнорирует такой стиль при анализе структуры документа;</p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span>для указания стилей, используемых в качестве динамически формируемых подзаголовков относительно &quot;настоящих&quot; заголовков; такие стили могут иметь уровень <span class=CODE>OutlineLevel</span> равный <span class=CODE>Body text</span>.</p>
+
+<p class=MsoListContinue>Видимо, указанный вами стиль <span class=DFN>Cover Comment</span> не имеет в вашем документе признак <span class=CODE>OutlineLevel</span>. Чтобы в этом убедиться, поставьте курсор в текст параграфа, отформатированного этим стилем, затем выполните <span class=DFN>Format&nbsp;&gt;&nbsp;Paragraph</span>. Посмотрите значение в поле <span class=DFN>Outline level</span>. Скорее всего, оно имеет значение <span class=CODE>Body text</span>, либо уровень <span class=CODE>OutlineLevel</span>, не совпадающий с <span class=CODE>1</span>.</p>
+
+<p class=MsoListContinue>Для решения вашей проблемы вы должны установить для стиля <span class=DFN>Cover Comment</span> признак <span class=CODE>OutlineLevel</span> равный <span class=CODE>1</span>. Если вы не хотите делать этого &quot;вручную&quot; в исходном тексте, то вы можете выполнить следующие действия.</p>
+
+<p class=MsoListNumber2>1.     Перейдите на вкладку <span class=DFN>Styles, Text</span>.</p>
+
+<p class=MsoListNumber2>2.     Дополните&nbsp;в&nbsp;поле&nbsp;<span class=DFN>Replace for HTML (list of change parameters)&nbsp;</span>список&nbsp;следующим&nbsp;значением:</p>
+
+<p class=MsoListContinue2><span class=CODE>Cover Comment!!10,Cover Comment!!1;</span></span></p>
+
+<p class=MsoListNumber2>3.     Если у вас в тексте стиль <span class=DFN>Cover Comment </span>встречается несколько раз, а вы хотите назначить уровень <span class=CODE>1</span> только параграфу, имеющему текст <span class=CODE>Important Notes</span>, то уточните ваш параметр:</p>
+
+<p class=MsoListContinue2><span class=CODE>Cover Comment!Important Notes!10,Cover Comment!Important Notes!1;</span></span></p>
+
+<p class=MsoNormal><span class=DFN>Вопрос. </span>Я указал на вкладке&nbsp;<span class=DFN>Headings&nbsp;</span>в поле&nbsp;<span class=DFN>Make Subheadings of Styles&nbsp;</span>стиль для подразделов&nbsp;<span class=DFN>SubSection</span>. В исходном документе эти топики входили в раздел уровня <span class=CODE>2</span>. В сгенерированной ЭС эти новые разделы имеют другой внешний вид заголовка по сравнению с прочими разделами уровня <span class=CODE>3</span>. То есть они не соответствуют выбранному скину.</p>
+
+<p class=MsoListContinue><span class=DFN>Ответ. </span>GenHelp не отслеживает автоматически соответствие указываемых стилей их наличию и описанию в файле <span class=FileNameUnix>.css</span>и <span class=FileNameUnix>.</span><span class=FileNameUnix>less</span>. В данном случае необходима ручная настройка стиля заголовка. Скопируйте в папку <span class=FileNameUnix>Update</span> файл <span class=FileNameUnix>.</span><span class=FileNameUnix>less </span>и создайте в нем новый стиль <span class=DFN>SubSection. </span>За основу нового стиля возьмите текст описания существующего заголовочного стиля (т.е., например, стиля <span class=DFN>H1</span>). </p>
+
+<p class=MsoListContinue><span class=DFN>Примечание.</span> Данный ответ подтверждает, что стили <span class=DFN>H1, H2, H3</span> и т.д.должны иметь одинаковое описание в файле<span class=FileNameUnix>.</span><span class=FileNameUnix>less</span>. Тогда заголовки всех разделов в ЭС будут иметь одинаковый вид. Такое требование, характерное для систем онлайновой помощи, соблюдено в скинах GenHelp. Кстати, в скинах GenHelp присутствует описание только стилей с <span class=DFN>H1</span> по <span class=DFN>H4</span>, что достаточно для большинства электронных документов. В случае необходимости разработки ЭС с бОльшим числом уровней разделов проводите дополнительную доработку файла <span class=FileNameUnix>.</span><span class=FileNameUnix>less</span>.</p>
+
+<p class=MsoNormal><span class=DFN>Вопрос</span>. Я во время генерации ЭС работал в Notepad и занимался вырезкой и вставкой в своем файле. Неожиданно GenHelp прекратил работу с сообщением об ошибке.</p>
+
+<p class=MsoListContinue><span class=DFN>Ответ. </span>Желательно во время работы GenHelp не работать с буфером обмена в других приложениях, так как GenHelp активно использует буфер обмена в своих целях. В данном случае могла произойти неожиданная потеря данных в результате одновременного доступа к буферу обмена. </p>
+
+<p class=MsoListContinue><span class=DFN>Примечание.</span> Если вам необходима длительная генерация, то проводите ее в отдельное время (в пакетном режиме) или на отдельном компьютере. Возможное решение&nbsp;&#8209; исполнение генерации на виртуальной машине (например, с использованием Microsoft Virtual PC). Кстати, это позволит и одновременно работать в Word в основной операционной системе.</p>
+
+<p class=MsoNormal><span class=DFN>Вопрос. </span>В разделах сгенерированной ЭС формата HTML (или CHM) наблюдается &quot;слипание&quot; слов, хотя в соответствующем тексте первоисточника слова разделены пробелами.</p>
+
+<p class=MsoListContinue><span class=DFN>Ответ. </span>Проверьте, соблюдается ли в первоисточнике между словом и последующим пробелом общий стиль форматирования. В случае неконсистентного применения стиля (особенно в случае изменений в шрифте</span>) программа экспорта текста из Word в HTML может неправильно сгенерировать выходной текст. Одной из причин стилевых погрешностей является импорт текста из других источников. Для вставки текста пользуйтесь командой вставки неформатированного текста (<span class=DFN>Edit&nbsp;&gt;&nbsp;Paste&nbsp;Special&nbsp;&gt;&nbsp;Unformatted&nbsp;Text</span>), затем для выделения частей вставленного текста используйте стили документа Word.</p>
+
+<p class=MsoListContinue>Проверьте стили в исходном параграфе. Отформатируйте слово и пробел одинаковым стилем (попробуйте стиль <span class=DFN>Default Paragraph Font</span> или стиль, которым отформатировано само слово). В некоторых случаях справиться с проблемой помогает использование &quot;жесткого&quot; пробела (<span class=DFN>&lt;Ctrl+Shift+пробел&gt;</span>) вместо обычного.</p>
+
+<p class=MsoNormal><span class=DFN>Вопрос. </span>Как мне создавать файл формата PDF каждый раз при генерации ЭС в формате DOC?</p>
+
+<p class=MsoListContinue><span class=DFN>Ответ. </span>Поместите в папку Update файд <span class=FileNameUnix>makepdf.dot</span>.</p>
+
+<p class=MsoListContinue>В результате GenHelp должен по концу обработки формата DOC откпрыть этот файл и вызвать макрос GH_COMPLETE_DOC</span>.</p>
+
+<p class=MsoNormal><span class=DFN>Вопрос</span><span class=DFN>.</span>Я раньше разрабатывал единый источник в среде Word 2003, а сейчас продолжаю работать с документом в Word 2010. Когда я провожу генерацию ЭС, я вижу, что GenHelp создает многочисленные разделы с одним и тем же именем, но разными окончаниями.При этом результирующая ЭС некорректна.</p>
+
+<p class=MsoListContinue><span class=DFN>Ответ</span><span class=DFN>. </span>Одна из возможных причин связана с тем, что вы работаете с документом в формате .doc в среде Word 2010. Из-за возможного дефекта просмотра документа в режиме Outline view, который используется для фbксации границ разделов, GenHelp может создавать некорректные имена разделов.Сохраните ваш документ в формате.docx, создайте новый проект и перенесите прежние настройки обновления в папку <span class=FileNameUnix>Update</span> (учитывая особенности обновления в GenHelp 4.00), затем выполните генерацию нового проекта.</p>
+
+<p class=MsoNormal><span class=DFN>Вопрос</span><span class=DFN>.</span>Мне необходимо выделить порцию текста особым фоном, в тексте несколько абзацев, одновременно содержащих обычный, нумерованный и маркированный текст. Когда я применяю в исходном документе операцию заливки (shading) этих абзацев цветным фоном, я не вижу соответствующей заливки в выходном HTML-формате.</p>
+
+<p class=MsoListContinue><span class=DFN>Ответ</span><span class=DFN>. </span>Это происходит вследствие того, что все стилевые теги в выходном HTML-формате вычищаются. Это реализуется следующим оператором замены в файле замен скина <span class=FileNameUnix>skinrep_1.ini:</span></p>
+
+<p class=MsoListContinue><span class=Code0>1=|()||regexp|</span></p>
+
+<p class=MsoListContinue>Такая замена необходима для того, чтобы стили, описанные в файле стилей (<span class=FileNameUnix>css_skin.less</span> и генерируемый файл <span class=FileNameUnix>css_skin.css</span>), срабатывали именно так, как они описаны, без модификаторовстиля, генерируемых Word при экспорте файла в формат HTML.</p>
+
+<p class=MsoListContinue>Для решения вашей проблемы создайте в документе или в прикрепленном к документу стилевом шаблоне новый стиль таблицы, отвечающий вашему замыслу. Например, этот стиль может описыать таблицу без границ и иметь необходимый цветной фон. В исходном документе создайте таблицу в этом стиле, затем в ней, как в контейнере, разместите текст, который вы хотите выделить. Выполните повторную генерацию проекта. В HTML-тексте выходного файла, полученного после генерации, найдите HTML-код таблицы, класс которой будет соответствовать имени нового табличного стиля. Например, если вы в исходном документе добавили стиль 'Table Note' и применили его, то в выходном HTML-файле соответствующего топика вы можете обнаружить код:</p>
+
+<p class=MsoListContinue2><span class=Code0>&lt;table class=TableNote ...&gt;</span></p>
+
+<p class=MsoListContinue2><span class=Code0>...</span></p>
+
+<p class=MsoListContinue2><span class=Code0>&lt;/table&gt;</span></p>
+
+<p class=MsoListContinue>Далее внесите в файл <span class=FileNameUnix>css_skin.less</span>изменение, описывающее стиль TableNoteтак, чтобы этот стиль описывал нужный вам цвето фона. Не забудьте разместить измененный файл <span class=FileNameUnix>css_skin.les</span><span class=FileNameUnix>s</span>в папке <span class=FileNameUnix>Update</span>вашего проекта.Выполните повторную генерацию проекта.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_nastrojki_okruzheniya_genhelp_.htm">Настройки окружения GenHelp</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

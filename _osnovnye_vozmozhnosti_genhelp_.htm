@@ -1,0 +1,129 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Основные возможности GenHelp</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_natchalo_raboty_.htm?back','_usloviya_ispolqzovaniya_genhelp_.htm?forw');synctoc('_osnovnye_vozmozhnosti_genhelp_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Начало работы " 
+				href="_natchalo_raboty_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Условия использования GenHelp " 
+				href="_usloviya_ispolqzovaniya_genhelp_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_natchalo_raboty_.htm">Начало работы</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Основные возможности GenHelp</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_osnovnye_vozmozhnosti_genhelp_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h2 >   Основные возможности GenHelp</h2>
+
+<p class=MsoNormal>GenHelp представляет собой простое в использовании средство создания HTML-версии документа, изначально подготовленного в Word. Полученные HTML-файлы могут быть путем простых, легко автоматизируемых операций преобразованы из некоторого стандартного вида к виду, требуемого пользователю. Кроме того, проведя некоторую настройку файла проекта, пользователь может создать ЭС в формате .<span class=FileNameUnix>chm</span>.</p>
+
+<p class=MsoNormal>Необходимо отметить следующие особенности продукта:</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>GenHelp поддерживает <em>концепцию единого первоисточника</em> (single source concepts), то есть единого источника данных (базового документа) для создания ЭС в различных форматах. В данном случае роль этого единого первоисточника играет документ, подготовленный в среде Word. В настоящее время имеется два выходных формата Help: HTML и CHM. Первый формат в основном используется в Web-приложениях, второй (предложенный Microsoft и поддерживаемый с помощью бесплатного средства разработки Microsoft HTML Workshop)&nbsp;— в приложениях, имеющих GUI-интерфейс Windows. Также GenHelp обеспечивает генерацию документа в формате .DOC (печатный вариант документации).</p>
+
+<p class=MsoListBullet> <span class=BulChar>&#149;   </span>ЭС, получаемая в результате работы GenHelp, имеет некий стандартный вид, соответствующий выбранному <em>скину</em>. С помощью команд ОС или утилит командной строки, включенных пользователем в подготовленный bat-файл может быть проведена автоматическая доработка ЭС к виду, необходимому пользователю.</p>
+
+<p class=MsoListContinue>Начиная с версии 3.00, пользователю предоставлена возможность выбрать скин при создании проекта GenHelp. Скин содержит в себе настройки внешнего вида ЭС (в формате HTML) и средства локализации ЭС (в формате HTML). В настоящее руководство включен материал, описывающий порядок создания скина.</p>
+
+<p class=MsoListContinue>В версии 4.00 скин является одним из параметров генерации, что подразумевает возможную смену скина перед генерацией.</p>
+
+<p class=MsoListContinue>Начиная с версии 4.00, состав скина изменен. Основная идея скина - применение шаблонов различных частей хелпа, генерация <em>переменных</em> и описание замен, которые необходимо выполнить в файлах, полученных в результате экспорта из Word в HTML.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Получаемая ЭС работает в различных современных браузерах, поддерживающих модель DOM. Часть функций хелп реализована на базе кросс-браузерной JavaScript-библиотеки JQuery (предполагается, что применяемый браузер поддерживает JQuery).</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Полученные HTML-страницы могут быть вызваны из приложения с учетом контекстной зависимости (то есть, может быть реализовано такое требование к ЭС, когда нажатие гиперссылки <span class=DFN>Help</span> в приложении может вызвать ту страницу ЭС, которая соответствует текущему экрану приложения).</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>В процессе сканирования исходного текста имеется широкая возможность предварительной обработки текста: удаление размеченного заранее теста в соответствии с форматом выходного Help. Имеется возможность подключения разработанного пользователем макроса предварительной обработки текста, а также макроса завершающей обработки текста в формате DOC.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Страницы HTML после их экспорта из Word подвергаются очистке от избыточных HTML-тэгов с помощью свободно распространяемой программы Microsoft <span class=FileNameUnix>filter</span><span class=FileNameUnix>.exe</span>.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>GenHelp поддерживает индексные поля Word, присутствующие в исходном документе первоисточника и генерирует предметный указатель (далее — <em>Индекс</em> или <em>ПУ</em>) в составе ЭС.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>GenHelp автоматически создает переходы между смежными страницами ЭС по специально генерируемым гиперссылкам.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>GenHelp автоматически создает систему поиска информации в полученных HTML-страницах с подсветкой результатов поиска на отображаемой странице.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>GenHelp поддерживает разработку и применение Help на русском языке, в отличие от многих промышленных систем разработки Help (поддерживается поиск на русском языке). При создании HTML-файлов используются имена разделов документа (русские названия разделов транслитерируются в английские имена файлов).</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>GenHelp поддерживает каскадные стили CSS, что позволяет легко настраивать шрифты и стили готовой ЭС. Начиная с версии 4.00 стили разрабатываются в формате .less с автоматисекой компиляцией в формат .css во время генерации.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>GenHelp содержит шаблон готового CHM-проекта для Microsoft HTML Workshop, что позволяет легко получить из сгенерированных HTML-страниц ЭС в формате CHM<span class=FileNameUnix>.</span></p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>В состав GenHelp включены утилиты командной строки <span class=FileNameUnix>ufrex </span>и<span class=FileNameUnix>genh_sr</span>, с помощью которых разработчик Help может провести поиск/замену контекстов в сгенерированных файлах Help (в том числе с применением регулярных выражений), а также провести их перемещение внутри файла.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_usloviya_ispolqzovaniya_genhelp_.htm">Условия использования GenHelp</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_ustanovka_genhelp_.htm">Установка GenHelp</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_naznatchenie_fajlov_genhelp_.htm">Назначение файлов GenHelp</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_nastrojka_i_lokalizatsiya_.htm">Настройка и локализация</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_nastrojka_brauzera_.htm">Настройка браузера</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_zapusk_genhelp_.htm">Запуск GenHelp</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_poryadok_razrabotki_aes_.htm">Порядок разработки ЭС</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

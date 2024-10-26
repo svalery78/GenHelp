@@ -1,0 +1,112 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Вызов пользовательского макроса обработки текста перед разметкой документа</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_korrektirovka_urovnej_paragrafov_.htm?back','_razmetka_dokumenta_.htm?forw');synctoc('_vyzov_polqzovatelqskogo_makrosa_ob_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Корректировка уровней параграфов " 
+				href="_korrektirovka_urovnej_paragrafov_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Разметка документа " 
+				href="_razmetka_dokumenta_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_generatsiya_aes_.htm">Генерация ЭС</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_aetapy_generatsii_aes_v_formate_ht_.htm">Этапы генерации ЭС в формате HTML</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Вызов пользовательского макроса обработки текста перед разметкой документа</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_vyzov_polqzovatelqskogo_makrosa_ob_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h4 > Вызов пользовательского макроса обработки текста перед разметкой документа</h4>
+
+<p class=MsoNormal>Возможностей поиска/замены текста, стилей и уровня заголовков, предлагаемых программой GenHelp, может оказаться для вас недостаточно (например, вам необходимо изменить другие свойства объектов исходного документа). В этом случае вы перед генерацией ЭС можете разработать свой собственный пакет макросов для предварительной обработки текста перед его переработкой в формат HTML.</p>
+
+<p class=MsoNormal>Для этого вам необходимо создать DOT-файл, разместить в нем свои макросы: создайте модуль <span class=Code0>Module1</span>, в нем&nbsp;&#8209; стартовую процедуру <span class=CODE>gh_start</span>. В распоряжении вашего макроса (с точки зрения Word) — текущий активный документ, который уже будет открыт в Word. Вы можете добавить в модуль и другие процедуры и функции, организовав их вызов из <span class=CODE>gh_start</span>.</p>
+
+<p class=MsoNormal>Для того чтобы ваш макрос отработал, необходимо его отладить и затем поместить DOT-файл в папку обновления (<span class=FileNameUnix>Update</span>) перед генерацией ЭС. Если в процессе генерации GenHelp обнаружит в папке обновления файл <span class=FileNameUnix>*.dot, </span>то Word подключит этот файл как шаблон макросов и вызовет на исполнение размещенный в этом файле макрос <span class=CODE>gh_start</span>. В случае ошибок вызова макроса GenHelp выдает в журнал сообщение об ошибке.</p>
+
+<p class=MsoNormal>Следует иметь в виду, что ошибки при исполнении пользовательского макроса могут прервать работу GenHelp.</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_proverka_parametrov_.htm">Проверка параметров</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_peresozdanie_papki_rezulqtata_.htm">Пересоздание папки результата</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_zapusk_word_.htm">Запуск Word</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_preobrazovanie_numerovannyh_spisko_.htm">Преобразование нумерованных списков в текст</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_udalenie_teksta__pometchennogo_k_u_.htm">Удаление текста, помеченного к удалению с помощью закладок</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_udalenie_i_zamena_teksta__formatir_.htm">Удаление и замена текста, форматированного некоторыми стилями и замена стилей</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_korrektirovka_urovnej_paragrafov_.htm">Корректировка уровней параграфов</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_razmetka_dokumenta_.htm">Разметка документа</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_postroenie_polnotekstovoj_bazy_poi_.htm">Построение полнотекстовой базы поиска</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_postroenie_soderzhaniya_.htm">Построение содержания</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_postroenie_predmetnogo_ukazatelya_.htm">Построение предметного указателя</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_korrektirovka_giperssylok_.htm">Корректировка гиперссылок</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sohranenie_monolitnogo_html_fajla_.htm">Сохранение монолитного HTML-файла</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sozdanie_perehodov_mezhdu_stranits_.htm">Создание переходов между страницами</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_generatsiya_protchih_peremennyh_.htm">Генерация прочих переменных</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_kopirovanie_shablonov_i_fajlov_zam_.htm">Копирование шаблонов и файлов замен</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vypolnenie_zamen_.htm">Выполнение замен</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sohranenie_topikov_i_fajlov_posle__.htm">Сохранение топиков и файлов после замен</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vypolnenie_kompilyatsii_fajla_stil_.htm">Выполнение компиляции файла стилей</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_zavershenie_sozdaniya_help_.htm">Завершение создания Help</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

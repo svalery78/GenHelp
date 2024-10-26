@@ -1,0 +1,127 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Порядок настройки внешнего вида ЭС</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_stilevye_fajly_.htm?back','_kak_sozdatq_novyj_skin_.htm?forw');synctoc('_poryadok_nastrojki_vneshnego_vida__.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Стилевые файлы " 
+				href="_stilevye_fajly_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Как создать новый скин " 
+				href="_kak_sozdatq_novyj_skin_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_nastrojka_vneshnego_vida_aes_v_for_.htm">Настройка внешнего вида ЭС в формате HTML</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Порядок настройки внешнего вида ЭС</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_poryadok_nastrojki_vneshnego_vida__.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h3 >  Порядок настройки внешнего вида ЭС</h3>
+
+<p class=MsoListNumber >1.     После создания проекта скопируйте из папки скина в папку <span class=FileNameUnix>Update</span> следующие файлы: </p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span>Файл <span class=FileNameUnix>.</span><span class=FileNameUnix>less</span>;</p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span>Файлы домашних страниц <span class=FileNameUnix>home.htm</span><span class=FileNameUnix>, index_home.htm</span>;</p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span><span class=FileNameUnix>CHM_frame_menu.htm</span>;</p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span><span class=FileNameUnix>CHM_frame_help.htm</span><span class=FileNameUnix>;</span></p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span>папки с графическими файлами<span class=FileNameUnix>;</span></p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span>файл <span class=FileNameUnix>skinrep_1.ini</span>.</p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span>файл <span class=FileNameUnix>specified_vars.ini</span>.</p>
+
+<p class=MsoListNumber >2.     Отредактируйте в папке замещения файл&nbsp;<span class=FileNameUnix>home.htm</span>&nbsp; таким образом, чтобы он отражал специфику ЭС (обратите внимание на название системы, версию, заголовок экрана).</p>
+
+<p class=MsoListNumber >3.     Отредактируйте в папке замещения файл <span class=FileNameUnix>CHM_frame_help.htm</span> таким образом, чтобы он отражал специфику помощи по пользованию ЭС.</p>
+
+<p class=MsoListNumber >4.     Отредактируйте файл <span class=FileNameUnix>index_home.htm</span> таким образом, чтобы он отражал специфику будущего предметного указателя, если ваш исходный документ будет содержать индекс. Обратите внимание на название системы, версию, заголовок экрана.</p>
+
+<p class=MsoListNumber >5.     Отредактируйте, если это необходимо, файл <span class=FileNameUnix>.</span><span class=FileNameUnix>less.</span></p>
+
+<p class=MsoListNumber >6.     Укажите требуемые значения определяемых переменных в файле <span class=FileNameUnix>specified_vars.ini</span>. </p>
+
+<p class=MsoListContinue>Например, если вам необходимо изменить режим отображения содержания ЭС и/или индекса не в виде дерева, а в виде плоского файла, то необходимо указать соответствующие значения определяемых переменных <span class=Code0>&lt;&lt;INDEX_SHOW_TREE&gt;&gt;</span>и <span class=Code0>&lt;&lt;CONTENTS_SHOW_TREE&gt;&gt;</span> в файле <span class=FileNameUnix>specified_vars.ini</span>. По умолчанию они определены как</p>
+
+<p class=MsoListContinue><span class=Code0>NN</span><span class=Code0>=|&lt;&lt;INDEX_SHOW_TREE&gt;&gt;|false|</span></p>
+
+<p class=MsoListContinue><span class=Code0>NN</span><span class=Code0>=|&lt;&lt;CONTENTS_SHOW_TREE&gt;&gt;|true|</span></p>
+
+<p class=MsoListContinue>Если вы, например, хотите отображать оглавление в виде плоского списка, то вы долдны указать <span class=Code0>false</span>для переменной <span class=Code0>&lt;&lt;CONTENTS_SHOW_TREE&gt;&gt;</span></p>
+
+<p class=MsoListNumber >7.     Добавьте, если необходимо, в файл <span class=FileNameUnix>skinrep_1.ini</span> дополнительные операции замены контекстов, а если необходимо, то создайте новые файлы дополнительных замен <span class=FileNameUnix>skinrep_2.ini</span><span class=FileNameUnix>skinrep_3.ini</span> и т.д. Операции поиска/замены описаны в документации к программе ufrex (в ней реализован тот же механиз поиска/замен, что и в программе GenHelp).</p>
+
+<p class=MsoListNumber >8.     Дополнительно подключите в файл <span class=FileNameUnix>complete.bat</span> вызовы утилит замены контекстов, например, программу <span class=FileNameUnix>genh_sr</span>.</p>
+
+<p class=Gap>&nbsp;</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vozmozhnosti_nastrojki_.htm">Возможности настройки</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_fajl_complete_bat_.htm">Файл complete.bat</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_stilevye_fajly_.htm">Стилевые файлы</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

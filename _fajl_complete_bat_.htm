@@ -1,0 +1,105 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Файл complete.bat</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_vozmozhnosti_nastrojki_.htm?back','_stilevye_fajly_.htm?forw');synctoc('_fajl_complete_bat_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Возможности настройки " 
+				href="_vozmozhnosti_nastrojki_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Стилевые файлы " 
+				href="_stilevye_fajly_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_nastrojka_vneshnego_vida_aes_v_for_.htm">Настройка внешнего вида ЭС в формате HTML</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Файл complete.bat</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_fajl_complete_bat_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h3 >  Файл <span class=FileNameUnix>complete.bat</span></h3>
+
+<p class=MsoNormal>Командный файл <span class=FileNameUnix>complete.bat</span><span class=FileNameUnix> </span>предназначен для выполнения автоматических завершающих операций по созданию ЭС. </p>
+
+<p class=MsoNormal>GenHelp запускает на исполнение файл <span class=FileNameUnix>complete.bat </span><i>из папки </i><span class=FileNameUnix>Output </span>в конце генерации ЭС.</p>
+
+<p class=MsoNormal>GenHelp передает файлу <span class=FileNameUnix>complete.bat </span>при его запуске три параметра:</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Полный путь доступа к папке приложения (в которой размещена программа <span class=FileNameUnix>GenHelp4.exe)</span>;</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Полный путь доступа к папке проекта;</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Имя файла проекта.</p>
+
+<p class=MsoNormal>Эти соглашения о параметрах должны применяться в GenHelp при вызове из <span class=FileNameUnix>complete.bat</span>любого bat-файла. Эти параметры передаются с окаймляющими кавычками. Для некоторых команд ОС, указываемых в bat-файле, эти кавычки необходимо убрать. </p>
+
+<p class=MsoNormal>Вы можете добавлять в файл <span class=FileNameUnix>complete.bat</span> командные строки вызова утилит и команд ОС. Например, в файл <span class=FileNameUnix>complete.bat</span> можно вписать вызовы команд XCOPY для копирования сгенерированных файлов в необходимые вам папки вашего проекта документирования.</p>
+
+<p class=MsoNormal>Для доведения сгенерированных HTML-страниц до необходимого вам внешнего вида вы можете воспользоваться утилитой командной строки, например, <span class=FileNameUnix>genh_sr.</span> Эта утилита предназначена для пакетной замены контекста в файлах. Определите, какие совокупности HTML-тэгов вам надо заменить в HTML-файлах папки <span class=FileNameUnix>Output</span> и что вы хотите предложить взамен (можно отладить такую замену на одном из HTML-файлов). Отлаженный вариант текста соответствующих командных строк включите в <span class=FileNameUnix>complete.bat</span>. Необходимые для программы <span class=FileNameUnix>genh_sr </span>файлы&nbsp;настроек размещайте в папке <span class=FileNameUnix>Update</span>, но при этом учитывайте, что обрабатываться они будут уже из папки <span class=FileNameUnix>Output</span>.</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vozmozhnosti_nastrojki_.htm">Возможности настройки</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_stilevye_fajly_.htm">Стилевые файлы</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_poryadok_nastrojki_vneshnego_vida__.htm">Порядок настройки внешнего вида ЭС</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

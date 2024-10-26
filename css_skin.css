@@ -1,0 +1,1575 @@
+/* LESS Values for whole styles*/
+/* End of LESS values*/
+
+body {
+  font-family: verdana, verdana;
+  font-size: 12px;
+}
+.MsoNormalTable p {
+  font-size: 12px;
+}
+.WordSection1 {
+  color: black;
+}
+/*************** Header Styles = Logo + Menu ********************/
+
+.SystemNameTable {
+  border-collapse: collapse;
+  font-size: 12px;
+  background: #124d67;
+  background: -moz-linear-gradient(top, #124d67 1%, #061e29 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #124d67), color-stop(100%, #061e29));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #124d67 1%, #061e29 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #124d67 1%, #061e29 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #124d67 1%, #061e29 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #124d67 1%, #061e29 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#124d67', endColorstr='#061e29', GradientType=0);
+  /* IE6-9 */
+  text-align: left;
+  width: 100%;
+  position: relative;
+}
+tr.SystemNameRow {
+  font-size: 20px;
+}
+.SystemNameCell,
+.SystemLogoCell {
+  height: 50px;
+  vertical-align: middle;
+  position: relative;
+}
+.SystemNameText {
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  display: block;
+}
+.SystemNameLogoText {
+  color: #9bb6bf;
+  display: block;
+  text-align: center;
+  padding: 0 40px;
+}
+/*------------------------------------- System Menu */
+
+.SystemMenuTable {
+  background: #2bb7f5;
+  /* background color for menu table*/
+  background: -moz-linear-gradient(top, #2bb7f5 0%, #26a3db 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2bb7f5), color-stop(100%, #26a3db));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #2bb7f5 0%, #26a3db 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #2bb7f5 0%, #26a3db 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #2bb7f5 0%, #26a3db 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #2bb7f5 0%, #26a3db 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2bb7f5', endColorstr='#26a3db', GradientType=0);
+  /* IE6-9 */
+  text-align: left;
+  width: 100%;
+  position: relative;
+  font-size: 12px;
+}
+.SystemMenuRow {
+  position: relative;
+}
+.SystemMenuCell {
+  vertical-align: top;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.SystemMenuCellHide {
+  vertical-align: middle;
+  background-color: #2bb7f5;
+}
+.SystemMenuCellSearchBox {
+  vertical-align: top;
+  margin-top: 5px;
+  width: 100%;
+  background: #29b0ec;
+}
+.SystemMenuCellSearchBox input {
+  border: none;
+  height: 22px;
+  padding-left: 5px;
+  width: 170px;
+  line-height: 20px;
+  margin-right: 5px;
+  background: white;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.SystemMenuLink,
+#opener {
+  background: #1f9ad6;
+  border: 1px solid white;
+  font-weight: bold;
+  color: white;
+  /* color of menu items */
+  text-decoration: none;
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  margin: 4px 15px;
+  padding: 0 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.SystemMenuLink:hover {
+  font-weight: bold;
+}
+.SystemMenuLink:hover,
+#opener:hover {
+  color: #a2f1fe;
+  border: 1px solid #777777;
+}
+#opener {
+  font-size: 15px;
+  text-decoration: none;
+  text-indent: 0;
+  width: 25px;
+}
+.SystemMenuLinkClosed {
+  background: url("template_img/opn_bg.png") no-repeat 1px 4px;
+}
+.SystemMenuLinkOpened {
+  background: url("template_img/cls_bg.png") no-repeat 1px 4px;
+}
+#lbSearch {
+  border: 1px solid white;
+  height: 20px;
+  line-height: 20px;
+  margin: 5px 0 0 0;
+  padding: 0 15px;
+}
+/*************** Left Frame Styles = dtree + search + tocind ********************/
+
+.dtree {
+  font-family: verdana;
+  font-size: 14px;
+  color: gray;
+  white-space: nowrap;
+}
+.dtree img {
+  border: 0px;
+  vertical-align: middle;
+}
+.dtree a {
+  color: black;
+  text-decoration: none;
+}
+.dtree a.node,
+.dtree a.nodeSel {
+  white-space: nowrap;
+  padding: 1px 2px;
+}
+.dtree a.node:hover,
+.dtree a.nodeSel:hover {
+  color: black;
+  text-decoration: underline;
+}
+.dtree a.nodeSel {
+  background-color: white;
+}
+.dtree .clip {
+  overflow: hidden;
+}
+.dtree p {
+  margin: 0;
+  padding: 7px 0;
+}
+.search_results_body {
+  font-family: verdana;
+  background: #a3e0ff;
+}
+p.TocFoundLine,
+p.TocFoundComment {
+  margin-left: 10px;
+  margin-bottom: 1px;
+  margin-top: 4px;
+  letter-spacing: -0.25px;
+}
+p.TocFoundLine {
+  font-size: 10px;
+  color: #186287;
+}
+p.TocFoundComment {
+  font-size: 12px;
+  font-weight: normal;
+  color: black;
+}
+a.TocFoundLine {
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  color: black;
+  text-decoration: none;
+}
+.chm_frame_index_body,
+.chm_frame_index_notree_body,
+.chm_frame_toc_body,
+.chm_frame_toc_notree_body {
+  background: #a3e0ff;
+}
+.chm_frame_index_notree_body {
+  font-family: verdana;
+}
+span.TOCTreeListHome {
+  letter-spacing: -0.25px;
+  color: #186287;
+}
+p.TocList1 a,
+p.TocList2 a,
+p.TocList3 a,
+p.TocList4 a,
+p.TocList5 a,
+p.TocList6 a {
+  color: black;
+}
+p.TocList1,
+p.TocListNoChildren1 {
+  margin: 4px 0 1px 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+p.TocList2,
+p.TocListNoChildren2 {
+  margin: 3px 0 1px 25px;
+  font-size: 12px;
+}
+p.TocList3,
+p.TocListNoChildren3 {
+  margin: 2px 0 1px 40px;
+  font-size: 11px;
+}
+p.TocList4,
+p.TocListNoChildren4 {
+  margin: 1px 0 1px 55px;
+  font-size: 10px;
+}
+p.TocList5,
+p.TocListNoChildren5 {
+  margin: 1px 0 1px 70px;
+  font-size: 10px;
+}
+p.TocList6,
+p.TocListNoChildren6 {
+  margin: 1px 0 1px 85px;
+  font-size: 10px;
+}
+a.TOCTreeListOpenCloseAll {
+  font-size: 12px;
+  letter-spacing: -0.25px;
+  color: #186287;
+}
+a.TOCTreeListOpenCloseAll:hover {
+  text-decoration: underline;
+}
+span.TOCTreeList1,
+span.TOCTreeList2,
+span.TOCTreeList3,
+span.TOCTreeList4,
+span.TOCTreeList5,
+span.TOCTreeList6 {
+  letter-spacing: -0.25px;
+  color: black;
+}
+span.TOCTreeList1,
+span.TOCTreeListNoChildren1,
+span.IndexTreeList1 {
+  font-size: 14px;
+}
+span.TOCTreeList2,
+span.TOCTreeListNoChildren2,
+span.IndexTreeList2 {
+  font-size: 12px;
+}
+span.TOCTreeList3,
+span.TOCTreeListNoChildren3 {
+  font-size: 11px;
+}
+span.TOCTreeList4,
+span.TOCTreeListNoChildren4,
+span.IndexTreeList3 {
+  font-size: 10px;
+}
+span.TOCTreeList5,
+span.TOCTreeListNoChildren5 {
+  font-size: 9px;
+}
+span.TOCTreeList6,
+span.TOCTreeListNoChildren6 {
+  font-size: 8px;
+}
+span.TOCTreeListNoChildren1,
+span.TOCTreeListNoChildren2,
+span.TOCTreeListNoChildren3,
+span.TOCTreeListNoChildren4,
+span.TOCTreeListNoChildren5,
+span.TOCTreeListNoChildren6 {
+  letter-spacing: -0.25px;
+  color: gray;
+}
+span.IndexTreeListHome {
+  font-size: 14px;
+  letter-spacing: -0.25px;
+  color: #186287;
+}
+span.IndexTreeList1,
+span.IndexTreeList2,
+span.IndexTreeList3 {
+  letter-spacing: -0.25px;
+}
+a.IndexTreeListOpenCloseAll {
+  font-size: 12px;
+  letter-spacing: -0.25px;
+  color: #186287;
+}
+a.IndexTreeListOpenCloseAll:hover {
+  text-decoration: underline;
+}
+p.TocIndexList1 {
+  margin: 4px 0 1px 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+p.TocIndexList2 {
+  margin: 3px 0 1px 25px;
+  font-size: 12px;
+}
+p.TocIndexList3 {
+  margin: 2px 0 1px 40px;
+  font-size: 10px;
+}
+a.TocIndexNotreeLink {
+  font-size: 10px;
+  letter-spacing: -0.25px;
+  color: black;
+}
+a.TocIndexNotreeLink:hover {
+  color: #186287;
+}
+/*************** Right Frame Styles = Topic ********************/
+
+.bf {
+  background: yellow;
+  font-weight: bold;
+}
+td.TopicLinksCell {
+  vertical-align: middle;
+}
+.TopicBody {
+  font-family: verdana;
+  color: black;
+  font-size: 12px;
+  letter-spacing: -0.25px;
+}
+.TopicBody a {
+  color: #186287;
+  text-decoration: none;
+  letter-spacing: 0;
+}
+.TopicBody a:hover {
+  text-decoration: underline;
+}
+a.AddFavoriteLink,
+a.AddFavoriteLink:visited {
+  font-size: 10px;
+  letter-spacing: 0;
+  font-weight: normal;
+  color: black;
+  text-decoration: none;
+  margin: 0;
+}
+a.AddFavoriteLink:hover {
+  text-decoration: underline;
+}
+a.TopicPathLinkEnabled,
+a.TopicPathLinkDisabled,
+a.TopicSyncTOC,
+a.TopicLinkPrev,
+a.TopicLinkNext {
+  font-size: 10px;
+  letter-spacing: 0;
+  font-weight: normal;
+  color: black;
+  text-decoration: none;
+}
+a.TopicPathLinkDisabled {
+  color: gray;
+}
+p.TopicLinksTopLeft,
+p.TopicLinksTopRight,
+p.TopicLinksBottom {
+  margin: 0;
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 0;
+}
+p.TopicLinksTopRight {
+  text-align: right;
+}
+p.TopicLinksBottom {
+  text-align: center;
+}
+p.TopicLinksBottom a {
+  color: black;
+}
+p.TopicSeeAlsoLabel {
+  margin: 0;
+  padding: 5px;
+  text-align: left;
+  font-size: 16px;
+  background: #a3e0ff;
+}
+p.TopicSeeAlsoSiblingLine {
+  margin: 0;
+  padding: 5px;
+  text-align: left;
+  background: snow;
+}
+a.TopicSeeAlsoSiblingLink {
+  background: url("template_img/topicline_bg.png") no-repeat 0 2px;
+  padding-left: 11px;
+  line-height: 15px;
+  font-weight: normal;
+  color: #186287;
+  text-decoration: none;
+}
+a.TopicSeeAlsoSiblingLink:hover {
+  text-decoration: underline;
+}
+a.glossanchor {
+  color: black;
+  font-weight: bold;
+}
+a.glosslink {
+  border-bottom: 2px dotted black;
+  text-decoration: none;
+}
+p.copyrighttext {
+  margin: 0;
+  text-align: left;
+  font-size: 8px;
+  color: DarkSlateGray;
+  background: white;
+}
+table.TableImageNormal {
+  margin-left: 0px;
+  border: 1px solid black;
+}
+table.TableImage {
+  margin-left: 28px;
+  border: 1px solid black;
+}
+table.TableImage2 {
+  margin-left: 56px;
+  border: 1px solid black;
+}
+table.TableImage3 {
+  margin-left: 84px;
+  border: 1px solid black;
+}
+table.TableImage4 {
+  margin-left: 112px;
+  border: 1px solid black;
+}
+table.TableImage5 {
+  margin-left: 140px;
+  border: 1px solid black;
+}
+p.TableImageBody,
+p.TableImageBodyNormal,
+p.TableImageBody2,
+p.TableImageBody3,
+p.TableImageBody4,
+p.TableImageBody5 {
+  margin: 0;
+  padding: 0;
+}
+p.TableImageCaption {
+  margin: 0;
+  text-align: left;
+  font-style: italic;
+  font-size: 12px;
+  padding: 10px 2px;
+}
+span.BulChar,
+span.BulChar2,
+span.BulChar3,
+span.BulChar4,
+span.BulChar5 {
+  font-family: verdana;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+span.BulChar {
+  font-size: 16px;
+}
+span.BulChar2 {
+  font-size: 14px;
+}
+span.BulChar3 {
+  font-size: 12px;
+}
+span.BulChar4 {
+  font-size: 11px;
+}
+span.BulChar5 {
+  font-size: 10px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #186287;
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-family: verdana;
+  background-color: #a3e0ff;
+  padding: 5px;
+  letter-spacing: 0;
+}
+p.MsoNormal,
+li.MsoNormal,
+div.MsoNormal {
+  margin: 0 0 6px 0;
+}
+p.MsoList,
+li.MsoList,
+div.MsoList {
+  margin: 0 0 6px 36px;
+}
+p.MsoList2,
+li.MsoList2,
+div.MsoList2 {
+  margin: 0 0 6px 54px;
+}
+p.MsoList3,
+li.MsoList3,
+div.MsoList3 {
+  margin: 0 0 6px 72px;
+}
+p.MsoList4,
+li.MsoList4,
+div.MsoList4 {
+  margin: 0 0 6px 90px;
+}
+p.MsoList5,
+li.MsoList5,
+div.MsoList5 {
+  margin: 0 0 6px 108px;
+}
+p.MsoList6,
+li.MsoList6,
+div.MsoList6 {
+  margin: 0 0 6px 126px;
+}
+p.ListBul1,
+li.ListBul1,
+div.ListBul1,
+p.ListBullet1,
+li.ListBullet1,
+div.ListBullet1,
+p.MsoListBullet,
+li.MsoListBullet,
+div.MsoListBullet {
+  margin: 0 0 6px 28px;
+  text-indent: -24px;
+}
+p.ListBul2,
+li.ListBul2,
+div.ListBul2,
+p.ListBullet2,
+li.ListBullet2,
+div.ListBullet2,
+p.MsoListBullet2,
+li.MsoListBullet2,
+div.MsoListBullet2 {
+  margin: 0 0 6px 56px;
+  text-indent: -23px;
+}
+p.ListBul3,
+li.ListBul3,
+div.ListBul3,
+p.ListBullet3,
+li.ListBullet3,
+div.ListBullet3,
+p.MsoListBullet3,
+li.MsoListBullet3,
+div.MsoListBullet3 {
+  margin: 0 0 6px 84px;
+  text-indent: -23px;
+}
+p.ListBul4,
+li.ListBul4,
+div.ListBul4,
+p.ListBullet4,
+li.ListBullet4,
+div.ListBullet4,
+p.MsoListBullet4,
+li.MsoListBullet4,
+div.MsoListBullet4 {
+  margin: 0 0 6px 112px;
+  text-indent: -23px;
+}
+p.ListBul5,
+li.ListBul5,
+div.ListBul5,
+p.ListBullet5,
+li.ListBullet5,
+div.ListBullet5,
+p.MsoListBullet5,
+li.MsoListBullet5,
+div.MsoListBullet5 {
+  margin: 0px 0 6px 140px;
+  text-indent: -23px;
+}
+p.ListBul6,
+li.ListBul6,
+div.ListBul6,
+p.ListBullet6,
+li.ListBullet6,
+div.ListBullet6,
+p.MsoListBullet6,
+li.MsoListBullet6,
+div.MsoListBullet6 {
+  margin: 0 0 6px 168px;
+  text-indent: -23px;
+}
+p.ListNum1,
+li.ListNum1,
+div.ListNum1,
+p.ListNumber1,
+li.ListNumber1,
+div.ListNumber1,
+p.MsoListNumber,
+li.MsoListNumber,
+div.MsoListNumber {
+  margin: 0 0 6px 28px;
+  text-indent: -25px;
+}
+p.ListNumRusCap,
+li.ListNumRusCap,
+div.ListNumRusCap,
+p.ListNumEngCap,
+li.ListNumEngCap,
+div.ListNumEngCap,
+p.ListNumRusCap1,
+li.ListNumRusCap1,
+div.ListNumRusCap1,
+p.ListNumEngCap1,
+li.ListNumEngCap1,
+div.ListNumEngCap1 {
+  margin: 0 0 6px 28px;
+  text-indent: -20px;
+}
+p.ListNumRusSmall,
+li.ListNumRusSmall,
+div.ListNumRusSmall,
+p.ListNumEngSmall,
+li.ListNumEngSmall,
+div.ListNumEngSmall,
+p.ListNumRusSmall1,
+li.ListNumRusSmall1,
+div.ListNumRusSmall1,
+p.ListNumEngSmall1,
+li.ListNumEngSmall1,
+div.ListNumEngSmall1 {
+  margin: 0 0 6px 28px;
+  text-indent: -25px;
+}
+p.ListNum2,
+li.ListNum2,
+div.ListNum2,
+p.ListNumber2,
+li.ListNumber2,
+div.ListNumber2,
+p.MsoListNumber2,
+li.MsoListNumber2,
+div.MsoListNumber2 {
+  margin: 0 0 6px 56px;
+  text-indent: -25px;
+}
+p.ListNumRusCap2,
+li.ListNumRusCap2,
+div.ListNumRusCap2,
+p.ListNumEngCap2,
+li.ListNumEngCap2,
+div.ListNumEngCap2 {
+  margin: 0 0 6px 56px;
+  text-indent: -20px;
+}
+p.ListNumRusSmall2,
+li.ListNumRusSmall2,
+div.ListNumRusSmall2,
+p.ListNumEngSmall2,
+li.ListNumEngSmall2,
+div.ListNumEngSmall2 {
+  margin: 0 0 6px 56px;
+  text-indent: -25px;
+}
+p.ListNum3,
+li.ListNum3,
+div.ListNum3,
+p.ListNumber3,
+li.ListNumber3,
+div.ListNumber3,
+p.MsoListNumber3,
+li.MsoListNumber3,
+div.MsoListNumber3 {
+  margin: 0 0 6px 84px;
+  text-indent: -25px;
+}
+p.ListNumRusCap3,
+li.ListNumRusCap3,
+div.ListNumRusCap3,
+p.ListNumEngCap3,
+li.ListNumEngCap3,
+div.ListNumEngCap3 {
+  margin: 0 0 6px 84px;
+  text-indent: -20px;
+}
+p.ListNumRusSmall3,
+li.ListNumRusSmall3,
+div.ListNumRusSmall3,
+p.ListNumEngSmall3,
+li.ListNumEngSmall3,
+div.ListNumEngSmall3 {
+  margin: 0 0 6px 84px;
+  text-indent: -25px;
+}
+p.ListNum4,
+li.ListNum4,
+div.ListNum4,
+p.ListNumber4,
+li.ListNumber4,
+div.ListNumber4,
+p.MsoListNumber4,
+li.MsoListNumber4,
+div.MsoListNumber4 {
+  margin-top: 0 0 6px 112px;
+  text-indent: -25px;
+}
+p.ListNumRusCap4,
+li.ListNumRusCap4,
+div.ListNumRusCap4,
+p.ListNumEngCap4,
+li.ListNumEngCap4,
+div.ListNumEngCap4 {
+  margin: 0 0 6px 112px;
+  text-indent: -20px;
+}
+p.ListNumRusSmall4,
+li.ListNumRusSmall4,
+div.ListNumRusSmall4,
+p.ListNumEngSmall4,
+li.ListNumEngSmall4,
+div.ListNumEngSmall4 {
+  margin: 0 0 6px 112px;
+  text-indent: -25px;
+}
+p.ListNum5,
+li.ListNum5,
+div.ListNum5,
+p.ListNumber5,
+li.ListNumber5,
+div.ListNumber5,
+p.MsoListNumber5,
+li.MsoListNumber5,
+div.MsoListNumber5 {
+  margin: 0 0 6px 140px;
+  text-indent: -25px;
+}
+p.ListNumRusCap5,
+li.ListNumRusCap5,
+div.ListNumRusCap5,
+p.ListNumEngCap5,
+li.ListNumEngCap5,
+div.ListNumEngCap5 {
+  margin: 0 0 6px 140px;
+  text-indent: -20px;
+}
+p.ListNumRusSmall5,
+li.ListNumRusSmall5,
+div.ListNumRusSmall5,
+p.ListNumEngSmall5,
+li.ListNumEngSmall5,
+div.ListNumEngSmall5 {
+  margin: 0 0 6px 140px;
+  text-indent: -25px;
+}
+p.ListNum6,
+li.ListNum6,
+div.ListNum6,
+p.ListNumber6,
+li.ListNumber6,
+div.ListNumber6,
+p.MsoListNumber6,
+li.MsoListNumber6,
+div.MsoListNumber6 {
+  margin: 0 0 6px 168px;
+  text-indent: -25px;
+}
+p.ListNumRusCap6,
+li.ListNumRusCap6,
+div.ListNumRusCap6,
+p.ListNumEngCap6,
+li.ListNumEngCap6,
+div.ListNumEngCap6 {
+  margin: 0 0 6px 168px;
+  text-indent: -20px;
+}
+p.ListNumRusSmall6,
+li.ListNumRusSmall6,
+div.ListNumRusSmall6,
+p.ListNumEngSmall6,
+li.ListNumEngSmall6,
+div.ListNumEngSmall6 {
+  margin: 0 0 6px 168px;
+  text-indent: -25px;
+}
+p.ListCont1,
+li.ListCont1,
+div.ListCont1,
+p.ListContinue1,
+li.ListContinue1,
+div.ListContinue1,
+p.MsoListContinue,
+li.MsoListContinue,
+div.MsoListContinue {
+  margin: 0 0 6px 28px;
+}
+p.ListCont2,
+li.ListCont2,
+div.ListCont2,
+p.ListContinue2,
+li.ListContinue2,
+div.ListContinue2,
+p.MsoListContinue2,
+li.MsoListContinue2,
+div.MsoListContinue2 {
+  margin: 0 0 6px 56px;
+}
+p.ListCont3,
+li.ListCont3,
+div.ListCont3,
+p.ListContinue3,
+li.ListContinue3,
+div.ListContinue3,
+p.MsoListContinue3,
+li.MsoListContinue3,
+div.MsoListContinue3 {
+  margin: 0 0 6px 84px;
+}
+p.ListCont4,
+li.ListCont4,
+div.ListCont4,
+p.ListContinue4,
+li.ListContinue4,
+div.ListContinue4,
+p.MsoListContinue4,
+li.MsoListContinue4,
+div.MsoListContinue4 {
+  margin: 0 0 6px 112px;
+}
+p.ListCont5,
+li.ListCont5,
+div.ListCont5,
+p.ListContinue5,
+li.ListContinue5,
+div.ListContinue5,
+p.MsoListContinue5,
+li.MsoListContinue5,
+div.MsoListContinue5 {
+  margin: 0 0 6px 140px;
+}
+p.ListCont6,
+li.ListCont6,
+div.ListCont6,
+p.ListContinue6,
+li.ListContinue6,
+div.ListContinue6,
+p.MsoListContinue6,
+li.MsoListContinue6,
+div.MsoListContinue6 {
+  margin: 0 0 6px 168px;
+}
+p.BlockQuotation,
+li.BlockQuotation,
+div.BlockQuotation {
+  margin: 0 24px 6px 24px;
+  background: #a3e0ff;
+  font-weight: normal;
+}
+p.BlockQuotationFirst,
+li.BlockQuotationFirst,
+div.BlockQuotationFirst {
+  margin: 0 24px;
+  text-indent: 3px;
+  background: silver;
+  font-weight: bold;
+}
+p.Guidelines,
+li.Guidelines,
+div.Guidelines,
+p.Section,
+li.Section,
+div.Section,
+p.Subsection,
+li.Subsection,
+div.Subsection,
+p.Topicgroup,
+li.Topicgroup,
+div.Topicgroup,
+p.Topic,
+li.Topic,
+div.Topic,
+p.TableCaption,
+li.TableCaption,
+div.TableCaption {
+  margin: 0 0 6px 0;
+  letter-spacing: 0;
+}
+p.Guidelines,
+li.Guidelines,
+div.Guidelines {
+  color: #186287;
+}
+p.Section,
+li.Section,
+div.Section {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #a3e0ff;
+}
+p.Subsection,
+li.Subsection,
+div.Subsection {
+  font-size: 15px;
+  font-weight: normal;
+  background-color: #a3e0ff;
+}
+p.Topicgroup,
+li.Topicgroup,
+div.Topicgroup {
+  font-size: 14px;
+  font-weight: bold;
+}
+p.Topic,
+li.Topic,
+div.Topic {
+  font-weight: bold;
+}
+p.TableCaption,
+li.TableCaption,
+div.TableCaption {
+  font-size: 9px;
+  font-weight: bold;
+}
+p.TableHeading,
+li.TableHeading,
+div.TableHeading {
+  margin: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0;
+}
+p.TableSubHeading,
+li.TableSubHeading,
+div.TableSubHeading {
+  margin: 4px;
+  font-size: 10px;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+.MsoNormalTable thead {
+  background-color: #a3e0ff;
+}
+p.TableTitle,
+li.TableTitle,
+div.TableTitle {
+  margin: 0;
+  text-align: center;
+  background-color: #a3e0ff;
+  font-weight: bold;
+  font-size: 10px;
+}
+p.TableNormal,
+li.TableNormal,
+div.TableNormal,
+p.NoteBody,
+li.NoteBody,
+div.NoteBody,
+p.TableTopic,
+li.TableTopic,
+div.TableTopic,
+p.NoteHeading,
+li.NoteHeading,
+div.NoteHeading {
+  margin: 4px;
+  font-size: 10px;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+p.TableTopic,
+li.TableTopic,
+div.TableTopic,
+p.NoteHeading,
+li.NoteHeading,
+div.NoteHeading {
+  font-weight: bold;
+}
+p.NoteHeading2,
+li.NoteHeading2,
+div.NoteHeading2,
+p.NoteBody2,
+li.NoteBody2,
+div.NoteBody2 {
+  margin: 4px;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 0;
+}
+p.NoteBody2,
+li.NoteBody2,
+div.NoteBody2 {
+  font-weight: normal;
+}
+p.TableListNum,
+li.TableListNum,
+div.TableListNum,
+p.TableListNumRusCap,
+li.TableListNumRusCap,
+div.TableListNumRusCap,
+p.TableListNumEngCap,
+li.TableListNumEngCap,
+div.TableListNumEngCap,
+p.TableListNumRusSmall,
+li.TableListNumRusSmall,
+div.TableListNumRusSmall,
+p.TableListNumEngSmall,
+li.TableListNumEngSmall,
+div.TableListNumEngSmall,
+p.TableListNum1,
+li.TableListNum1,
+div.TableListNum1,
+p.TableListNumRusCap1,
+li.TableListNumRusCap1,
+div.TableListNumRusCap1,
+p.TableListNumEngCap1,
+li.TableListNumEngCap1,
+div.TableListNumEngCap1,
+p.TableListNumRusSmall1,
+li.TableListNumRusSmall1,
+div.TableListNumRusSmall1,
+p.TableListNumEngSmall1,
+li.TableListNumEngSmall1,
+div.TableListNumEngSmall1 {
+  margin: 4px 4px 4px 30px;
+  text-indent: -20px;
+  font-size: 10px;
+}
+p.TableListBul,
+li.TableListBul,
+div.TableListBul,
+p.TableListBul1,
+li.TableListBul1,
+div.TableListBul1 {
+  margin: 4px 4px 4px 30px;
+  text-indent: -14px;
+  font-size: 10px;
+}
+p.TableListCont,
+li.TableListCont,
+div.TableListCont,
+p.TableListCont1,
+li.TableListCont1,
+div.TableListCont1 {
+  margin: 4px 4px 4px 30px;
+  text-indent: 0px;
+  font-size: 10px;
+}
+p.TableListNum2,
+li.TableListNum2,
+div.TableListNum2,
+p.TableListNumRusCap2,
+li.TableListNumRusCap2,
+div.TableListNumRusCap2,
+p.TableListNumEngCap2,
+li.TableListNumEngCap2,
+div.TableListNumEngCap2,
+p.TableListNumRusSmall2,
+li.TableListNumRusSmall2,
+div.TableListNumRusSmall2,
+p.TableListNumEngSmall2,
+li.TableListNumEngSmall2,
+div.TableListNumEngSmall2 {
+  margin: 4px 4px 4px 50px;
+  text-indent: -20px;
+  font-size: 10px;
+}
+p.TableListBul2,
+li.TableListBul2,
+div.TableListBul2 {
+  margin: 4px 4px 4px 50px;
+  text-indent: -14px;
+  font-size: 10px;
+}
+p.TableListCont2,
+li.TableListCont2,
+div.TableListCont2 {
+  margin: 4px 4px 4px 50px;
+  text-indent: 0px;
+  font-size: 10px;
+}
+p.TableListNum3,
+li.TableListNum3,
+div.TableListNum3,
+p.TableListNumRusCap3,
+li.TableListNumRusCap3,
+div.TableListNumRusCap3,
+p.TableListNumEngCap3,
+li.TableListNumEngCap3,
+div.TableListNumEngCap3,
+p.TableListNumRusSmall3,
+li.TableListNumRusSmall3,
+div.TableListNumRusSmall3,
+p.TableListNumEngSmall3,
+li.TableListNumEngSmall3,
+div.TableListNumEngSmall3 {
+  margin: 4px 4px 4px 70px;
+  text-indent: -20px;
+  font-size: 10px;
+}
+p.TableListBul3,
+li.TableListBul3,
+div.TableListBul3 {
+  margin: 4px 4px 4px 70px;
+  text-indent: -14px;
+  font-size: 10px;
+}
+p.TableListCont3,
+li.TableListCont3,
+div.TableListCont3 {
+  margin: 4px 4px 4px 70px;
+  text-indent: 0px;
+  font-size: 10px;
+}
+p.TableListNum4,
+li.TableListNum4,
+div.TableListNum4,
+p.TableListNumRusCap4,
+li.TableListNumRusCap4,
+div.TableListNumRusCap4,
+p.TableListNumEngCap4,
+li.TableListNumEngCap4,
+div.TableListNumEngCap4,
+p.TableListNumRusSmall4,
+li.TableListNumRusSmall4,
+div.TableListNumRusSmall4,
+p.TableListNumEngSmall4,
+li.TableListNumEngSmall4,
+div.TableListNumEngSmall4 {
+  margin: 4px 4px 4px 90px;
+  text-indent: -20px;
+  font-size: 10px;
+}
+p.TableListBul4,
+li.TableListBul4,
+div.TableListBul4 {
+  margin: 4px 4px 4px 90px;
+  text-indent: -14px;
+  font-size: 10px;
+}
+p.TableListCont4,
+li.TableListCont4,
+div.TableListCont4 {
+  margin: 4px 4px 4px 90px;
+  text-indent: 0px;
+  font-size: 10px;
+}
+p.TableListNum5,
+li.TableListNum5,
+div.TableListNum5,
+p.TableListNumRusCap5,
+li.TableListNumRusCap5,
+div.TableListNumRusCap5,
+p.TableListNumEngCap5,
+li.TableListNumEngCap5,
+div.TableListNumEngCap5,
+p.TableListNumRusSmall5,
+li.TableListNumRusSmall5,
+div.TableListNumRusSmall5,
+p.TableListNumEngSmall5,
+li.TableListNumEngSmall5,
+div.TableListNumEngSmall5 {
+  margin: 4px 4px 4px 110px;
+  text-indent: -20px;
+  font-size: 10px;
+}
+p.TableListBul5,
+li.TableListBul5,
+div.TableListBul5 {
+  margin: 4px 4px 4px 110px;
+  text-indent: -14px;
+  font-size: 10px;
+}
+p.TableListCont5,
+li.TableListCont5,
+div.TableListCont5 {
+  margin: 4px 4px 4px 110px;
+  text-indent: 0px;
+  font-size: 10px;
+}
+p.TableListNum6,
+li.TableListNum6,
+div.TableListNum6,
+p.TableListNumRusCap6,
+li.TableListNumRusCap6,
+div.TableListNumRusCap6,
+p.TableListNumEngCap6,
+li.TableListNumEngCap6,
+div.TableListNumEngCap6,
+p.TableListNumRusSmall6,
+li.TableListNumRusSmall6,
+div.TableListNumRusSmall6,
+p.TableListNumEngSmall6,
+li.TableListNumEngSmall6,
+div.TableListNumEngSmall6 {
+  margin: 4px 4px 4px 130px;
+  text-indent: -20px;
+  font-size: 10px;
+}
+p.TableListBul6,
+li.TableListBul6,
+div.TableListBul6 {
+  margin: 4px 4px 4px 130px;
+  text-indent: -14px;
+  font-size: 10px;
+}
+p.TableListCont6,
+li.TableListCont6,
+div.TableListCont6 {
+  margin: 4px 4px 4px 130px;
+  text-indent: 0px;
+  font-size: 10px;
+}
+p.TableNormalTiny,
+li.TableNormalTiny,
+div.TableNormalTiny {
+  margin: 4px;
+  font-size: 8px;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+p.TableListNumTiny1,
+li.TableListNumTiny1,
+div.TableListNumTiny1 {
+  margin: 4px 4px 4px 20px;
+  text-indent: -15px;
+  font-size: 9px;
+}
+p.TableListBulTiny1,
+li.TableListBulTiny1,
+div.TableListBulTiny1 {
+  margin: 4px 4px 4px 20px;
+  text-indent: -8px;
+  font-size: 8px;
+}
+p.TableListContTiny1,
+li.TableListContTiny1,
+div.TableListContTiny1 {
+  margin: 4px 4px 4px 20px;
+  text-indent: 0px;
+  font-size: 8px;
+}
+p.TableListNumTiny2,
+li.TableListNumTiny2,
+div.TableListNumTiny2 {
+  margin: 4px 4px 4px 35px;
+  text-indent: -15px;
+  font-size: 8px;
+}
+p.TableListBulTiny2,
+li.TableListBulTiny2,
+div.TableListBulTiny2 {
+  margin: 4px 4px 4px 35px;
+  text-indent: -8px;
+  font-size: 8px;
+}
+p.TableListContTiny2,
+li.TableListContTiny2,
+div.TableListContTiny2 {
+  margin: 4px 4px 4px 35px;
+  text-indent: 0px;
+  font-size: 8px;
+}
+p.TableListNumTiny3,
+li.TableListNumTiny3,
+div.TableListNumTiny3 {
+  margin: 4px 4px 4px 50px;
+  text-indent: -15px;
+  font-size: 8px;
+}
+p.TableListBulTiny3,
+li.TableListBulTiny3,
+div.TableListBulTiny3 {
+  margin: 4px 4px 4px 50px;
+  text-indent: -8px;
+  font-size: 8px;
+}
+p.TableListContTiny3,
+li.TableListContTiny3,
+div.TableListContTiny3 {
+  margin: 4px 4px 4px 50px;
+  text-indent: 0px;
+  font-size: 8px;
+}
+p.TableCellNum,
+li.TableCellNum,
+div.TableCellNum {
+  margin: 4px;
+  font-size: 10px;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+p.MsoHeader,
+li.MsoHeader,
+div.MsoHeader,
+p.MsoFooter,
+li.MsoFooter,
+div.MsoFooter {
+  margin: 4px;
+  font-size: 9px;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+p.PageNumber {
+  margin: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0;
+}
+p.GridCompactLeft,
+p.GridCompactCenter {
+  margin: 2px;
+  font-size: 6px;
+  text-align: left;
+  letter-spacing: 0;
+}
+p.GridCompactCenter {
+  text-align: center;
+}
+p.GridCompactRight {
+  margin: 2px;
+  font-size: 6px;
+  text-align: right;
+  letter-spacing: 0;
+}
+p.GridCompactJustify {
+  margin: 2px;
+  font-size: 6px;
+  text-align: justify;
+  letter-spacing: 0;
+}
+p.Gap,
+p.NoteIndent {
+  margin: 0;
+  font-size: 4px;
+  text-align: left;
+  letter-spacing: 0;
+}
+p.IndentFigure,
+li.IndentFigure,
+div.IndentFigure {
+  margin: 0 0 0 36px;
+  text-indent: 0px;
+  font-size: 6px;
+}
+p.FigureCaption,
+li.FigureCaption,
+div.FigureCaption {
+  margin: 0 0 6px 72px;
+  text-indent: 0px;
+}
+span.em,
+span.DFN,
+span.STRONG,
+span.FileName,
+span.CompanySlogan,
+span.CompanyAddress,
+span.DocDisclaimer,
+span.DocTitle,
+span.DocSubject,
+span.DocSummaryTopic,
+span.DocSummaryBodyText,
+span.FooterText,
+span.HeaderText,
+span.PageNumberText,
+span.DocComment,
+span.DocLegend,
+em,
+strong,
+span.emphasis,
+span.HeaderText,
+span.CODE,
+span.codesmall,
+span.Object,
+span.MsoHyperlink,
+span.ChapterLabel,
+span.FileName,
+span.FileNameUnix,
+span.GuidelinesText,
+span.StatusExpectedAtRisk,
+span.StatusExpectedLate,
+span.StatusExpectedNormal,
+span.StatusProposed,
+span.StatusResolvedInTime,
+span.StatusResolvedLate {
+  letter-spacing: 0;
+}
+span.em {
+  font-style: italic;
+}
+span.DFN {
+  font-weight: bold;
+}
+span.STRONG {
+  font-weight: bold;
+  font-style: italic;
+}
+p.Simple,
+li.Simple,
+div.Simple {
+  margin: 0px;
+}
+span.FileName {
+  font-size: 12px;
+  font-style: normal;
+  font-variant: small-caps;
+}
+span.CompanySlogan {
+  font-size: 14px;
+  font-variant: small-caps;
+  font-style: italic;
+}
+span.CompanyAddress,
+span.DocDisclaimer {
+  font-size: 10px;
+}
+span.DocTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+span.DocSubject {
+  font-size: 13px;
+  font-weight: bold;
+}
+span.DocSummaryTopic,
+span.DocSummaryBodyText {
+  font-size: 11px;
+}
+span.FooterText,
+span.HeaderText {
+  font-size: 9px;
+}
+span.PageNumberText {
+  font-size: 10px;
+  font-weight: bold;
+}
+span.DocComment {
+  font-size: 10px;
+  font-style: italic;
+}
+span.DocLegend {
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+strong {
+  font-style: italic;
+  font-weight: bold;
+}
+span.emphasis {
+  font-style: italic;
+}
+span.HeaderText {
+  font-size: 9px;
+  font-style: italic;
+}
+span.CODE,
+span.codesmall,
+span.Object,
+span.MsoHyperlink,
+span.ChapterLabel {
+  font-variant: normal;
+  font-style: normal;
+}
+span.CODE,
+span.CODE0 {
+  font-family: "Courier New";
+}
+span.codesmall {
+  font-family: "Courier New";
+  font-size: 9px;
+}
+span.Object {
+  text-decoration: underline;
+}
+span.MsoHyperlink {
+  text-decoration: underline;
+  color: #186287;
+}
+span.ChapterLabel {
+  font-size: 40px;
+}
+span.FileName {
+  font-style: normal;
+  font-variant: small-caps;
+}
+span.FileNameUnix {
+  font-family: "Lucida Console";
+  font-style: normal;
+  font-variant: small-caps;
+}
+span.GuidelinesText {
+  font-style: italic;
+  color: #186287;
+}
+span.StatusExpectedAtRisk {
+  background-color: red;
+}
+span.StatusExpectedLate {
+  background-color: yellow;
+}
+span.StatusExpectedNormal {
+  background-color: green;
+}
+span.StatusProposed {
+  color: blue;
+}
+span.StatusResolvedInTime {
+  color: green;
+}
+span.StatusResolvedLate {
+  color: red;
+}

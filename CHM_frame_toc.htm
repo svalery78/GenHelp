@@ -1,0 +1,166 @@
+﻿<html>
+<head>
+<title>Home Page</title>
+<script type="text/javascript" src="js_dtree.js"></script>
+<script type="text/javascript" src="js_findtext.js"></script>
+<link rel="StyleSheet" href="css_skin.css" type="text/css" />
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+</head>
+<body nowrap class="chm_frame_toc_body">
+<div class="dtree">
+<script type="text/javascript">
+           <!--
+                var lnk = self.location.href;
+                var iback = lnk.indexOf("?", 0);
+                var lnklen = lnk.length;
+                var contents_page = lnk.substring(1, iback-1);
+                var main_page = "";
+                if (iback >= 0) {main_page = lnk.substring(iback + 1, lnklen);}
+                var refr_main = 1; //0 = not refresh main page (only synchronize TOC); 1 = refresh main page
+                var sync_pos = main_page.indexOf("%sync%", 0); 
+                if (sync_pos == 0)   //example of such href: "CHM_frame_toc.htm?%sync%_introducing_the_stystem.htm"
+                {
+                refr_main = 0;
+                main_page = main_page.substring(6, lnklen - 6);
+                }
+                if (main_page == "home.htm") {main_page = "CLOSEALL";}
+                if (main_page == "CLOSEALL") {refr_main = 0;}
+                var show_dtree = true;
+                show_dtree = true;
+                if (show_dtree)
+                   {
+                   document.write("<p><a class=TOCTreeListOpenCloseAll href=\"javascript: d.openAll();\">Открыть все&nbsp</a>  | <a  class=TOCTreeListOpenCloseAll href=\"javascript: d.closeAll();\">Cкрыть все&nbsp</a> </p>");
+                   d = new dTree('d');
+                   d.add(0,-1,'<span class=TOCTreeListHome>Домашняя страница</span>','home.htm','','main'); 
+
+                   d.add(1,0,'<span class=TOCTreeList1>Введение</span>','_vvedenie_.htm','Введение','main');
+                   d.add(2,1,'<span class=TOCTreeList2>Другая документация</span>','_drugaya_dokumentatsiya_.htm','Другая документация','main');
+                   d.add(3,1,'<span class=TOCTreeList2>Обзор руководства</span>','_obzor_rukovodstva_.htm','Обзор руководства','main');
+                   d.add(4,1,'<span class=TOCTreeList2>Соглашения</span>','_soglasheniya_.htm','Соглашения','main');
+                   d.add(5,1,'<span class=TOCTreeList2>Терминология</span>','_terminologiya_.htm','Терминология','main');
+                   d.add(6,1,'<span class=TOCTreeList2>Список сокращений</span>','_spisok_sokraschenij_.htm','Список сокращений','main');
+                   d.add(7,0,'<span class=TOCTreeList1>Введение в GenHelp</span>','_vvedenie_v_genhelp_.htm','Введение в GenHelp','main');
+                   d.add(8,0,'<span class=TOCTreeList1>Начало работы</span>','_natchalo_raboty_.htm','Начало работы','main');
+                   d.add(9,8,'<span class=TOCTreeList2>Основные возможности GenHelp</span>','_osnovnye_vozmozhnosti_genhelp_.htm','Основные возможности GenHelp','main');
+                   d.add(10,8,'<span class=TOCTreeList2>Условия использования GenHelp</span>','_usloviya_ispolqzovaniya_genhelp_.htm','Условия использования GenHelp','main');
+                   d.add(11,8,'<span class=TOCTreeList2>Установка GenHelp</span>','_ustanovka_genhelp_.htm','Установка GenHelp','main');
+                   d.add(12,8,'<span class=TOCTreeList2>Назначение файлов GenHelp</span>','_naznatchenie_fajlov_genhelp_.htm','Назначение файлов GenHelp','main');
+                   d.add(13,12,'<span class=TOCTreeList3>Папка App</span>','_papka_app_.htm','Папка App','main');
+                   d.add(14,12,'<span class=TOCTreeList3>Папка Project_0000</span>','_papka_project_0000_.htm','Папка Project_0000','main');
+                   d.add(15,12,'<span class=TOCTreeList3>Папка Filter</span>','_papka_filter_.htm','Папка Filter','main');
+                   d.add(16,12,'<span class=TOCTreeList3>Папка Skins</span>','_papka_skins_.htm','Папка Skins','main');
+                   d.add(17,12,'<span class=TOCTreeList3>Папка HHW</span>','_papka_hhw_.htm','Папка HHW','main');
+                   d.add(18,12,'<span class=TOCTreeList3>Папка GenHelp_Documentation_rus</span>','_papka_genhelp_documentation_rus_.htm','Папка GenHelp_Documentation_rus','main');
+                   d.add(19,12,'<span class=TOCTreeList3>Папка GenHelp_Documentation_eng</span>','_papka_genhelp_documentation_eng_.htm','Папка GenHelp_Documentation_eng','main');
+                   d.add(20,8,'<span class=TOCTreeList2>Настройка и локализация</span>','_nastrojka_i_lokalizatsiya_.htm','Настройка и локализация','main');
+                   d.add(21,8,'<span class=TOCTreeList2>Настройка браузера</span>','_nastrojka_brauzera_.htm','Настройка браузера','main');
+                   d.add(22,8,'<span class=TOCTreeList2>Запуск GenHelp</span>','_zapusk_genhelp_.htm','Запуск GenHelp','main');
+                   d.add(23,8,'<span class=TOCTreeList2>Порядок разработки ЭС</span>','_poryadok_razrabotki_aes_.htm','Порядок разработки ЭС','main');
+                   d.add(24,0,'<span class=TOCTreeList1>Подготовка исходного документа</span>','_podgotovka_ishodnogo_dokumenta_.htm','Подготовка исходного документа','main');
+                   d.add(25,24,'<span class=TOCTreeList2>Реализация концепции единого первоисточника</span>','_realizatsiya_kontseptsii_edinogo_p_.htm','Реализация концепции единого первоисточника','main');
+                   d.add(26,24,'<span class=TOCTreeList2>Требования к первоисточнику</span>','_trebovaniya_k_pervoistotchniku_.htm','Требования к первоисточнику','main');
+                   d.add(27,24,'<span class=TOCTreeList2>Подготовка первоисточника</span>','_podgotovka_pervoistotchnika_.htm','Подготовка первоисточника','main');
+                   d.add(28,0,'<span class=TOCTreeList1>Работа с GenHelp</span>','_rabota_s_genhelp_.htm','Работа с GenHelp','main');
+                   d.add(29,28,'<span class=TOCTreeList2>Создание нового проекта</span>','_sozdanie_novogo_proekta_.htm','Создание нового проекта','main');
+                   d.add(30,28,'<span class=TOCTreeList2>Выбор существующего проекта</span>','_vybor_suschestvuyuschego_proekta_.htm','Выбор существующего проекта','main');
+                   d.add(31,28,'<span class=TOCTreeList2>Настройка параметров генерации проекта</span>','_nastrojka_parametrov_generatsii_pr_.htm','Настройка параметров генерации проекта','main');
+                   d.add(32,28,'<span class=TOCTreeList2>Генерация ЭС</span>','_generatsiya_aes_.htm','Генерация ЭС','main');
+                   d.add(33,32,'<span class=TOCTreeList3>Этапы генерации ЭС в формате HTML</span>','_aetapy_generatsii_aes_v_formate_ht_.htm','Этапы генерации ЭС в формате HTML','main');
+                   d.add(34,33,'<span class=TOCTreeList4>Проверка параметров</span>','_proverka_parametrov_.htm','Проверка параметров','main');
+                   d.add(35,33,'<span class=TOCTreeList4>Пересоздание папки результата</span>','_peresozdanie_papki_rezulqtata_.htm','Пересоздание папки результата','main');
+                   d.add(36,33,'<span class=TOCTreeList4>Запуск Word</span>','_zapusk_word_.htm','Запуск Word','main');
+                   d.add(37,33,'<span class=TOCTreeList4>Преобразование нумерованных списков в текст</span>','_preobrazovanie_numerovannyh_spisko_.htm','Преобразование нумерованных списков в текст','main');
+                   d.add(38,33,'<span class=TOCTreeList4>Удаление текста, помеченного к удалению с помощью закладок</span>','_udalenie_teksta__pometchennogo_k_u_.htm','Удаление текста, помеченного к удалению с помощью закладок','main');
+                   d.add(39,33,'<span class=TOCTreeList4>Удаление и замена текста, форматированного некоторыми стилями и замена стилей</span>','_udalenie_i_zamena_teksta__formatir_.htm','Удаление и замена текста, форматированного некоторыми стилями и замена стилей','main');
+                   d.add(40,33,'<span class=TOCTreeList4>Корректировка уровней параграфов</span>','_korrektirovka_urovnej_paragrafov_.htm','Корректировка уровней параграфов','main');
+                   d.add(41,33,'<span class=TOCTreeList4>Вызов пользовательского макроса обработки текста перед разметкой документа</span>','_vyzov_polqzovatelqskogo_makrosa_ob_.htm','Вызов пользовательского макроса обработки текста перед разметкой документа','main');
+                   d.add(42,33,'<span class=TOCTreeList4>Разметка документа</span>','_razmetka_dokumenta_.htm','Разметка документа','main');
+                   d.add(43,33,'<span class=TOCTreeList4>Построение полнотекстовой базы поиска</span>','_postroenie_polnotekstovoj_bazy_poi_.htm','Построение полнотекстовой базы поиска','main');
+                   d.add(44,33,'<span class=TOCTreeList4>Построение содержания</span>','_postroenie_soderzhaniya_.htm','Построение содержания','main');
+                   d.add(45,33,'<span class=TOCTreeList4>Построение предметного указателя</span>','_postroenie_predmetnogo_ukazatelya_.htm','Построение предметного указателя','main');
+                   d.add(46,33,'<span class=TOCTreeList4>Корректировка гиперссылок</span>','_korrektirovka_giperssylok_.htm','Корректировка гиперссылок','main');
+                   d.add(47,33,'<span class=TOCTreeList4>Сохранение монолитного HTML-файла</span>','_sohranenie_monolitnogo_html_fajla_.htm','Сохранение монолитного HTML-файла','main');
+                   d.add(48,33,'<span class=TOCTreeList4>Создание переходов между страницами</span>','_sozdanie_perehodov_mezhdu_stranits_.htm','Создание переходов между страницами','main');
+                   d.add(49,33,'<span class=TOCTreeList4>Генерация прочих переменных</span>','_generatsiya_protchih_peremennyh_.htm','Генерация прочих переменных','main');
+                   d.add(50,33,'<span class=TOCTreeList4>Копирование шаблонов и файлов замен</span>','_kopirovanie_shablonov_i_fajlov_zam_.htm','Копирование шаблонов и файлов замен','main');
+                   d.add(51,33,'<span class=TOCTreeList4>Выполнение замен</span>','_vypolnenie_zamen_.htm','Выполнение замен','main');
+                   d.add(52,33,'<span class=TOCTreeList4>Сохранение топиков и файлов после замен</span>','_sohranenie_topikov_i_fajlov_posle__.htm','Сохранение топиков и файлов после замен','main');
+                   d.add(53,33,'<span class=TOCTreeList4>Выполнение компиляции файла стилей</span>','_vypolnenie_kompilyatsii_fajla_stil_.htm','Выполнение компиляции файла стилей','main');
+                   d.add(54,33,'<span class=TOCTreeList4>Завершение создания Help</span>','_zavershenie_sozdaniya_help_.htm','Завершение создания Help','main');
+                   d.add(55,32,'<span class=TOCTreeList3>Создание ЭС в формате CHM</span>','_sozdanie_aes_v_formate_chm_.htm','Создание ЭС в формате CHM','main');
+                   d.add(56,32,'<span class=TOCTreeList3>Получение документа в формате DOC</span>','_polutchenie_dokumenta_v_formate_do_.htm','Получение документа в формате DOC','main');
+                   d.add(57,32,'<span class=TOCTreeList3>Построение контекстно-зависимой ЭС</span>','_postroenie_kontekstno_zavisimoj_ae_.htm','Построение контекстно-зависимой ЭС','main');
+                   d.add(58,57,'<span class=TOCTreeList4>Формат CHM</span>','_format_chm_.htm','Формат CHM','main');
+                   d.add(59,57,'<span class=TOCTreeList4>Формат HTML</span>','_format_html_.htm','Формат HTML','main');
+                   d.add(60,28,'<span class=TOCTreeList2>Работа с готовой ЭС в формате HTML</span>','_rabota_s_gotovoj_aes_v_formate_htm_.htm','Работа с готовой ЭС в формате HTML','main');
+                   d.add(61,60,'<span class=TOCTreeList3>Содержание ЭС</span>','_soderzhanie_aes_.htm','Содержание ЭС','main');
+                   d.add(62,60,'<span class=TOCTreeList3>Предметный Указатель ЭС</span>','_predmetnyj_ukazatelq_aes_.htm','Предметный Указатель ЭС','main');
+                   d.add(63,60,'<span class=TOCTreeList3>Поиск информации средствами ЭС</span>','_poisk_informatsii_sredstvami_aes_.htm','Поиск информации средствами ЭС','main');
+                   d.add(64,28,'<span class=TOCTreeList2>Работа с готовой ЭС в формате CHM</span>','_rabota_s_gotovoj_aes_v_formate_chm_.htm','Работа с готовой ЭС в формате CHM','main');
+                   d.add(65,28,'<span class=TOCTreeList2>Настройка внешнего вида ЭС в формате HTML</span>','_nastrojka_vneshnego_vida_aes_v_for_.htm','Настройка внешнего вида ЭС в формате HTML','main');
+                   d.add(66,65,'<span class=TOCTreeList3>Возможности настройки</span>','_vozmozhnosti_nastrojki_.htm','Возможности настройки','main');
+                   d.add(67,65,'<span class=TOCTreeList3>Файл complete.bat</span>','_fajl_complete_bat_.htm','Файл complete.bat','main');
+                   d.add(68,65,'<span class=TOCTreeList3>Стилевые файлы</span>','_stilevye_fajly_.htm','Стилевые файлы','main');
+                   d.add(69,65,'<span class=TOCTreeList3>Порядок настройки внешнего вида ЭС</span>','_poryadok_nastrojki_vneshnego_vida__.htm','Порядок настройки внешнего вида ЭС','main');
+                   d.add(70,28,'<span class=TOCTreeList2>Как создать новый скин</span>','_kak_sozdatq_novyj_skin_.htm','Как создать новый скин','main');
+                   d.add(71,28,'<span class=TOCTreeList2>Выполнение GenHelp в пакетном режиме</span>','_vypolnenie_genhelp_v_paketnom_rezh_.htm','Выполнение GenHelp в пакетном режиме','main');
+                   d.add(72,0,'<span class=TOCTreeList1>Приложения</span>','_prilozheniya_.htm','Приложения','main');
+                   d.add(73,72,'<span class=TOCTreeList2>Настройки окружения GenHelp</span>','_nastrojki_okruzheniya_genhelp_.htm','Настройки окружения GenHelp','main');
+                   d.add(74,73,'<span class=TOCTreeList3>Переменные</span>','_peremennye_.htm','Переменные','main');
+                   d.add(75,73,'<span class=TOCTreeList3>Шаблоны</span>','_shablony_.htm','Шаблоны','main');
+                   d.add(76,73,'<span class=TOCTreeList3>Файлы замен</span>','_fajly_zamen_.htm','Файлы замен','main');
+                   d.add(77,73,'<span class=TOCTreeList3>Генерируемые и определяемые переменные</span>','_generiruemye_i_opredelyaemye_perem_.htm','Генерируемые и определяемые переменные','main');
+                   d.add(78,73,'<span class=TOCTreeList3>Пример файла замен, настроенного пользователем</span>','_primer_fajla_zamen__nastroennogo_p_.htm','Пример файла замен, настроенного пользователем','main');
+                   d.add(79,72,'<span class=TOCTreeList2>ЧАВО (часто задаваемые вопросы)</span>','_tchavo__tchasto_zadavaemye_voprosy_.htm','ЧАВО (часто задаваемые вопросы)','main');
+
+
+                   d.config.inOrder = true; 
+                   document.write(d);
+                   if (main_page != "")
+                      {
+                      if (main_page != "CLOSEALL") {d.openToURL(main_page, true);}
+                      else
+                         {
+                         d.closeAll();
+                         d.s(0);
+                         }
+                      if (refr_main == 1)
+                         {
+                         parent.main.location.href = main_page;
+                         }
+                      }
+                   else
+                      {
+                      d.closeAll();d.s(0);
+                      }
+                   }
+                else
+                   {
+                   if (main_page != "")
+                      {
+                      if (main_page != "CLOSEALL") {parent.contents.location.href = "CHM_frame_toc_notree.htm" + "#toc_" + main_page;}
+                      else
+                         {
+                         parent.contents.location.href = "CHM_frame_toc_notree.htm";
+                         }
+                      if (refr_main == 1)
+                         {
+                         parent.main.location.href = main_page;
+                         }
+                   }
+                   else
+                      {
+                      parent.contents.location.href = "CHM_frame_toc_notree.htm";
+                      }
+                   }
+            //-->
+       </script>
+</div>
+</body>
+<!--
+
+This file uses the dtree 2.05 javascript. Author: Geir Landrц
+Script is placed at: www.destroydrop.com/javascript/tree/
+Added to the script: openToURL function (Author: Y.Shindin)
+-->
+</html>

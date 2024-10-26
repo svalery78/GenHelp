@@ -1,0 +1,120 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Требования к первоисточнику</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_realizatsiya_kontseptsii_edinogo_p_.htm?back','_podgotovka_pervoistotchnika_.htm?forw');synctoc('_trebovaniya_k_pervoistotchniku_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Реализация концепции единого первоисточника " 
+				href="_realizatsiya_kontseptsii_edinogo_p_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Подготовка первоисточника " 
+				href="_podgotovka_pervoistotchnika_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_podgotovka_ishodnogo_dokumenta_.htm">Подготовка исходного документа</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Требования к первоисточнику</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_trebovaniya_k_pervoistotchniku_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h2 >  Требования к первоисточнику</span></h2>
+
+<p class=MsoNormal>Файл Word, являющийся первоисточником, должен удовлетворять ряду требований. Большинство этих требований на практике учитывается авторами документации, подготавливаемой средствами Word. Соблюдение этих правил в полном объеме сократит затраты на подготовку ЭС.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Первоисточник должен быть подготовлен в соответствии со стилевой дисциплиной. Это означает, что для каждого приема форматирования, применяемого в тексте, предусмотрен конкретный стиль Word. И наоборот, каждый стиль, использованный в документе, предназначен для выполнения только определенного вида форматирования текста. GenHelp рассчитан на расширенный состав стилей, применяемых в пакете ESP.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Стили, использованные в первоисточнике, должны подключаться из внешнего шаблона (файла с расширением <span class=FileNameUnix>.dot</span>). Сам файл документа не должен включать собственных стилей. Такой подход позволяет подключить к документу любой подходящий внешний шаблон, не нанося внешнему виду документа искажений формата.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Стили абзацев (параграфов) <em>заголовков</em> в тексте (так называемые <em>outline-стили</em>) должны иметь определенные имена. Так, заголовки уровня 1 в исходном документе должны быть набраны стилем <span class=CODE>Heading&nbsp;1</span> (<span class=Code0>Заголовок&nbsp;1</span></span> в русской версии </span>Word</span>) и иметь свойство параграфа <span class=CODE>OutlineLevel</span>, равное <span class=CODE>Level&nbsp;1</span>, заголовки уровня 2 — соответственно стилем <span class=CODE>Heading&nbsp;2 и иметь </span>значение <span class=CODE>Level&nbsp;2</span> и т.п. GenHelp разрешает применение и других outline-стилей, но в этом случае их надо задавать в виде параметров программы перед запуском генерации ЭС.</span></p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Не рекомендуется оставлять в документе пустые абзацы (параграфы) вообще и в особенности пустые параграфы, имеющие признаки outline-стилей. Здесь и далее под равнозначными терминами  &quot;абзац&quot; и &quot;параграф&quot; мы будем понимать совокупность слов, заканчивающуюся символом конца параграфа (<img border=0 width=18 height=16 src="DOCIMG_files/image012.jpg"></span>). </p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>При расстановке внутренних ссылок используйте гиперссылки (hyperlinks), а не перекрестные ссылки (см. раздел &quot;<a href="_podgotovka_pervoistotchnika_.htm#_Подготовка_первоисточника">Подготовка первоисточника</a>&quot;).</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>В том случае, если какой-либо раздел первоисточника заканчивается маркированным или нумерованным списком, размещайте после последнего параграфа этого списка пустой параграф в стиле <span class=Code0>Gap</span>.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>При подготовке документа в Word рекомендуется отключить опции Word, позволяющие проводить автоматическое форматирование и автоматическую замену набираемого вами текста. Также не рекомендуется для разработки первоисточника использовать в Word т.н. &quot;smart quotes&quot;.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Документ не должен содержать текста в режиме исправления (Track Changes). Все правки должны быть приняты, а режим отключен. Если необходимо вести правки, то сохраняйте для проекта GenHelp отдельную копию файла без правок. </p>
+
+<p class=MsoNormal>Установите опции работы Word следующим образом (способы открытия приведенных далее вкладок соответствующих форм настройки могут различаться в зависимости от версии Word):</p>
+
+<p class=MsoListNumber >1.     На&nbsp;вкладке&nbsp;<span class=DFN>Autoformat&nbsp;As&nbsp;You&nbsp;Type</span></p>
+
+<p class=MsoListBullet2 ><span class=DFN> <span class=BulChar2 >&#149;    </span></span>снимите&nbsp;отметки&nbsp;с&nbsp;флажков&nbsp;<span class=DFN>Headings</span>, <span class=DFN>Borders, Tables, Automatic bulleted lists</span> и <span class=DFN>Automatic numbered lists.</span></p>
+
+<p class=MsoListBullet2 ><span class=DFN> <span class=BulChar2 >&#149;    </span></span>снимите&nbsp;отметку&nbsp;с&nbsp;опции<span class=CODE> &quot;Straight quotes&quot; with &quot;smart quotes&quot;</span>.</p>
+
+<p class=MsoListNumber >2.     На&nbsp;вкладке&nbsp;<span class=DFN>Autoformat</span></p>
+
+<p class=MsoListBullet2 ><span class=DFN> <span class=BulChar2 >&#149;    </span></span>снимите&nbsp;отметки с флажков <span class=DFN>Headings</span>, <span class=DFN>Lists, Automatic bulleted lists</span> и <span class=DFN>Other paragraphs.</span></p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span>снимите&nbsp;отметку&nbsp;с&nbsp;опции<span class=CODE> &quot;Straight quotes&quot; with &quot;smart quotes&quot;</span>.</p>
+
+<p class=Gap><span class=DFN>&nbsp;</span></span></p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_realizatsiya_kontseptsii_edinogo_p_.htm">Реализация концепции единого первоисточника</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_podgotovka_pervoistotchnika_.htm">Подготовка первоисточника</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

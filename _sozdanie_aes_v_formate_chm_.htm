@@ -1,0 +1,95 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Создание ЭС в формате CHM</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_zavershenie_sozdaniya_help_.htm?back','_polutchenie_dokumenta_v_formate_do_.htm?forw');synctoc('_sozdanie_aes_v_formate_chm_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Завершение создания Help " 
+				href="_zavershenie_sozdaniya_help_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Получение документа в формате DOC " 
+				href="_polutchenie_dokumenta_v_formate_do_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_generatsiya_aes_.htm">Генерация ЭС</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Создание ЭС в формате CHM</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_sozdanie_aes_v_formate_chm_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h3 >  Создание ЭС в формате CHM</h3>
+
+<p class=MsoNormal>Для создания ЭС в формате CHM установите флажок <span class=DFN>CHM</span><span class=DFN> </span>на вкладке <span class=DFN>Generate</span>. Одновременно установится и флажок <span class=DFN>HTML</span><span class=DFN>, </span>так как для генерации в формат CHM GenHelp сначала проводит генерацию в формат HTML, а уже затем (на этапе исполнения файла <span class=FileNameUnix>complete.bat</span>) пользуется полученными файлами HTML для создания CHM. Получаемый в результате работы GenHelp файл <span class=FileNameUnix>CHM Project.chm</span><span class=FileNameUnix> </span>и есть ЭС в формате CHM. </p>
+
+<p class=MsoNormal>Если оформление ЭС или другие данные внешнего вида вас не устраивает, то используется следующий общий подход к доработке ЭС:</p>
+
+<p class=MsoListNumber >1.     Поместите в папку замещения <span class=FileNameUnix>Update </span>шаблон файла <span class=FileNameUnix>CHM Project.hhp</span><span class=FileNameUnix>. </span>Затем отредактируйте этот файл с учетом ваших требований, подключите новые файлы, нужные для проекта (например, таблицу контекстов) и т.п. </p>
+
+<p class=MsoListNumber >2.     Учтите другие возможности переоформления ЭС (см. примеры из разд. &quot;<a href="_nastrojka_vneshnego_vida_aes_v_for_.htm#_Настройка_внешнего_вида">Настройка внешнего вида ЭС в формате HTML</a>&quot;). Если вы выполняете какие-либо ручные исправления, то подумайте о том, что эти операции могут быть автоматизированы средствами поиска/замены текста (путем подключения внешних утилит командной строки в файл <span class=FileNameUnix>complete.bat</span>).</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_aetapy_generatsii_aes_v_formate_ht_.htm">Этапы генерации ЭС в формате HTML</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_polutchenie_dokumenta_v_formate_do_.htm">Получение документа в формате DOC</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_postroenie_kontekstno_zavisimoj_ae_.htm">Построение контекстно-зависимой ЭС</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

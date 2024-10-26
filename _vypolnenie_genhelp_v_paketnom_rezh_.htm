@@ -1,0 +1,132 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Выполнение GenHelp в пакетном режиме</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_kak_sozdatq_novyj_skin_.htm?back','_prilozheniya_.htm?forw');synctoc('_vypolnenie_genhelp_v_paketnom_rezh_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Как создать новый скин " 
+				href="_kak_sozdatq_novyj_skin_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Приложения " 
+				href="_prilozheniya_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Выполнение GenHelp в пакетном режиме</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_vypolnenie_genhelp_v_paketnom_rezh_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h2 >  Выполнение GenHelp в пакетном режиме</h2>
+
+<p class=MsoNormal>GenHelp разрабатывалась с учетом возможности ее исполнения в форме вызова утилиты командной строки. Для работы в этом режиме рекомендуется создать <span class=FileNameUnix>bat</span>-файл, содержащий команду на вызов GenHelp. Запуск в пакетном режиме предполагает, что исходный текст и параметры GenHelp &quot;отлажены&quot;.</p>
+
+<p class=MsoNormal>В процессе своего исполнения в пакетном режиме GenHelp может выдавать окна сообщений, связанных с ошибками в параметрах. При этом работа GenHelp завершается.</p>
+
+<p class=MsoNormal>Перед выполнением проекта в пакетном режиме проект должен быть занесен в файл&nbsp;<span class=FileNameUnix>projects_ini</span>. Во&nbsp;время генерации проекта в пакетном режиме GenHelp не обновляет информацию о проекте в файле&nbsp;<span class=FileNameUnix>projects_ini</span>.</p>
+
+<p class=MsoNormal>Формат команды исполнения GenHelp следующий:</p>
+
+<p class=MsoListContinue><span class=CODE>&quot;App\GenHelp4.exe&quot; [проект]</span></p>
+
+<p class=MsoListContinue><em>где</em></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="87%"
+ >
+ <tr>
+  <td width="17%" valign=top >
+  <p class=TableNormal><span   class=CODE>App</span></p>
+  </td>
+  <td width="82%" valign=top >
+  <p class=TableNormal>полный путь к папке, содержащей <span   class=FileNameUnix>GenHelp4.exe</span>. Если путь содержит   пробелы, то весь путь (включая текст <span class=FileNameUnix>GenHelp4.exe</span>) надо заключить в апострофы.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="17%" valign=top >
+  <p class=TableNormal><span   class=CODE>проект</span></p>
+  </td>
+  <td width="82%" valign=top >
+  <p class=TableNormal>полный путь к файлу проекта GenHelp.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal align=left >&nbsp;</p>
+
+<p class=MsoListContinue><span class=DFN>Пример файла </span><span class=FileNameUnix>GenHelp.bat</span>.</p>
+
+<p class=MsoListContinue><span class=CODE>C:\GenHelp\GenHelp4.exe C:\Prj\ICAT2\SS-ICAT2-OH.ini</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sozdanie_novogo_proekta_.htm">Создание нового проекта</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vybor_suschestvuyuschego_proekta_.htm">Выбор существующего проекта</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_nastrojka_parametrov_generatsii_pr_.htm">Настройка параметров генерации проекта</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_generatsiya_aes_.htm">Генерация ЭС</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_rabota_s_gotovoj_aes_v_formate_htm_.htm">Работа с готовой ЭС в формате HTML</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_rabota_s_gotovoj_aes_v_formate_chm_.htm">Работа с готовой ЭС в формате CHM</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_nastrojka_vneshnego_vida_aes_v_for_.htm">Настройка внешнего вида ЭС в формате HTML</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_kak_sozdatq_novyj_skin_.htm">Как создать новый скин</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

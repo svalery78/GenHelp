@@ -1,0 +1,107 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Формат CHM</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_postroenie_kontekstno_zavisimoj_ae_.htm?back','_format_html_.htm?forw');synctoc('_format_chm_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Построение контекстно-зависимой ЭС " 
+				href="_postroenie_kontekstno_zavisimoj_ae_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Формат HTML " 
+				href="_format_html_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_generatsiya_aes_.htm">Генерация ЭС</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_postroenie_kontekstno_zavisimoj_ae_.htm">Построение контекстно-зависимой ЭС</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Формат CHM</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_format_chm_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h4 >Формат CHM </h4>
+
+<p class=MsoNormal>Для построения контекстно-зависимой ЭС формата CHM необходимо согласовать с разработчиками приложения имена файлов HTML, которые надо вызывать из ЭС в зависимости от логики приложения. Эти данные могут быть сведены разработчиком приложения в специальную ресурсную таблицу.</p>
+
+<p class=MsoNormal>Ниже приведен пример командной строки, которую надо сформировать для вызова на просмотр готовой ЭС с именем <span class=FileNameUnix>CHM&nbsp;Project.chm.</span> Просмотр начнется со страницы, соответствующей файлу <span class=FileNameUnix>_user_manual_overview_.htm.</span> Просмотр выполняется с помощью программы <span class=FileNameUnix>hh.exe</span>, входящей в HTML Help Workshop.</p>
+
+<p class=MsoNormal><span class=CODE>hh&nbsp;&quot;C:\Prj\ICAT2\OnlineHelp\SS-ICAT2-OH\<br> CHM Project.chm::/_user_manual_overview_.htm&quot;</span></span></p>
+
+<p class=MsoNormal>Полученный в результате генерации файл <span class=FileNameUnix>CHM&nbsp;Project.chm</span> необходимо открыть (двойным щелчком в Проводнике Windows) и тщательно протестировать (ошибки, некорректные ссылки и т.п.). </p>
+
+<p class=MsoNormal>Для &quot;ручной&quot; доработки ЭС в формате CHM необходимо учесть следующее. В составе рабочей папки имеется файл <span class=FileNameUnix>CHM&nbsp;Project.hhp</span>&nbsp;— шаблон стандартного файла проекта для Microsoft HTML Help Workshop. Возможно, некоторые параметры проекта вам придется перед компиляцией модифицировать в соответствии с исходными данными создаваемой справочной системы. В частности, может потребоваться: </p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>изменить имя файла CHM, заголовок окна, локализацию продукта (язык), </p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>указать дополнительные закладки в панели навигации, </p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>создать опции поиска по индексу и полнотекстового поиска и т.п. </p>
+
+<p class=MsoNormal>Подробно эти сведения изложены в разделе Help программы Microsoft HTML Help Workshop. </p>
+
+<p class=MsoNormal>Файл проекта затем должен быть откомпилирован в Microsoft HTML Help Workshop. Для компиляции откройте <span class=FileNameUnix>CHM&nbsp;Project.hhp</span> в Microsoft HTML Help Workshop и нажмите кнопку <span class=DFN>Save All Files And Compile</span><span class=DFN>.</span> Запускается программа <span class=FileNameUnix>hhc.exe</span>, которая компилирует проект.</p>
+
+<p class=MsoNormal>Описание программы HTML HELP Workshop, формата CHM и методика построения контекстно-зависимой ЭС, в том числе материалы для языков VB и C++ имеются на сайтах <a href="http://mvps.org/htmlhelpcenter/">http://mvps.org/htmlhelpcenter/</a>  (на английском языке) и <a href="http://hyperhelp.dtn.ru/hhtech.htm">http://hyperhelp.dtn.ru/hhtech.htm</a>  (на русском языке).</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_format_html_.htm">Формат HTML</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

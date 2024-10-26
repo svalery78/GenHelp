@@ -1,0 +1,17 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=CHM Project.chm
+Contents file=TOC.hhc
+Default Font=,8,1
+Default Window=CHM Demonstration
+Default topic=Home.htm
+Display compile progress=No
+Full-text search=Yes
+Index file=Index.hhk
+Language=0x419 Russian
+Title=Домашняя страница
+
+[WINDOWS]
+CHM Demonstration=,"TOC.hhc","Index.hhk","Home.htm",,,,,,0x3520,230,0x300c,[64,44,965,720],,,,,,,0
+
+[INFOTYPES]

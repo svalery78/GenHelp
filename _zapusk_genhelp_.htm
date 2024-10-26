@@ -1,0 +1,121 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Запуск GenHelp</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_nastrojka_brauzera_.htm?back','_poryadok_razrabotki_aes_.htm?forw');synctoc('_zapusk_genhelp_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Настройка браузера " 
+				href="_nastrojka_brauzera_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Порядок разработки ЭС " 
+				href="_poryadok_razrabotki_aes_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_natchalo_raboty_.htm">Начало работы</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Запуск GenHelp</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_zapusk_genhelp_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h2 >  Запуск GenHelp</h2>
+
+<p class=MsoNormal>Выполните <span class=DFN>Start &gt; Programs &gt; GenHelp &gt; Start GenHelp </span> или запустите программу <span class=FileNameUnix>GenHelp4.exe</span> из папки <span class=FileNameUnix>APP.</span> Программа отобразит форму <span class=DFN>GenHelp</span>. В нижней части этой формы расположена область сообщений программы, в которой выводится сообщение о параметрах текущего проекта.</p>
+
+<table class=TableImage  border=0 cellspacing=0 cellpadding=0 widthdeleted646
+ >
+ <tr>
+  <td widthdeleted38 valign=top >
+  <p class=TableImageBody$4 ><img border=0 widthdeleted533 height=306   src="DOCIMG_files/image010.jpg"></span></p>
+  </td>
+  <td 
+  widthdeleted112><p class='MsoNormal'>&nbsp;</td>   </span>  </tr>  <tr>   <td widthdeleted646 colspan=2 valign=top >   <p class=TableImageCaption><em>Рисунок   </em><em>4</em><em>. </em><em>Запуск программы GenHelp</em></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Список проектов может быть пустым.</p>
+
+<p class=MsoNormal>Подробно работа с программой изложена в разд. &quot;<a href="_rabota_s_genhelp_.htm#_Работа_с_GenHelp">Работа с GenHelp</a>&quot;. GenHelp также может быть запущена как утилита командной строки. См. разд. &quot;<a href="_vypolnenie_genhelp_v_paketnom_rezh_.htm#_Выполнение_GenHelp_в_1">Выполнение GenHelp в пакетном режиме</a>&quot;.</p>
+
+<p class=MsoNormal>Во время работы с программой вы можете нажать клавишу &lt;<b>F1</b>&gt; для получения помощи. Система запустит файл в формате CHM, подготовленный на основе материала настоящего руководства (с использованием GenHelp). В состав дистрибутива входят файлы помощи на русском и английском языках. Для того чтобы сменить язык помощи, закройте GenHelp и измените в файле <span class=FileNameUnix>APP\genhelp.ini, </span>в секции <span class=CODE>[Messasges]</span> значение параметра HELPFILE, так, чтобы он указывал относительный путь доступа к необходимому вам файлу CHM. Например, для того, чтобы работать с английским вариантом файла, путь доступа может быть указан как</p>
+
+<p class=MsoListContinue ><span class=CODE>    </span></span><span class=CODE>HELPFILE=GenHelp_Documentation_eng\Output\CHM Project.chm</span></p>
+
+<p class=MsoNormal>Для активизации измененных настроек сохраните файл <span class=FileNameUnix>genhelp.ini </span>и перезапустите GenHelp.</p>
+
+<p class=MsoNormal><span class=DFN>Примечание</span>. Для корректного вызова файла помощи необходимо, чтобы окно запущенного на исполнение файла помощи имело заголовок <span class=DFN>Help on GenHelp</span> (независимо от языка, на котором разработан файл). Заголовок окна можно изменить в соответствующем файле проекта генерации HTML Help.</p>
+
+<p class=MsoNormal>Подготовка нового проекта описана в разделе &quot;<a href="_sozdanie_novogo_proekta_.htm#_Создание_нового_проекта">Создание нового проекта</a>&quot;.</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_osnovnye_vozmozhnosti_genhelp_.htm">Основные возможности GenHelp</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_usloviya_ispolqzovaniya_genhelp_.htm">Условия использования GenHelp</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_ustanovka_genhelp_.htm">Установка GenHelp</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_naznatchenie_fajlov_genhelp_.htm">Назначение файлов GenHelp</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_nastrojka_i_lokalizatsiya_.htm">Настройка и локализация</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_nastrojka_brauzera_.htm">Настройка браузера</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_poryadok_razrabotki_aes_.htm">Порядок разработки ЭС</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

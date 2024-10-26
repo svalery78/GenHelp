@@ -1,0 +1,121 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Получение документа в формате DOC</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_sozdanie_aes_v_formate_chm_.htm?back','_postroenie_kontekstno_zavisimoj_ae_.htm?forw');synctoc('_polutchenie_dokumenta_v_formate_do_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Создание ЭС в формате CHM " 
+				href="_sozdanie_aes_v_formate_chm_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Построение контекстно-зависимой ЭС " 
+				href="_postroenie_kontekstno_zavisimoj_ae_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_generatsiya_aes_.htm">Генерация ЭС</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Получение документа в формате DOC</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_polutchenie_dokumenta_v_formate_do_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h3 >  Получение документа в формате DOC</h3>
+
+<p class=MsoNormal>Для создания версии документа для печати установите флажок <span class=DFN>CHM</span><span class=DFN> </span>на вкладке <span class=DFN>Generate</span>. Результирующий файл с именем <span class=FileNameUnix>Printed_abc.doc </span>(где <span class=FileNameUnix>abc.doc</span>&nbsp;— имя первоисточника) будет размещен в папке <span class=FileNameUnix>Output</span>.</p>
+
+<p class=MsoNormal>Как уже указывалось выше (см. разд. &quot;<a href="_aetapy_generatsii_aes_v_formate_ht_.htm#_Этапы_генерации_ЭС">Этапы генерации ЭС в формате HTML</a>&quot;, разд. &quot;<a href="_postroenie_predmetnogo_ukazatelya_.htm#_Построение_предметного_указателя">Построение предметного указателя</a>&quot;), первоисточник может содержать поля XE в двух форматах: стандартном XE и в формате XE-BSI. GenHelp &quot;понимает&quot; оба формата. Однако с такими полями нельзя передавать документ заказчику, особенно в том случае, когда предполагается, что заказчик может самостоятельно продолжить разработку документа. Для этого GenHelp в процессе создания печатного формата преобразует поля XE-BSI в обычные поля XE. При этом из одного поля в формате XE-BSI получается несколько полей в формате XE. </p>
+
+<p class=MsoNormal>Например, приведенную выше комбинацию полей </p>
+
+<p class=MsoListContinue>{XE &quot;Уровень2 %уровень 1a %уровень 1b … %уровень 1n&quot; \f &quot;bsi&quot; }</p>
+
+<p class=MsoNormal>GenHelp заменит на последовательность</p>
+
+<p class=MsoListContinue>{XE &quot;Уровень1a:уровень 2&quot; }{ XE &quot;Уровень1b:уровень 2&quot; } … <br> { XE &quot;Уровень1n:уровень 2&quot; }</p>
+
+<p class=MsoNormal>В процессе создания печатного документа GenHelp выполняет следующие этапы:</p>
+
+<p class=MsoListNumber >1.     Загрузка первоисточника в Word.</p>
+
+<p class=MsoListNumber >2.     Удаление текста, помеченного к удалению закладками (см. параметр <span class=DFN>Delete for DOC (list of bookmark prefixes) </span> на вкладке <span class=DFN>Bookmarks</span>).</p>
+
+<p class=MsoListNumber >3.     Выполнение подготовленного макроса предварительной обработки текста (<span class=FileNameUnix>gh_start</span>), если он указан пользователем (подробнее см. разд. &quot;<a href="_vyzov_polqzovatelqskogo_makrosa_ob_.htm#_Вызов_пользовательского_макроса">Вызов пользовательского макроса обработки текста перед разметкой документа</a>&quot;).</p>
+
+<p class=MsoListNumber >4.     Сканирование всех полей и переделка индексных полей формата<span class=CODE> XE-BSI </span>в стандартный формат <span class=CODE>XE</span>.</p>
+
+<p class=MsoListNumber >5.     Замена шрифта в гиперссылках (синий подчеркнутый текст заменяется на черный неподчеркнутый).</p>
+
+<p class=MsoListNumber >6.     Обновление полей, в том числе поля <span class=CODE>TOC</span> (содержание) и <span class=CODE>Index</span> (предметный указатель).</p>
+
+<p class=MsoListNumber >7.     Выполнение подготовленного макроса завершающей обработки текста (<span class=FileNameUnix>gh_complete_doc</span>), если он указан пользователем. Правила вызова этого макроса такие же, как и для макроса <span class=FileNameUnix>gh_start</span>. Если такой макрос предусмотрен пользователем, то он должен быть размещен в файле <span class=FileNameUnix>gh_user.dot </span>(который пользователь должен разместить в папке <span class=FileNameUnix>Update</span>)<span class=FileNameUnix>. </span>В конце своей работы макрос должен обновить все поля в документе (включая поле <span class=DFN>TOC</span>).</p>
+
+<p class=MsoListNumber ><span class=FileNameUnix>8.  </span>Сохранение файла в папку <span class=FileNameUnix>Output</span> с именем <span class=FileNameUnix>Printed_имяпервоисточника.doc. </span>Например, если первоисточник имеет имя <span class=FileNameUnix>SS-ICAT2-700S-(UserGuide).doc</span>, то файл в печатном формате будет сохранен с именем Printed_<span class=FileNameUnix>SS-ICAT2-700S-(UserGuide).doc.</span></p>
+
+<p class=MsoListNumber ><span class=FileNameUnix>9.  </span>Закрытие файла и сеанса Word<span class=FileNameUnix>.</span></p>
+
+<p class=Gap>&nbsp;</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_aetapy_generatsii_aes_v_formate_ht_.htm">Этапы генерации ЭС в формате HTML</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sozdanie_aes_v_formate_chm_.htm">Создание ЭС в формате CHM</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_postroenie_kontekstno_zavisimoj_ae_.htm">Построение контекстно-зависимой ЭС</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

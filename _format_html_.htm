@@ -1,0 +1,124 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Формат HTML</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_format_chm_.htm?back','_rabota_s_gotovoj_aes_v_formate_htm_.htm?forw');synctoc('_format_html_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Формат CHM " 
+				href="_format_chm_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Работа с готовой ЭС в формате HTML " 
+				href="_rabota_s_gotovoj_aes_v_formate_htm_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_generatsiya_aes_.htm">Генерация ЭС</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_postroenie_kontekstno_zavisimoj_ae_.htm">Построение контекстно-зависимой ЭС</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Формат HTML</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_format_html_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h4 >Формат HTML </h4>
+
+<p class=MsoNormal>При создании контекстно-зависимой ЭС формата HTML необходимо согласовать с разработчиками приложения имена HTML-файлов, соответствующих всем возможным вариантам вызова ЭС. </p>
+
+<p class=MsoNormal>Для вызова необходимой страницы контекстно-зависимой ЭС приложение должно динамически построить HTML-файл и вызвать его на исполнение.</p>
+
+<p class=MsoNormal>Примерный вид этого файла почти полностью соответствует виду файла <span class=FileNameUnix>CHM_frame_index_search_main.htm</span>, который входит в каждый скин:</p>
+
+<table class=TableImageNormal border=0 cellspacing=0 cellpadding=0 widthdeleted"100%"
+ >
+ <tr>
+  <td widthdeleted"100%" valign=top >
+  <p class=TableImageBody ><a   name="_Toc346638569"></a> <a name="_Работа_с_готовой"></a> <span class=Code0>&lt;html&gt;</span></span></p>
+  <p class=TableImageBody ><span class=Code0>&lt;head&gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>&lt;title&gt;System   Name&lt;/title&gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>&lt;META   http-equiv=&quot;content-type&quot; content=&quot;text/html;   charset=UTF-8&quot;&gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>&lt;/head&gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>&lt;frameset   rows=&quot;113,*&quot; frameborder=&quot;0&quot; noresize &gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>  &lt;frame name=&quot;menu&quot;   scrolling=&quot;no&quot; src=&quot;CHM_frame_menu.htm&quot;   marginwidthdeleted&quot;0&quot; marginheight=&quot;0&quot;   frameborder=&quot;0&quot; noresize=&quot;&quot;&gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>  &lt;frameset cols=&quot;30%,*&quot;   frameborder=&quot;0&quot;&gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>    &lt;frame name=&quot;contents&quot;   src=&quot;CHM_frame_toc.htm&quot; scrolling=&quot;auto&quot;  border=&quot;0&quot;   frameborder=&quot;0&quot;/&gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>    &lt;frame name=&quot;main&quot;   src=&quot;_how_to_check_out_.htm&quot; scrolling=&quot;auto&quot;&gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>  &lt;/frameset&gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>  &lt;noframes&gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>  &lt;body &gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>  &lt;p&gt;Your browser does not support   frames.&amp;nbsp; ;(&lt;/p&gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>  &lt;/body&gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>  &lt;/noframes&gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>&lt;/frameset&gt;</span></p>
+  <p class=TableImageBody ><span class=Code0>&lt;/html&gt;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td widthdeleted"100%" valign=top >
+  <p class=TableImageCaption><em>Рисунок </em><em>13</em><em>. </em></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_format_chm_.htm">Формат CHM</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

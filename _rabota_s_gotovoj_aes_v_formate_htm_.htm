@@ -1,0 +1,132 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Работа с готовой ЭС в формате HTML</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_format_html_.htm?back','_soderzhanie_aes_.htm?forw');synctoc('_rabota_s_gotovoj_aes_v_formate_htm_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Формат HTML " 
+				href="_format_html_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Содержание ЭС " 
+				href="_soderzhanie_aes_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Работа с готовой ЭС в формате HTML</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_rabota_s_gotovoj_aes_v_formate_htm_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h2 >Работа с готовой ЭС в формате HTML </span></h2>
+
+<p class=MsoNormal>Как уже указывалось, наименования элементов интерфейса и сообщения сгенерированной ЭС в GenHelp указаны на английском языке. Текст этих сообщений вы можете изменить (подробнее см. раздел &quot;<a href="_nastrojka_vneshnego_vida_aes_v_for_.htm#_Настройка_внешнего_вида">Настройка внешнего вида ЭС в формате HTML</a>&quot;). Для определенности будем считать, что ЭС создана на основе скина GenHelp_eng.</p>
+
+<p class=MsoNormal>Получаемый в результате работы GenHelp набор файлов образует ЭС, которая имеет вид справочной системы. Для проверки работоспособности созданной ЭС запустите файл <span class=FileNameUnix>CHM_frame_index_search_main.htm</span> из папки <span class=FileNameUnix>Output</span>.</p>
+
+<p class=MsoNormal>Созданная ЭС имеет кнопки: <span class=DFN>Contents,</span> <span class=DFN>Index, Search, </span>кнопки со стрелками, кнопки <span class=DFN>Back</span>, <span class=DFN>Forw</span>, а также кнопка вызова помощи по ЭС (<span class=DFN>Using</span>).</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Щелчок на кнопке <span class=DFN>Contents</span><span class=DFN> </span>вызывает загрузку содержания ЭС в левый навигационный фрейм.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Щелчок на кнопке <span class=DFN>Index</span><span class=DFN> </span>вызывает загрузку ПУ в левый навигационный фрейм. Если исходный документ содержит индексные поля, то в ЭС будут включены средства работы с индексом. В случае если исходный документ не содержит индексных полей, будет построена пустая страница ПУ, содержащая фразу</p>
+
+<p class=MsoListContinue><span class=CODE>The Index was not developed for this Help.</span></p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Для просмотра раздела ЭС из содержания или из ПУ выберите в левом фрейме необходимую гиперссылку.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Для поиска информации наберите контекст поиска в окне поиска и щелкните на кнопке <span class=DFN>Search</span>. См. раздел &quot;<a href="_poisk_informatsii_sredstvami_aes_.htm#_Поиск_информации_средствами_1">Поиск информации средствами ЭС</a>&quot;.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>С помощью кнопок со стрелками навигации по соседним разделам ЭС (<span class=DFN>Previous, Next</span>) осуществляется навигация по системе помощи в режиме просмотра книги. Кнопки (или гиперссылки) с тем же назначением размещены внизу каждого раздела ЭС.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>С помощью кнопок со стрелками навигации по истории просмотра страниц (<span class=DFN>Back, Forw</span>) осуществляется переход к разделам, уже просмотренным ранее. История посещений страниц ЭС не сохраняется при закрытии ЭС.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Щелчок на кнопке <span class=DFN>Using</span> вызывает краткое руководство по пользованию системой помощи. Редактировать текст этого руководства можно в файле <span class=FileNameUnix>CHM_frame_help.htm</span>.</p>
+
+<p class=MsoNormal>ЭС может работать в двух режимах: <em>режиме навигации</em> и в <em>режиме поиска</em>.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>В режиме навигации происходит автоматическая синхронизация просматриваемых разделов ЭС и содержания. В режиме навигации поле поиска очищено.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Режим поиска включается, когда пользователь работает с Предметным указателем, Избранным или выполняет поиск, либо просматривает результаты поиска. В режиме поиска поле поиска имеет заданное пользователем значение критерия поиска. В режиме поиска не происходит синхронизация разделов ЭС (вызываемых на просмотр из списка найденных разделов) и содержания. </p>
+
+<p class=MsoListContinue>Возвратиться в режим навигации вы можете одним из следующих способов:</p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span>щелкнуть на кнопке <span class=DFN>Contents</span>, чтобы отобразить ЭС с домашней страницы;</p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span>щелкнуть на гиперссылке <span class=DFN>Synchronize TOC</span>, размещенной в верхней части каждого раздела ЭС. Система отобразит содержание ЭС в соответствии с именем текущего раздела.</p>
+
+<p class=MsoNormal>Полученная ЭС имеет то достоинство, что в случае использования в составе Web-приложения ЭС не требует установки на места пользователей системы никаких файлов, так как все файлы ЭС можно разместить на сервере.</p>
+
+<p class=MsoNormal>Рекомендуется оценить корректность генерации ЭС. Проверьте правильность созданных ссылок и корректность переходов в готовой ЭС и в случае некорректной структуры исправьте ошибки в исходном документе и повторите шаги создания ЭС.</p>
+
+<p class=MsoNormal>Разумеется, полученная ЭС может быть доработана. Об этом см. раздел &quot;<a href="_nastrojka_vneshnego_vida_aes_v_for_.htm#_Настройка_внешнего_вида">Настройка внешнего вида ЭС в формате HTML</a>&quot;.</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sozdanie_novogo_proekta_.htm">Создание нового проекта</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vybor_suschestvuyuschego_proekta_.htm">Выбор существующего проекта</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_nastrojka_parametrov_generatsii_pr_.htm">Настройка параметров генерации проекта</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_generatsiya_aes_.htm">Генерация ЭС</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_rabota_s_gotovoj_aes_v_formate_chm_.htm">Работа с готовой ЭС в формате CHM</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_nastrojka_vneshnego_vida_aes_v_for_.htm">Настройка внешнего вида ЭС в формате HTML</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_kak_sozdatq_novyj_skin_.htm">Как создать новый скин</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vypolnenie_genhelp_v_paketnom_rezh_.htm">Выполнение GenHelp в пакетном режиме</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

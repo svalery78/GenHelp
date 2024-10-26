@@ -1,0 +1,128 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Поиск информации средствами ЭС</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_predmetnyj_ukazatelq_aes_.htm?back','_rabota_s_gotovoj_aes_v_formate_chm_.htm?forw');synctoc('_poisk_informatsii_sredstvami_aes_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Предметный Указатель ЭС " 
+				href="_predmetnyj_ukazatelq_aes_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Работа с готовой ЭС в формате CHM " 
+				href="_rabota_s_gotovoj_aes_v_formate_chm_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_rabota_s_gotovoj_aes_v_formate_htm_.htm">Работа с готовой ЭС в формате HTML</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Поиск информации средствами ЭС</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_poisk_informatsii_sredstvami_aes_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h3 >  Поиск информации средствами ЭС</h3>
+
+<p class=MsoNormal>Полученная ЭС имеет простые средства поиска информации. Для этого ЭС снабжена полем ввода контекста поиска и кнопкой <span class=DFN>Search</span><span class=DFN>.</span></p>
+
+<p class=MsoNormal>Контекст поиска может выглядеть в виде нескольких комбинаций слов, разделенных пробелами. Комбинация слов&nbsp;— это слово или набор слов, разделенных знаком плюса.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>В случае, когда в комбинации слов присутствует несколько слов, разделенных знаками &quot;+&quot;, то осуществляется поиск этих слов по принципу &quot;И&quot;. Например, если пользователь ввел &quot;<span class=CODE>система+может</span>&quot;, то в результатах поиска будут страницы, которые содержат одновременно слова &quot;<span class=CODE>система</span>&quot; и &quot;<span class=CODE>может</span>&quot;.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Если в строке поиска присутствует несколько слов или комбинаций, разделенных знаком пробела, то поиск осуществляется по принципу &quot;ИЛИ&quot;. Например, если пользователь ввел в строку поиска &quot;<span class=CODE>система может</span>&quot;, то в результатах поиска будут страницы, которые содержат либо слова &quot;<span class=CODE>система</span>&quot;, либо &quot;<span class=CODE>может</span>&quot;.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>При сравнении информации во время поиска система переводит данные в верхний регистр. Если необходимо провести точный поиск с учетом регистра, то перед соответствующим словом, входящим в комбинацию слов для поиска, необходимо указать символ восклицательного знака. Например, для того, чтобы найти страницы, содержащие точно слово &quot;<span class=CODE>Система</span>&quot; (с заглавной буквы) и одновременно слово &quot;<span class=CODE>может</span>&quot; (либо с заглавной, либо с прописной буквы), контекст поиска должен быть указан как</p>
+
+<p class=MsoListContinue ><span class=CODE>*!Система+может</span></p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Если поиск будет неуспешным, то ЭС выдаст об этом сообщение. </p>
+
+<p class=MsoListContinue ><span class=CODE>*No topics found</span></p>
+
+<p class=MsoListContinue ><span class=CODE>*</span>Из-за возможности некорректности в работе системы, не рекомендуется использование символов: ^ и кавычек. Также не следует внутри слов, входящих в комбинацию поиска, указывать знаки препинания и символ подчеркивания.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Если контекст поиска не задан, то ЭС выдаст сообщение</p>
+
+<p class=MsoListContinue><span class=CODE>Specify string, then click SEARCH</span></p>
+
+<p class=MsoListContinue>Локализация всех сообщений выполнена на уровне скина путес создания соответствующих определяемых переменных и шаблонов файлов, содержащих эти переменные.</p>
+
+<p class=MsoListBullet > <span class=BulChar >&#149;   </span>Если система найдет разделы, содержащие введенный контекст, то она отобразит список найденных разделов в левом фрейме ЭС. Если щелкнуть на одной из гиперссылок в левом фрейме, то ЭС выдаст в правом фрейме раздел, соответствующий этой гиперссылке, причем найденные контексты будут подсвечены. Цвет подсветки можно настроить (см. раздел &quot;<a href="_nastrojka_vneshnego_vida_aes_v_for_.htm#_Настройка_внешнего_вида">Настройка внешнего вида ЭС в формате HTML</a>&quot;. На приведенном снимке экрана настроен не только цвет подсветки, но и установлен жирный шрифт.</p>
+
+<table class=TableImageNormal border=0 cellspacing=0 cellpadding=0 widthdeleted530
+ >
+ <tr>
+  <td widthdeleted"100%" valign=top >
+  <p class=TableImageBody ><img border=0 widthdeleted530 height=96   src="DOCIMG_files/image038.jpg"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td widthdeleted"100%" valign=top >
+  <p class=TableImageCaption><em>Рисунок </em><em>16</em><em>. </em><em>Подсветка найденных контекстов</em></p>
+  </td>
+ </tr>
+</table>
+
+<p class=Gap>&nbsp;</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_soderzhanie_aes_.htm">Содержание ЭС</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_predmetnyj_ukazatelq_aes_.htm">Предметный Указатель ЭС</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

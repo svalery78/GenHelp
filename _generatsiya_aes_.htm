@@ -1,0 +1,110 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Генерация ЭС</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_nastrojka_parametrov_generatsii_pr_.htm?back','_aetapy_generatsii_aes_v_formate_ht_.htm?forw');synctoc('_generatsiya_aes_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Настройка параметров генерации проекта " 
+				href="_nastrojka_parametrov_generatsii_pr_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Этапы генерации ЭС в формате HTML " 
+				href="_aetapy_generatsii_aes_v_formate_ht_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Генерация ЭС</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_generatsiya_aes_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h2 >  Генерация ЭС</h2>
+
+<p class=MsoNormal>Для генерации ЭС из подготовленного первоисточника выполните следующие шаги.</p>
+
+<p class=MsoListNumber >1.     Создайте новый проект (см. разд. &quot;<a href="_sozdanie_novogo_proekta_.htm#_Создание_нового_проекта">Создание нового проекта</a> <a href="#sec_sozdanie_novogo_proekta_">sec_sozdanie_novogo_proekta_</a>&quot;) или выберите существующий проект (см. разд. &quot;<a href="_vybor_suschestvuyuschego_proekta_.htm#_Выбор_существующего_проекта">Выбор существующего проекта</a>&quot;). Вы можете также сменить скин, но следует помнить, что если у вас в папке <span class=DFN>Update</span>подготовлены замены, то при другом скине они могут оказаться не вполне корректными.</p>
+
+<p class=MsoListNumber >2.     Определите или измените параметры генерации для проекта (см. разд. &quot;<a href="_nastrojka_parametrov_generatsii_pr_.htm#_Настройка_параметров_генерации">Настройка параметров генерации проекта</a>&quot;).</p>
+
+<p class=MsoListNumber >3.     Перед запуском процесса генерации необходимо закрыть все сессии Word и убедиться, что в системе нет &quot;зависших&quot; процессов Word или GenHelp. Если есть — удалить их (например, через менеджер процессов операционной системы).</p>
+
+<p class=MsoListNumber >4.     На вкладке&nbsp;<span class=DFN>Generate&nbsp;</span>щелкните на &nbsp;кнопке&nbsp;<span class=DFN>Generate Help</span>. Ждите окончания генерации. Время генерации сильно зависит от размера документа и количества полей XE и гиперссылок. </p>
+
+<p class=MsoNormal>Для наблюдения за процессом генерации можно установить флажок <span class=DFN>Detailed trace</span><span class=DFN>.</span></span> Если вы не хотите наблюдать за генерацией, то можно снять отметку с этого флажка. </p>
+
+<p class=MsoNormal>В GenHelp реализована возможность <a href="_vypolnenie_genhelp_v_paketnom_rezh_.htm#_Выполнение_GenHelp_в_1">пакетного исполнения</a> , что позволяет запускать программу из командной строки. Для пакетного режима также справедливо требование о недопустимости одновременно работающих посторонних процессов Word. Пакетный режим предполагает строго последовательное исполнение процессов Word и GenHelp из одного и того же командного файла. Как в случае диалоговой работы, так и при пакетном исполнении GenHelp формирует журнал сообщений генерации — файл <span class=FileNameUnix>GHtrace.log</span>, который размещается в папке <span class=FileNameUnix>Output (</span>в папке результата<span class=FileNameUnix>)</span>. </p>
+
+<p class=MsoNormal>Программа GenHelp разработана как клиент-серверная, где роль OLE-сервера выполняет Word. Другими словами, программа GenHelp передает в Word команды, которые тот исполняет: это поиск текста, установка режимов работы, открытие/чтение/закрытие файлов и т.п. Как уже указывалось выше, для устойчивой работы GenHelp в процессе генерации не рекомендуется работать с Word в диалоговом режиме, так как это может вызвать приостановку работы GenHelp, иногда с выдачей сообщения о подтверждении продолжения работы. Это может привести к ненужным потерям времени, а иногда и к прекращению работы GenHelp в результате неочевидных блокировок со стороны Word.</p>
+
+<p class=MsoNormal>Если по каким-то причинам работа GenHelp прервется, то следует иметь в виду, что перед повторным запуском GenHelp надо удалить процесс Word, который взаимодействовал с GenHelp. В противном случае &quot;новый&quot; Word будет пытаться завладеть монопольно ресурсами &quot;старого&quot; Word, что вызовет ненужные осложнения и потерю времени. Для удаления &quot;старого&quot; Word запустите менеджер процессов (например, в Windows XP: нажмите <span class=DFN>&lt;Ctll+Alt+Del&gt;</span>, затем выберите <span class=DFN>Task Manager</span>)<span class=DFN>.</span> На вкладке <span class=DFN>Processes</span> найдите запись <span class=CODE>Winword.exe</span>, выделите ее и выберите <span class=DFN>End Process</span>, затем подтвердите удаление процесса).</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sozdanie_novogo_proekta_.htm">Создание нового проекта</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vybor_suschestvuyuschego_proekta_.htm">Выбор существующего проекта</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_nastrojka_parametrov_generatsii_pr_.htm">Настройка параметров генерации проекта</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_rabota_s_gotovoj_aes_v_formate_htm_.htm">Работа с готовой ЭС в формате HTML</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_rabota_s_gotovoj_aes_v_formate_chm_.htm">Работа с готовой ЭС в формате CHM</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_nastrojka_vneshnego_vida_aes_v_for_.htm">Настройка внешнего вида ЭС в формате HTML</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_kak_sozdatq_novyj_skin_.htm">Как создать новый скин</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vypolnenie_genhelp_v_paketnom_rezh_.htm">Выполнение GenHelp в пакетном режиме</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

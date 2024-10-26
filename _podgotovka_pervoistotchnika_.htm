@@ -1,0 +1,148 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Подготовка первоисточника</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_trebovaniya_k_pervoistotchniku_.htm?back','_rabota_s_genhelp_.htm?forw');synctoc('_podgotovka_pervoistotchnika_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Требования к первоисточнику " 
+				href="_trebovaniya_k_pervoistotchniku_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Работа с GenHelp " 
+				href="_rabota_s_genhelp_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_podgotovka_ishodnogo_dokumenta_.htm">Подготовка исходного документа</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Подготовка первоисточника</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_podgotovka_pervoistotchnika_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h2 >  Подготовка первоисточника</span></h2>
+
+<p class=MsoNormal>Действия, описанные в этом разделе, необходимо выполнить на этапе создания первоисточника исходного документа (руководства пользователя, инструкции и т.п.) в виде файла Word (<span class=FileNameUnix>*.doc</span><span class=FileNameUnix>,</span><span class=FileNameUnix>*.docx</span>). Выполнять эти действия нужно тогда, когда структура документа (состав и названия разделов и подразделов) устоялась и больше меняться не будет. Лучше всего создавать ЭС тогда, когда текст первоисточника утвержден.</p>
+
+<p class=MsoNormal>Здесь и далее в руководстве по термином <em>раздел</em>мы будем понимать текст, расположенный между соседними параграфами, отформатированными outline-стилями. В этот текст также входит заголовок первого outline-стиля. Например, в текущий раздел входит заголовок раздела (&quot;Подготовка первоисточника&quot;) и текст до заголовка &quot;Работа с GenHelp&quot;. Заметьте, что при этом заголовки могут иметь разный уровень outline (как в случае текущего и следующего раздела настоящего документа).</p>
+
+<p class=MsoNormal>Опирайтесь на следующие правила.</p>
+
+<p class=MsoListNumber >1.     Если исходный документ содержит <em>глоссарий</em>, то он должен быть расположен в отдельном разделе документа. Статьи глоссария должны быть подготовлены единообразно, например, в табличном формате или в формате списка, где каждый нечетный параграф&nbsp; содержит выделенный (специальным стилем) текст наименования статьи, а каждый четный&nbsp;— текст определения. Пример внешнего вида глоссария приведен в документе <span class=FileNameUnix>PSTD-DOC-03-(Правила_Разработки_Глоссария)</span>.</p>
+
+<p class=MsoListNumber >2.     Расставьте <em>закладки</em> в документе (<span class=DFN>Insert&nbsp;&gt;&nbsp;Bookmark…</span>) на те подзаголовки в разделах, на которые возможны гиперссылки из других разделов (напр., на <em>статьи глоссария</em>). Расстановка своих собственных закладок даст вам полный контроль над закладками в документе.</p>
+
+<p class=MsoListContinue>При расстановке закладок соблюдайте единообразную систему префиксов имен. Например, закладки для имен разделов могут иметь префикс <span class=CODE><b>sec_</b></span>, рисунков&nbsp;— префикс <span class=CODE><b>fig_</b></span>, таблиц — <span class=CODE><b>tab_</b></span>, названий</span> статей глоссария — <span class=CODE><b>gl</b></span><span class=CODE><b>oss</b></span><span class=CODE><b>_</b></span> и т.п. При расстановке закладок используйте латинские символы. Закладки не должны быть &quot;скрытыми&quot; и не должны захватывать концевые форматирующие символы (конца абзаца и ячейки в таблице).</span> Вместо пробелов используйте знак подчеркивания.</p>
+
+<p class=MsoListContinue>Префикс, примененный для глоссарных статей, внесите в специальную переменную документа </span>Word</span>.</span>Это позволит в созданной ЭС для гиперссылок на глоссарные статьи сгенерировать всплывающие подсказки со определением соответствующего глоссарного термина. Такой подход позволит пользователю ЭС просматривать определение глоссарного термина, не переходя по ссылке на глоссарий. Например, если вы создали закладки на названиях с префиксом </span><span class=CODE><b>gl_</span></b></span>, </span>то выполните:</span></p>
+
+<p class=ListNumRusCap2>А.    </span>Откройте панель пользовательских свойств </span>(</span><span class=DFN>File &gt; Properties &gt; Advanced Properties</span></span>).</span></p>
+
+<p class=ListNumRusCap2>Б.     </span>Добавьте переменную </span><span class=Code0>BMKHLINKPREF</span></span> со значением </span><span class=Code0>gl</span></span><span class=Code0>oss</span></span><span class=Code0>_</span></span>.</span></p>
+
+<p class=MsoListContinue2><span class=DFN>Примечание</span></span>: В зависимости от способа, применяемого для создания закладок (вручную или с помощью макроса), фактические префиксы могут иметь на один знак подчеркивания больше </span>(</span><span class=Code0>gloss__</span></span>в нашем примере), что следует учесть при указании переменной </span><span class=Code0>BMKHLINKPREF</span></span>.</span></p>
+
+<p class=ListNumRusCap2>В.    </span>Сохраните документ.</span></p>
+
+<p class=MsoListNumber >3.     Расставьте отдельные закладки на те порции текста документа, которые имеют специальное назначение в первоисточнике. Такие закладки также не должны создаваться как &quot;скрытые&quot;. GenHelp предоставляет возможность в процессе генерации ЭС удалять из текста первоисточника куски текста, помеченные закладкой, которая имеет некий заранее установленный префикс. Например, можно использовать следующие префиксы закладок:</p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span><span class=CODE><b>GH_SS_</b></span>&nbsp;— префикс для закладок, которыми отмечены куски текста, которые не должны попасть ни в один из выходных форматов. Например, текст отладочного предметного указателя.</p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span><span class=CODE><b>GH_HTML_</b></span>&nbsp;— префикс для закладок, которыми отмечены куски текста, которые попадут только в HTML или CHM формат.</p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span><span class=CODE><b>GH_PRT_</b></span>&nbsp;— префикс для закладок, которыми отмечены куски текста, которые попадут только в DOC формат. Например, текст содержания и тексты заголовков крупных частей документа.</p>
+
+<p class=MsoListContinue >    </span><span class=DFN>Пример префиксов закладок</span>. </p>
+
+<p class=MsoListContinue >    </span><span class=CODE><b>GH_PRT_toc</b></span>,<span class=CODE><b> GH_SS_index</b></span>. </p>
+
+<p class=MsoListNumber >4.     Расставьте, пользуясь средствами Word, гиперссылки на разделы документа и статьи глоссария. Выделите текст термина или ключевой фразы, выполните <span class=DFN>Insert&nbsp;&gt;&nbsp;Hyperlinlk</span>, затем выберите в дереве <span class=DFN>Bookmarks</span> закладку, соответствующую имени раздела или термина в разделе глоссарии. Расстановку гиперссылок рекомендуется выполнять в режиме отключения отображения кодов полей.</p>
+
+<p class=MsoListContinue>Перед установкой гиперссылки на раздел проверяйте, является ли раздел, на который укажет гиперссылка, непустым (то есть содержит внутренний текст). Если этот раздел пуст, то установите гиперссылку на ближайший следующий непустой раздел. Естественно, при этом вы обязаны не нарушить логику самой ссылки. Установка гиперссылки на пустой раздел может повлечь за собой не совсем корректную навигацию в готовой ЭС</span>(появление &quot;тупиковых&quot; топиков, из которых нет перехода на соседние топики).</span></p>
+
+<p class=MsoListContinue>Если в разделе, из которого делается некоторая ссылка (например, на статью глоссария), уже есть точно такая же ссылка, то новую ссылку делать из этого раздела не надо. Результирующая ЭС, перегруженная лишними гиперссылками, будет выглядеть плохо.</p>
+
+<p class=MsoListContinue>&nbsp;</p>
+
+<p class=MsoListNumber >5.     Расставьте в первоисточнике индексные поля. GenHelp поддерживает только два уровня стандартного формата полей XE. Например, если в документе есть поле вида XE, {<span class=CODE>XE &quot;Статья1:статья2:статья3&quot;</span>}, то результат будет выглядеть как </p>
+
+<p class=MsoListContinue><span class=CODE>Статья1<br>       статья2:статья3</span></p>
+
+<p class=MsoListContinue>При разработке индекса для ЭС кроме полей XE стандартного формата рекомендуется пользоваться форматом XE-BSI, поддерживаемым пакетом макросов XEV (см. также разд. &quot;<a href="_postroenie_predmetnogo_ukazatelya_.htm#_Построение_предметного_указателя">Построение предметного указателя</a>&quot;). </p>
+
+<p class=MsoListNumber >6.     Просмотрите документ, сделайте поправки в орфографии, форматировании и верстке.</p>
+
+<p class=MsoListNumber >7.     Обновите все поля, сохраните файл первоисточника.</p>
+
+<p class=MsoNormal><span class=DFN>Ограничения</span></p>
+
+<p class=MsoListBullet> <span class=BulChar>&#149;   </span>В первоисточнике не должно быть фреймов, встроенных фигур Word (autoshapes) и прочих объектов, привязанных по &quot;якорю&quot;. Такие объекты могут быть некорректно преобразованы при экспорте документа в формат HTML. GenHelp не проверялся для составных документов (в режиме мастер-документа).</p>
+
+<p class=MsoListBullet> <span class=BulChar>&#149;   </span>Если заголовки соседнего уровня в исходном документе следуют один за другим без промежутка, то между такими заголовками не должно быть невидимого текста или невидимых полей Word.</p>
+
+<p class=MsoListBullet> <span class=BulChar>&#149;   </span>Не располагайте поля Word (например, поля XE) в тексте заголовков разделов.</p>
+
+<p class=Gap>&nbsp;</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_realizatsiya_kontseptsii_edinogo_p_.htm">Реализация концепции единого первоисточника</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_trebovaniya_k_pervoistotchniku_.htm">Требования к первоисточнику</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

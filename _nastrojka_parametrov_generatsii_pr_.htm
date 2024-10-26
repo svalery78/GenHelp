@@ -1,0 +1,386 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Настройка параметров генерации проекта</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_vybor_suschestvuyuschego_proekta_.htm?back','_generatsiya_aes_.htm?forw');synctoc('_nastrojka_parametrov_generatsii_pr_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Выбор существующего проекта " 
+				href="_vybor_suschestvuyuschego_proekta_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Генерация ЭС " 
+				href="_generatsiya_aes_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Настройка параметров генерации проекта</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_nastrojka_parametrov_generatsii_pr_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h2 >  Настройка параметров генерации проекта</h2>
+
+<p class=MsoNormal>После создания проекта или выбора существующего проекта вам необходимо настроить параметры генерации проекта. После создания проекта эти параметры имеют стандартные значения, определенные в файле-образце <span class=FileNameUnix>App</span>\<span class=FileNameUnix>project_0000\project_0000.ini. </span>Если вы хотите, чтобы вновь создаваемые проекты имели некоторые значения параметров по умолчанию, то вам необходимо соответствующим образом изменить этот файл.</p>
+
+<p class=MsoNormal>Для настройки параметров проекта</p>
+
+<p class=MsoListNumber ><span class=DFN>1.     </span></span>Щелкните на вкладке <span class=DFN>Bookmarks</span><span class=DFN>.</span></p>
+
+<table class=TableImage  border=0 cellspacing=0 cellpadding=0 widthdeleted"90%"
+ >
+ <tr>
+  <td widthdeleted"100%" valign=top >
+  <p class=TableImageBody$4 ><img border=0 widthdeleted480 height=258   src="DOCIMG_files/image026.jpg"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td widthdeleted"100%" valign=top >
+  <p class=TableListCont><em>Рисунок </em><em>9</em><em>. Вкладка </em><em>Bookmarks</em></p>
+  </td>
+ </tr>
+</table>
+
+<p class=Gap>&nbsp;</p>
+
+<p class=MsoListContinue>Эта вкладка предназначена для указания префиксов закладок (bookmarks). В процессе предварительной обработки файла первоисточника программа GenHelp просматривает в документе все закладки. Если имя закладки соответствует одному из указанных префиксов, то текст документа, ограниченный данной закладкой, будет удален из обработки. </p>
+
+<p class=MsoListContinue>Для форматов выходного HELP (HTML/CHM или DOC) имеются свои варианты <em>списков</em> префиксов закладок. Список префиксов закладок имеет следующий формат:</p>
+
+<p class=MsoListContinue><span class=CODE>Префикс1;Префикс2;…;ПрефиксN;</span></p>
+
+<p class=MsoListContinue>Установите список префиксов закладок для формата HTML в поле <span class=DFN>Delete for HTML (list of bookmark prefixes)</span> и список префиксов для формата DOC в поле <span class=DFN>Delete for DOC (list of bookmark prefixes)</span><span class=DFN>.</span></p>
+
+<p class=MsoListContinue>Если вы хотите отменить обработку закладок, то можно указать пустой список, который имеет вид:</p>
+
+<p class=MsoListContinue><span class=CODE>!;</span></p>
+
+<p class=MsoListContinue>Такие приемы указания списка вообще и пустого списка в частности применяются и для других параметров генерации.</p>
+
+<p class=MsoListContinue>Если контексты, имеющие заданный префикс, должны быть удалены как для формата DOC, так и для формата HTML, то такой префикс надо указать в обоих списках.</p>
+
+<p class=MsoListContinue>Рекомендуются следующие варианты заполнения полей на вкладке <span class=DFN>Bookmarks</span>. </p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 widthdeleted"89%"
+ >
+ <tr>
+  <td widthdeleted"47%" valign=top >
+  <p class=TableTitle >Поле</p>
+  </td>
+  <td widthdeleted"52%" valign=top >
+  <p class=TableTitle >Рекомендуемый список закладок</p>
+  </td>
+ </tr>
+ <tr>
+  <td widthdeleted"47%" valign=top >
+  <p class=TableNormal><span   class=DFN>Delete for HTML (list of bookmark prefixes)</span></p>
+  </td>
+  <td widthdeleted"52%" valign=top >
+  <p class=TableNormal><span   class=CODE>GH_PRT_;GH_SS_;XEV_FULL_;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td widthdeleted"47%" valign=top >
+  <p class=TableNormal><span   class=DFN>Delete for DOC (list of bookmark prefixes)</span></p>
+  </td>
+  <td widthdeleted"52%" valign=top >
+  <p class=TableNormal><span   class=CODE>GH_HTML_;GH_SS_;XEV_FULL_;</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=Gap>&nbsp;</p>
+
+<p class=MsoListContinue><span class=DFN>Примечание</span>. Все настройки, указываемые для формата HTML, автоматически распространяются на формат CHM</p>
+
+<p class=MsoListContinue><span class=DFN>Примечание</span>. Найденный по закладкам текст удаляется только временно, из обработки, а не из файла первоисточника. Файл первоисточника в процессе генерации открыт только на чтение.</p>
+
+<p class=MsoListNumber ><span class=DFN>2.     </span></span>Щелкните на вкладке <span class=DFN>Headings</span><span class=DFN>.</span></p>
+
+<table class=TableImage  border=0 cellspacing=0 cellpadding=0 widthdeleted"90%"
+ >
+ <tr>
+  <td widthdeleted"100%" valign=top >
+  <p class=TableImageBody$4 ><img border=0 widthdeleted481 height=254   src="DOCIMG_files/image028.jpg"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td widthdeleted"100%" valign=top >
+  <p class=TableImageCaption><em>Рисунок </em><em>10</em><em>. </em><em>Вкладка Headings</em></p>
+  </td>
+ </tr>
+</table>
+
+<p class=Gap><span class=DFN>&nbsp;</span></span></p>
+
+<p class=MsoListContinue>Вкладка <span class=DFN>Headings</span> предназначена для обработки параграфов, форматированных заголовочными стилями (outlines). Как уже указывалось, работа с GenHelp предполагает, что рабочий документ оформлен в соответствии со стилевой дисциплиной. Согласно ее принципам, заголовки уровня <span class=Code0>1</span> должны быть набраны стилем <span class=DFN>Heading&nbsp;1</span> (<span class=DFN>Заголовок&nbsp;1</span></span> в русской версии </span>Word</span>) и иметь свойство параграфа <span class=Code0>OutlineLevel</span>, равное <span class=Code0>Level&nbsp;1</span>, заголовки уровня <span class=Code0>2</span>&nbsp;— соответственно стилем <span class=DFN>Heading&nbsp;2</span> и иметь значение <span class=Code0>Level&nbsp;2</span> и т.п. Программа GenHelp позволяет расширить этот список с помощью данной вкладки, а также определить стили, которые будут выступать в качестве заголовочных.</p>
+
+<p class=MsoListContinue>Для изменения состава заголовочных стилей:</p>
+
+<p class=ListNumRusCap2>Г.     </span>Отметьте флажок <span class=DFN>Correct outlined text</span>. Программа GenHelp активизирует поля <span class=DFN>Outline levels</span>, <span class=DFN>Allowed styles for outline</span> и <span class=DFN>Make subheadings of styles</span>.</p>
+
+<p class=ListNumRusCap2>Д.    </span>Выберите из ниспадающего списка <span class=DFN>Outline levels</span> уровень заголовка, например, <span class=Code0>2</span></span>. Программа GenHelp отобразит в поле <span class=DFN>Allowed styles for outline</span> список стилей, которые в первоисточнике будут трактоваться как легальные стили уровня <span class=Code0>2</span></span> (по умолчанию, список содержит стиль <span class=DFN>Heading 2</span></span>). Это означает, что если при сканировании параграфов первоисточника встретится стиль, имеющий уровень <span class=Code0>OutlineLevel</span>, равный <span class=Code0>2</span></span>, и не входящий в этот список, то текст, отформатированный таким стилем, будет переформатирован в уровень <span class=Code0>10</span> (называемый также уровнем <span class=Code0>Body text</span>).)</p>
+
+<p class=ListNumRusCap2>Е.     </span>Дополните список своими стилями. Например, если первоисточник разрабатывался в русском шаблоне, который в качестве стиля уровня 1 по умолчанию использует стиль <span class=DFN>Заголовок 1, </span>то надо добавить текст </span><span class=CODE>Заголовок 1 </span></span>в конец списка и завершить список символом точки с запятой.</span></p>
+
+<p class=MsoListContinue2><span class=DFN>Примечания</span></span></p>
+
+<p class=ListNumRusSmall3>а.     </span>Следует иметь в виду, что для формирования </span>HTML-</span>разделов ЭС </span>GenHelp </span>берет абзацы документа, отформатированные <em>встроенными</em> стилями </span>Word </span><span class=DFN>Heading 1</span></span>&nbsp;– </span><span class=DFN>Heading 9</span></span>(или <span class=DFN>Заголовок&nbsp;1&nbsp;–&nbsp;Заголовок&nbsp;9</span> в русской версии </span>Word). </span>Абзацы с такими стилями формируют в выходных </span>HRML-</span>файлах соответствующие теги </span><span class=Code0>&lt;H1&gt;</span></span>, </span><span class=Code0>&lt;H2&gt;</span></span>и&nbsp;т.д. Эти особенности следует иметь в виду при разработке исходного документа.</span></p>
+
+<p class=ListNumRusSmall3>б.     </span>Не рекомендуется использовать русские наименования <em>невстроенных</em> стилей при разработке первоисточника. Дело в том, что что во время генерации ЭС GenHelp вызывает программу экспорта текста в HTML и при этом русские названия стилей заменяются на неэквивалентные английские. Это создает трудности при стилевом доведении ЭС до необходимого целевого вида (хотя эти трудности можно решить).</span></p>
+
+<p class=ListNumRusCap2>Ж.   </span>Перейдите к пункту B для указания стилей других уровней.</p>
+
+<p class=ListNumRusCap2>З.     </span>Если вы хотите, чтобы какой-нибудь стиль, используемый в роли заголовочного, но таковым не определенный через свойство параграфа </span><span class=Code0>Outline level</span></span>, выступал в качестве разделителя разделов в выходном HELP формата HTML, то укажите этот стиль в списке <span class=DFN>Make subheadings of styles</span></span>. </span></p>
+
+<p class=MsoListContinue2>Пусть, например, в первоисточнике имеется текст, отформатированный с использованием следующих стилей:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 widthdeleted"86%"
+ >
+ <tr >
+  <td widthdeleted"49%" valign=top >
+  <p class=TableNormal><span   class=Strong10>Working   with Data Items</span></span></p>
+  </td>
+  <td widthdeleted"50%" valign=top >
+  <p class=TableNormal>(имеет стиль   параграфа <span class=DFN>Heading</span></span><span class=DFN><span   > 1</span></span>)</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td widthdeleted"49%" valign=top >
+  <p class=TableNormal><span   class=DFN>Primary   Data Items</span></span></p>
+  </td>
+  <td widthdeleted"50%" valign=top >
+  <p class=TableNormal>(имеет стиль   параграфа <span class=DFN>Heading</span></span><span class=DFN><span   > 2</span></span>)</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td widthdeleted"49%" valign=top >
+  <p class=TableNormal><span   class=DFN>Creating Primary Data Items</span></span>              </span></p>
+  </td>
+  <td widthdeleted"50%" valign=top >
+  <p class=TableNormal>(имеет стиль   параграфа <span class=DFN>Subtopic</span>)</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td widthdeleted"49%" valign=top >
+  <p class=TableNormal><span   class=DFN>Updating Primary Data Items</span></span></p>
+  </td>
+  <td widthdeleted"50%" valign=top >
+  <p class=TableNormal>(имеет стиль   параграфа <span class=DFN>Subtopic</span>)</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=Gap>&nbsp;</span></p>
+
+<p class=MsoListContinue2>Допустим, по каким-либо причинам в выходном формате DOC</span> может быть неприемлемым использование стиля заголовка <span class=DFN>Heading 3 </span>вместо <span class=DFN>Subtopic</span>, в то время как в формате HTML</span> надо разделить этот текст на разделы (например, в случае длинного текста раздела, что в общем случае плохо смотрится в ЭС). Деление разделов на <em>топики</em> (несамостоятельные подразделы) широко используется в англоязычной печатной документации. </span></p>
+
+<p class=MsoListContinue2>В нашем случае вам необходимо дополнить список <span class=DFN>Make subheadings of styles </span>элементом <span class=DFN>Subtopic</span>. Тогда программа GenHelp, найдя в исходном тексте параграф, имеющий стиль <span class=DFN>Subtopic</span>, установит в таком параграфе уровень заголовка, на 1 более низкий, чем последний &quot;настоящий&quot; заголовочный уровень. В результате в формате DOC вы не раздробите (на уровне содержания) текст ниже уровня 2, зато получите отдельные разделы в формате HTML (в данном случае, третьего уровня).</span></p>
+
+<p class=MsoListContinue2>Вместе с тем, лучшим решением все же является ручная разбивка источника на раздеелы на основе соответствующих стилей.</span></p>
+
+<p class=MsoListContinue><span class=DFN>Примечания</span></p>
+
+<p class=MsoListBullet2> <span class=BulChar2>&#149;    </span>Пустые параграфы, имеющие уровень Outline, равный 1 — 9, удаляются из обработки автоматически.</p>
+
+<p class=MsoListBullet2> <span class=BulChar2>&#149;    </span>Выполнениe функции анализа заголовочных параграфов может значительно увеличить время генерации.</p>
+
+<p class=MsoListBullet2> <span class=BulChar2>&#149;    </span>Правила указания списка такие же, как и для других параметров проекта (элементы списка разделены символом &quot;<span class=CODE>;</span>&quot;, а пустой список обозначается как &quot;<span class=CODE>!;</span>&quot;). </p>
+
+<p class=Gap>&nbsp;</p>
+
+<p class=MsoListNumber >3.     Щелкните на вкладке <span class=DFN>Styles, Text</span>.</p>
+
+<table class=TableImage  border=0 cellspacing=0 cellpadding=0 widthdeleted"90%"
+ >
+ <tr>
+  <td widthdeleted"100%" valign=top >
+  <p class=TableImageBody$4 ><img border=0 widthdeleted485 height=253   src="DOCIMG_files/image030.jpg"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td widthdeleted"100%" valign=top >
+  <p class=TableImageCaption><em>Рисунок </em><em>11</em><em>. </em><em>Вкладка Styles, Text</em></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoListContinue><span class=DFN>&nbsp;</span></span></p>
+
+<p class=MsoListContinue><span class=DFN>Вкладка </span>Styles, Text</span>&nbsp;предназначена для обработки текста и стилей в исходном документе в зависимости от целевого формата.</p>
+
+<p class=ListNumRusCap2>А.    </span><span class=DFN>Замена и удаление текста</span> (для формата HTML). Если вам необходимо изменить текст или его форматирование в исходном документе перед экспортом разделов в формат HTML, используйте поле <span class=DFN>Replace for HTML (list of change parameters)</span>. В случае, когда вам не нужна такая обработка исходного текста, укажите пустой список (т.е., принятое по умолчанию значение <span class=Code0>!;</span>).</p>
+
+<p class=MsoListContinue2>Вы можете заменить текст, стиль и уровень Outline. Список может содержать несколько элементов списка, разделенных точкой с запятой. Формат элемента списка следующий.</p>
+
+<p class=MsoListContinue2><span class=Code0>[исх_стиль]![исх_текст]![исх_уровень],[вых_стиль]![вых_текст]![вых_уровень];</span></p>
+
+<p class=MsoListContinue2>Каждый из подпараметров может отсутствовать (на это указывают квадратные скобки). В этом случае он не участвует в операции поиска/замены. Левая часть выражения указывает, что надо найти, правая часть — на что заменить. Вся правая часть (от запятой включительно) может отсутствовать. Это значит, что найденный текст (или стиль) надо удалить. При указании поиска/замены текста можно вместе с обычными символами указывать комбинации специальных символов, используемых в Word для обозначения параграфов (<span class=Code0>^p</span>), секций (<span class=Code0>^b</span>), знаков табуляции (<span class=Code0>^t</span>) и т.д.</p>
+
+<p class=MsoListContinue2><span class=DFN>Примечание</span>. При указании замены стилей убедитесь, что вы указываете замену однородных стилей (например, вы не можете заменить стиль абзаца на стиль символа и т.д.).</p>
+
+<p class=MsoListContinue><span class=DFN>Примеры. </span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 widthdeleted"86%"
+ >
+ <thead>
+  <tr >
+   <td widthdeleted"40%" valign=top >
+   <p class=TableTitle ><span    class=DFN>Задача</span></p>
+   </td>
+   <td widthdeleted"59%" valign=top >
+   <p class=TableTitle ><span    class=DFN>Элемент списка</span></p>
+   </td>
+  </tr>
+ </thead>
+ <tr >
+  <td widthdeleted"40%" valign=top >
+  <p class=TableNormal><span   class=DFN>Заменить   текст </span></span><span   class=CODE>BU</span><span   class=DFN> на текст </span></span><span   class=CODE>Business Unit</span></p>
+  </td>
+  <td widthdeleted"59%" valign=top >
+  <p class=TableNormal><span   class=CODE>!!BU!!,!!Business   Unit!!;</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td widthdeleted"40%" valign=top >
+  <p class=TableNormal><span   class=DFN>Заменить   текст </span></span><span   class=CODE>U_list</span><span   class=DFN>, Набранный   стилем CODE на текст </span></span><span   class=CODE>User list</span><span   class=DFN>, набранный   стилем DFN.</span></span></p>
+  </td>
+  <td widthdeleted"59%" valign=top >
+  <p class=TableNormal><span   class=CODE>!CODE!U_list!!,!DFN!User   list!!;</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td widthdeleted"40%" valign=top >
+  <p class=TableNormal><span   class=DFN>Заменить   текст, набранный стилем шрифта </span></span><span class=DFN>DFN</span><span class=DFN><span   > и имеющий уровень </span></span><span   class=CODE>1</span><span   class=DFN> на текст,   имеющий стиль параграфа </span></span><span   class=DFN>Body text</span><span   class=DFN> и уровень   заголовка </span></span><span   class=CODE>Body</span><span   class=CODE>text</span><span   class=CODE>(10)</span><span   class=DFN>.</span></span></p>
+  </td>
+  <td widthdeleted"59%" valign=top >
+  <p class=TableNormal><span   class=CODE>!DFN!!1!,!Body   text!!10!;</span></p>
+  </td>
+ </tr>
+ <tr >
+  <td widthdeleted"40%" valign=top >
+  <p class=TableNormal><span   class=DFN>Удалить   текст, набранный стилем </span></span><span   class=DFN>Encrypted</span><span   class=DFN>.</span></span></p>
+  </td>
+  <td widthdeleted"59%" valign=top >
+  <p class=TableNormal><span   class=CODE>!Encrypted!!!;</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=Gap><span class=DFN>&nbsp;</span></span></p>
+
+<p class=MsoListContinue2><span class=DFN>Примечание</span>. Функция замены стилей вам может понадобиться для слияния топиков некоторого уровня. Например, вы хотите, чтобы топики 3-го и 4-го уровней были бы не самостоятельными разделами ЭС, а подразделами соответствующего раздела уровня 3 и входили бы в контент этого раздела. Тогда вам следует указать соответствующие замены для стилей <span class=DFN>Heading&nbsp;3</span>и <span class=DFN>Heading&nbsp;4</span>, например:</p>
+
+<p class=MsoListContinue2><span class=Code0>!Heading 3!!!,!</span><span class=Code0>Subt</span><span class=Code0>opic</span><span class=Code0>3</span><span class=Code0>!!!;!Heading 4!!!,!</span><span class=Code0>Subt</span><span class=Code0>opic</span><span class=Code0>4</span><span class=Code0>!!!;</span></p>
+
+<p class=MsoListContinue2>В этом примере предполагается, что в исходном документе, либо в прикрепленном к нему стилевом шаблоне имеются определения для стилей <span class=DFN>Subtopic3</span>и <span class=DFN>Subtopic4</span>, не являющихся стилями заголовка.</p>
+
+<p class=ListNumRusCap2>Б.     </span><span class=DFN>Замена и удаление текста</span> <span class=DFN>(для формата DOC)</span>. Если вам необходимо изменить текст или его форматирование в исходном документе перед генерацией в формат DOC, используйте поле <span class=DFN>Replace for DOC (list of change parameters)</span>. Формат и назначение элементов списка те же, что и в предыдущем пункте A. </p>
+
+<p class=MsoListContinue2><span class=DFN>Примечание</span>. Вы можете выполнить замену и в файле результатов генерации. В состав GenHelp входит автономные программы поиска/замены контекстов ufrex и genh_sr, использующие шаблоны поиска/замены текста. Эти программы можно использовать в том случае, когда в HTML-файлах, полученных в результате работы GenHelp, необходимо проводить замены одних текстовых строк на другие (например, удалять ненужные HTML-тэги). Формат запуска и параметры этих программ изложены в Приложении. Вызов требуемой программы на исполнение можно описать в файле&nbsp;<span class=FileNameUnix>complete.bat</span>.</p>
+
+<p class=MsoListNumber ><span class=DFN>4.     </span></span>Щелкните на вкладке <span class=DFN>Generate</span><span class=DFN>.</span></p>
+
+<table class=TableImage  border=0 cellspacing=0 cellpadding=0 widthdeleted646
+ >
+ <tr>
+  <td widthdeleted414 valign=top >
+  <p class=TableImageBody$4 ><img border=0 widthdeleted484 height=276   src="DOCIMG_files/image032.jpg"></span></p>
+  </td>
+  <td 
+  widthdeleted161><p class='MsoNormal'>&nbsp;</td>   </span>  </tr>  <tr>   <td widthdeleted646 colspan=2 valign=top >   <p class=TableImageCaption><em>Рисунок </em><em>12</em><em>. </em><em>Вкладка Generate</em></p>
+  </td>
+ </tr>
+</table>
+
+<p class=Gap><span class=DFN>&nbsp;</span></span></p>
+
+<p class=MsoListContinue><span class=DFN>Здесь вы можете указать параметры генерации ЭС. </span></span></p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span><span class=DFN>Detailed trace</span><span class=DFN>. </span></span>Установите этот флажок для вывода журнала сообщений генерации ЭС в область сообщений. Сообщения выводятся по ходу процесса генерации, причем последнее сообщение выводится в первой строке области сообщений.</p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span><span class=DFN>View Word's work</span><span class=DFN>. </span>Установите этот флажок, если вы хотите наблюдать процесс форматирования документа во время генерации ЭС. Этот режим — отладочный (например, для отладки пользовательского макроса). </p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span><span class=DFN>View HTML output</span>. Если вы хотите после создания ЭС в формате HTML просмотреть результат генерации в браузере, то установите этот флажок. </p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span><span class=DFN>HTML</span>. Установка этого флажка дает программе указание генерировать ЭС в формате HTML. Снятие этого флажка снимает одновременно флажок с параметра CHM , так как для генерации в формат CHM GenHelp сначала проводит генерацию в формат HTML, а уже затем пользуется полученными файлами HTML для создания CHM.</p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span><span class=DFN>DOC</span>. Установка этого флажка дает программе указание генерировать ЭС в формате DOC. Генерация заключается в удалении из текста лишней информации (с помощью параметров, указываемых на вкладке Bookmarks) и обновления полей (в том числе содержания и индекса).</p>
+
+<p class=MsoListBullet2 > <span class=BulChar2 >&#149;    </span><span class=DFN>CHM</span>. Установка этого флажка дает программе указание генерировать ЭС в формате CHM. Одновременно GenHelp автоматически устанавливает флажок HTML.</p>
+
+<p class=MsoListNumber >5.     Для получения помощи щелкните на вкладке <span class=DFN>Help</span>, а затем на кнопке <span class=DFN>Help</span>. Помощь к самой программе GenHelp подготовлена средствами GenHelp, в формате CHM.</p>
+
+<p class=MsoListNumber >6.     Для запуска генерации щелкните <span class=DFN>Generate Help</span>.</p>
+
+<p class=Gap>&nbsp;</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sozdanie_novogo_proekta_.htm">Создание нового проекта</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vybor_suschestvuyuschego_proekta_.htm">Выбор существующего проекта</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_generatsiya_aes_.htm">Генерация ЭС</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_rabota_s_gotovoj_aes_v_formate_htm_.htm">Работа с готовой ЭС в формате HTML</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_rabota_s_gotovoj_aes_v_formate_chm_.htm">Работа с готовой ЭС в формате CHM</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_nastrojka_vneshnego_vida_aes_v_for_.htm">Настройка внешнего вида ЭС в формате HTML</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_kak_sozdatq_novyj_skin_.htm">Как создать новый скин</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vypolnenie_genhelp_v_paketnom_rezh_.htm">Выполнение GenHelp в пакетном режиме</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

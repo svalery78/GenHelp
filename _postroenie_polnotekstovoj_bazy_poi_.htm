@@ -1,0 +1,114 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Построение полнотекстовой базы поиска</title>
+<link href="css_skin.css" rel="stylesheet" type="text/css">
+<script language=javascript type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script language=javascript type="text/javascript" src="js_highlight.js"></script>
+<script language=javascript type="text/javascript" src="js_findtext.js"></script>
+
+</head>
+
+<body class="TopicBody" onload="hide_elements();setpagelinks('_razmetka_dokumenta_.htm?back','_postroenie_soderzhaniya_.htm?forw');synctoc('_postroenie_polnotekstovoj_bazy_poi_.htm');find_text();" > 
+
+<hr>
+<table class=NextPrevTopic border=0 cellspacing=0 cellpadding=0 width=90%>
+	<col width="30px" />
+    	<col width="30px" />
+    	<col width="80px" />
+    	<col width="40px" />
+	<tr>
+		<td id="SHOWPREVTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkPrev" title="На предыдущий раздел:&nbsp;Разметка документа " 
+				href="_razmetka_dokumenta_.htm">Предыдущий&nbsp;
+			</a> 
+  			</p>
+		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWNEXTTOPICDIV" class="TopicLinksCell">
+			<p class=TopiclinksTopLeft>
+			<a class="TopicLinkNext" title="На следующий раздел:&nbsp;Построение содержания " 
+				href="_postroenie_soderzhaniya_.htm">Следующий&nbsp;
+			</a> 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="SHOWPATHLINKDIVID" class="TopicLinksCell"> 
+			<p class=TopiclinksTopLeft>
+        		<a class = "TopicPathLinkEnabled" href = "_rabota_s_genhelp_.htm">Работа с GenHelp</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_generatsiya_aes_.htm">Генерация ЭС</a> &nbsp;>&nbsp;<a class = "TopicPathLinkEnabled" href = "_aetapy_generatsii_aes_v_formate_ht_.htm">Этапы генерации ЭС в формате HTML</a> &nbsp;>&nbsp;<a class = "TopicPathLinkDisabled" href = "javascript:;">Построение полнотекстовой базы поиска</a> &nbsp; 
+			</p>
+  		</td>
+
+	  	<td>&nbsp;&nbsp;&nbsp;
+  		</td>
+
+	  	<td id="TOPIC_SYNCTOC_ID" class="TopicLinksCell">
+			<p class="TopiclinksTopRight">
+			<a class="TopicSyncTOC" title="Синхронизировать Содержание с выделением текущего раздела"											href="javascript:synctoc_unc('_postroenie_polnotekstovoj_bazy_poi_.htm');">
+				Синхронизировать Содержание
+			</a> &nbsp;
+			</p>
+  		</td>
+	</tr>
+</table>
+
+<hr>
+
+<div class=WordSection1>
+
+<h4 >Построение полнотекстовой базы поиска </h4>
+
+<p class=MsoNormal>GenHelp анализирует текст каждого раздела документа и выделяет все имеющиеся в разделе слова. Из этих слов программа составляет массив строк на коде Javascript. Затем GenHelp добавляет Javascript-код для анализа того, соответствует ли слово, введенное пользователем ЭС, каким-либо строкам массива. Результатом работы скрипта в готовой ЭС является вывод разделов, отвечающих критерию поиска, либо сообщения о том, что данные не найдены.</p>
+
+<p class=MsoNormal>Текст созданного таким образом скрипта программа GenHelp размещает в <em>генерируемой переменной</em> с именем <span class=Code0>&lt;&lt;SEARCH_FULLBASE&gt;&gt;</span>. По окончании генерации GenHelp выполняет цикл замен в файлах папки результата. В частности, в файле <span class=FileNameUnix>js_addfound.js</span> контекст <span class=Code0>&lt;&lt;SEARCH_FULLBASE&gt;&gt;</span>заменяется на текст этого скрипта. Скрипт используется только для ЭС формата HTML.</p>
+
+<p class=MsoNormal><span class=DFN>Примечание</span>. При создании полнотекстовой базы GenHelp выполняет следующую обработку(это необходимо для корректного выполнения поиска в готовойЭС):</p>
+
+<p class=MsoListBullet> <span class=BulChar>&#149;   </span>В тексте раздела символы, не входящие в файл <span class=FileNameUnix>genhelp_act</span>, заменяются на пробел. </p>
+
+<p class=MsoListBullet> <span class=BulChar>&#149;   </span>В заголовках разделов выполняется замена кавычек на комбинацию символов, отображающую кавычки. Это приводит к появлению лишнего пробела после кавычки, поэтому рекомендуется либо не указывать кавычки в заголовке, либо указывать символы прямых кавычек (в коде <span class=Code0>02BA</span>).</p>
+
+
+
+</div>
+
+
+<div id="SHOWSEEALSODIVID">
+<hr>
+<p class="TopicSeeAlsoLabel" title="Смотрите также родственные разделы"> Смотрите также</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_proverka_parametrov_.htm">Проверка параметров</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_peresozdanie_papki_rezulqtata_.htm">Пересоздание папки результата</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_zapusk_word_.htm">Запуск Word</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_preobrazovanie_numerovannyh_spisko_.htm">Преобразование нумерованных списков в текст</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_udalenie_teksta__pometchennogo_k_u_.htm">Удаление текста, помеченного к удалению с помощью закладок</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_udalenie_i_zamena_teksta__formatir_.htm">Удаление и замена текста, форматированного некоторыми стилями и замена стилей</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_korrektirovka_urovnej_paragrafov_.htm">Корректировка уровней параграфов</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vyzov_polqzovatelqskogo_makrosa_ob_.htm">Вызов пользовательского макроса обработки текста перед разметкой документа</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_razmetka_dokumenta_.htm">Разметка документа</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_postroenie_soderzhaniya_.htm">Построение содержания</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_postroenie_predmetnogo_ukazatelya_.htm">Построение предметного указателя</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_korrektirovka_giperssylok_.htm">Корректировка гиперссылок</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sohranenie_monolitnogo_html_fajla_.htm">Сохранение монолитного HTML-файла</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sozdanie_perehodov_mezhdu_stranits_.htm">Создание переходов между страницами</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_generatsiya_protchih_peremennyh_.htm">Генерация прочих переменных</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_kopirovanie_shablonov_i_fajlov_zam_.htm">Копирование шаблонов и файлов замен</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vypolnenie_zamen_.htm">Выполнение замен</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_sohranenie_topikov_i_fajlov_posle__.htm">Сохранение топиков и файлов после замен</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_vypolnenie_kompilyatsii_fajla_stil_.htm">Выполнение компиляции файла стилей</a> &nbsp;</p>
+<p class = "TopicSeeAlsoSiblingLine"> <a class = "TopicSeeAlsoSiblingLink" href = "_zavershenie_sozdaniya_help_.htm">Завершение создания Help</a> &nbsp;</p>
+
+</div>
+
+<hr>
+
+<p class="copyrighttext">(C) Год(ы) Компания, Все права сохранены</p>
+</body>
+</html>

@@ -1,107 +1,170 @@
-﻿function hide_elements() {
-$('#HIDEPREVTOPICDIV').replaceWith( "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>" );
-$('#HIDENEXTTOPICDIV').replaceWith( "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>" );
-$('#HIDESEEALSODIVID').hide();
-$('.wrappable').hide();
-if( parent.menu && parent.menu.document.searchform && parent.menu.document.searchform.searchtext ) 
-{ 
-}
-else
-{
-$('#TOPIC_SYNCTOC_ID').hide();
-}
-return;
-}
-
-function toggle(obj) {
-var sibling;
-if(obj.nextSibling.nodeType==3) {
-    sibling=obj.nextSibling.nextSibling;
-    }
-else {
-    sibling=obj.nextSibling;
-    }
-sibling.style.display=(sibling.style.display=='none')? 'block' : 'none';
-}
-
-function find_text() {
-//--------------------------------------------------------------------------------------------------------------------*
-// This function performs search of the text specified in input field of the parent form
-// The text (if found) is highlighted. The highlight style is '.bf' (see the chm.css file)
-// Works in IE4 (yellow or other specified highlight - see the code), 
-//          Netscape 4+ (highlights only first found text),
-//          and DOM browsers: IE5+, Mozilla 1+, Netscape 6+, Opera 7+ (may be, also 5 or 6 - not tested), 
-//
-// the text of the function for creating a .chm file should be:
-//
-// function find_text() {return ("-1");}
-//--------------------------------------------------------------------------------------------------------------------*
-//
-
-var txt, i, t, found;
-var str, sep, exprstr;
-
-//browser definitions
-var isDOM=document.getElementById;
-var win = parent.main;
-str=""; //search string
-
-if( parent.menu && parent.menu.document.searchform && parent.menu.document.searchform.searchtext ) 
-{ 
-   	//shall work only in HTML
-   	str = parent.menu.document.searchform.searchtext.value; 
-
-	//process help-based cookie history
-	processHistoryCookies();
-}
-else
-{
-   //shall work only in CHM
-   return ("-1");
-}
-
-
-
-if (trim(str) == "")
-   return ("-1");
-
-sep = "|";
-
-exprstr = parseexpr(trim(str),sep);
-var word_array = exprstr.split(sep);
-var iword;
-var nextword;
-var nwords = word_array.length;
-
-
-
-if (isDOM)
-   {
-   element = document.body;
-   for(iword = 0;iword < word_array.length;iword++)    
-      {
-      str = word_array[iword];
-      //spanAllTextNodes (str, 'bf', element); //old solution
-      if (str.length > 1)
-         {
-         if (str.charAt(0) == "!" )
-            {
-            str = str.substring(1, str.length);
-            $('body').highlight(str, { element: 'span', className: 'bf', caseSensitive: true });
-            }
-         else
-            {
-            $('body').highlight(str, { element: 'span', className: 'bf' });
-            }
-         }
-      else
-         {
-         $('body').highlight(str, { element: 'span', className: 'bf' });
-         }
-      }
-   return ("0");
+﻿// Скрытие элементов
+function hideElements() {
+   document.querySelector('#HIDEPREVTOPICDIV')?.replaceWith(document.createElement("td"));
+   document.querySelector('#HIDENEXTTOPICDIV')?.replaceWith(document.createElement("td"));
+   document.querySelector('#HIDESEEALSODIVID')?.style.display = "none";
+   
+   document.querySelectorAll('.wrappable').forEach(el => el.style.display = "none");
+ 
+   if (parent?.menu?.document?.searchform?.searchtext) {
+     // searchform присутствует, никаких дополнительных действий
+   } else {
+     document.querySelector('#TOPIC_SYNCTOC_ID')?.style.display = "none";
    }
-}
+ }
+
+
+// Переключение видимости элемента
+function toggle(obj) {
+   let sibling = obj.nextElementSibling;
+   if (sibling) {
+     sibling.style.display = (sibling.style.display === 'none') ? 'block' : 'none';
+   }
+ }
+
+// Поиск и выделение текста
+function findText() {
+   let searchText = parent?.menu?.document?.searchform?.searchtext?.value?.trim();
+   if (!searchText) return "-1";
+ 
+   const highlightText = (text, className) => {
+     document.body.innerHTML = document.body.innerHTML.replace(
+       new RegExp(`(${text})`, 'gi'),
+       `<span class="${className}">$1</span>`
+     );
+   };
+ 
+   let words = parseExpr(searchText, "|").split("|");
+   words.forEach(word => {
+     if (word.startsWith("!")) {
+       highlightText(word.substring(1), 'bf case-sensitive');
+     } else {
+       highlightText(word, 'bf');
+     }
+   });
+ 
+   return "0";
+ }
+ 
+ // Функция для разбиения строки на слова
+function parseExpr(expr, sep) {
+   return expr.split(" ").join(sep);
+ }
+ 
+ // Удаление пробелов
+ function trim(inputString) {
+   return inputString?.replace(/^\s+|\s+$/g, '') || "";
+ }
+
+
+ 
+
+
+
+// function hide_elements() {
+// $('#HIDEPREVTOPICDIV').replaceWith( "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>" );
+// $('#HIDENEXTTOPICDIV').replaceWith( "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>" );
+// $('#HIDESEEALSODIVID').hide();
+// $('.wrappable').hide();
+// if( parent.menu && parent.menu.document.searchform && parent.menu.document.searchform.searchtext ) 
+// { 
+// }
+// else
+// {
+// $('#TOPIC_SYNCTOC_ID').hide();
+// }
+// return;
+// }
+
+// function toggle(obj) {
+// var sibling;
+// if(obj.nextSibling.nodeType==3) {
+//     sibling=obj.nextSibling.nextSibling;
+//     }
+// else {
+//     sibling=obj.nextSibling;
+//     }
+// sibling.style.display=(sibling.style.display=='none')? 'block' : 'none';
+// }
+
+// function find_text() {
+// //--------------------------------------------------------------------------------------------------------------------*
+// // This function performs search of the text specified in input field of the parent form
+// // The text (if found) is highlighted. The highlight style is '.bf' (see the chm.css file)
+// // Works in IE4 (yellow or other specified highlight - see the code), 
+// //          Netscape 4+ (highlights only first found text),
+// //          and DOM browsers: IE5+, Mozilla 1+, Netscape 6+, Opera 7+ (may be, also 5 or 6 - not tested), 
+// //
+// // the text of the function for creating a .chm file should be:
+// //
+// // function find_text() {return ("-1");}
+// //--------------------------------------------------------------------------------------------------------------------*
+// //
+
+// var txt, i, t, found;
+// var str, sep, exprstr;
+
+// //browser definitions
+// var isDOM=document.getElementById;
+// var win = parent.main;
+// str=""; //search string
+
+// if( parent.menu && parent.menu.document.searchform && parent.menu.document.searchform.searchtext ) 
+// { 
+//    	//shall work only in HTML
+//    	str = parent.menu.document.searchform.searchtext.value; 
+
+// 	//process help-based cookie history
+// 	processHistoryCookies();
+// }
+// else
+// {
+//    //shall work only in CHM
+//    return ("-1");
+// }
+
+
+
+// if (trim(str) == "")
+//    return ("-1");
+
+// sep = "|";
+
+// exprstr = parseexpr(trim(str),sep);
+// var word_array = exprstr.split(sep);
+// var iword;
+// var nextword;
+// var nwords = word_array.length;
+
+
+
+// if (isDOM)
+//    {
+//    element = document.body;
+//    for(iword = 0;iword < word_array.length;iword++)    
+//       {
+//       str = word_array[iword];
+//       //spanAllTextNodes (str, 'bf', element); //old solution
+//       if (str.length > 1)
+//          {
+//          if (str.charAt(0) == "!" )
+//             {
+//             str = str.substring(1, str.length);
+//             $('body').highlight(str, { element: 'span', className: 'bf', caseSensitive: true });
+//             }
+//          else
+//             {
+//             $('body').highlight(str, { element: 'span', className: 'bf' });
+//             }
+//          }
+//       else
+//          {
+//          $('body').highlight(str, { element: 'span', className: 'bf' });
+//          }
+//       }
+//    return ("0");
+//    }
+// }
 
 function spanAllTextNodes (text_tofind, styleClass, element) {
 //This is the old solution to highlight text; now, the js_highlight.js JQuery plugin is used 
@@ -142,61 +205,61 @@ function spanAllTextNodes (text_tofind, styleClass, element) {
 }
 
 
-function parseexpr(expr,sep) {
-//parse 'expr' and make a character-delimited string (the 'sep' is the delimiter)  
-var pos_expr=0;
-var len_expr;
-var cur_subexpr = "";
-var cur_char;
-var out_expr = "";
+// function parseexpr(expr,sep) {
+// //parse 'expr' and make a character-delimited string (the 'sep' is the delimiter)  
+// var pos_expr=0;
+// var len_expr;
+// var cur_subexpr = "";
+// var cur_char;
+// var out_expr = "";
 
-len_expr = expr.length;
+// len_expr = expr.length;
 
-while (pos_expr <= len_expr-1)
-   {
-   cur_char = expr.charAt(pos_expr);
-   expr_break = 0;
-   if ((cur_char == " ") || (cur_char == "+"))
-      {
-      if (cur_subexpr != "") 
-         {
-         out_expr = out_expr + cur_subexpr + sep;
-         }
-      cur_subexpr = ""; 
-     }
-   else
-     {
-     cur_subexpr = cur_subexpr + cur_char;
-     }
-   pos_expr++;
-   }
-if (cur_subexpr != "")
-   {
-   out_expr = out_expr + cur_subexpr;
-   }
+// while (pos_expr <= len_expr-1)
+//    {
+//    cur_char = expr.charAt(pos_expr);
+//    expr_break = 0;
+//    if ((cur_char == " ") || (cur_char == "+"))
+//       {
+//       if (cur_subexpr != "") 
+//          {
+//          out_expr = out_expr + cur_subexpr + sep;
+//          }
+//       cur_subexpr = ""; 
+//      }
+//    else
+//      {
+//      cur_subexpr = cur_subexpr + cur_char;
+//      }
+//    pos_expr++;
+//    }
+// if (cur_subexpr != "")
+//    {
+//    out_expr = out_expr + cur_subexpr;
+//    }
 
-return(out_expr);
-}
+// return(out_expr);
+// }
 
-function trim(inputString) {
-// Remove spaces from the head and tail of the string
-   if (typeof inputString != "string") { return inputString; }
-   var retValue = inputString;
-   var ch = retValue.substring(0, 1);
-   while (ch == " ") {
-      retValue = retValue.substring(1, retValue.length);
-      ch = retValue.substring(0, 1);
-   }
-   ch = retValue.substring(retValue.length-1, retValue.length);
-   while (ch == " ") {
-      retValue = retValue.substring(0, retValue.length-1);
-      ch = retValue.substring(retValue.length-1, retValue.length);
-   }
-   while (retValue.indexOf("  ") != -1) {
-      retValue = retValue.substring(0, retValue.indexOf("  ")) + retValue.substring(retValue.indexOf("  ")+1, retValue.length);
-   }
-   return retValue;
-}
+// function trim(inputString) {
+// // Remove spaces from the head and tail of the string
+//    if (typeof inputString != "string") { return inputString; }
+//    var retValue = inputString;
+//    var ch = retValue.substring(0, 1);
+//    while (ch == " ") {
+//       retValue = retValue.substring(1, retValue.length);
+//       ch = retValue.substring(0, 1);
+//    }
+//    ch = retValue.substring(retValue.length-1, retValue.length);
+//    while (ch == " ") {
+//       retValue = retValue.substring(0, retValue.length-1);
+//       ch = retValue.substring(retValue.length-1, retValue.length);
+//    }
+//    while (retValue.indexOf("  ") != -1) {
+//       retValue = retValue.substring(0, retValue.indexOf("  ")) + retValue.substring(retValue.indexOf("  ")+1, retValue.length);
+//    }
+//    return retValue;
+// }
 
 
 function HistoryCookieStorageSize()

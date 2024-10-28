@@ -1,4 +1,111 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>GenHelp</title>
+	<link href="css_skin.css" rel="stylesheet" type="text/css">
+	<script src="js_findtext.js"></script>
+	<script src="js_hidepanel.js"></script>
+	<script>
+		function doSearch() {
+			document.getElementById('contents-frame').src = 'CHM_sffound.htm';
+			return false;
+		}
+
+		function togglePanel() {
+			const contentsDiv = document.getElementById('contents');
+			const mainDiv = document.getElementById('main');
+			const opener = document.getElementById('opener');
+
+			if (contentsDiv.style.display === 'none') {
+				contentsDiv.style.display = 'block';
+				mainDiv.style.width = '70%';
+				opener.textContent = '<-';
+			} else {
+				contentsDiv.style.display = 'none';
+				mainDiv.style.width = '100%';
+				opener.textContent = '->';
+			}
+		}
+	</script>
+</head>
+
+<body onload="togglePanel();">
+
+	<div>
+		<!-- SYSTEM NAME/LOGO -->
+		<div class="SystemNameTable">
+			<div class="SystemNameRow">
+				<div class="SystemNameCell">
+					<img src="./template_img/genhelp_logo.jpg" alt="GenHelp" class="SystemNameLogoText" />
+				</div>
+				<div class="SystemNameCell SystemNameText">GenHelp</div>
+			</div>
+		</div>
+
+		<!-- HELP MENU BAR -->
+		<div class="SystemMenuTable">
+			<div class="SystemMenuRow">
+				<!-- HIDE/UNHIDE CONTENTS SWITCH -->
+				<div class="SystemMenuCell">
+					<a href="#" id="opener" onclick="togglePanel();"
+						title="Скрыть/отобразить панель содержания">&lt;-</a>
+				</div>
+
+				<!-- CONTENTS MENU ITEM -->
+				<div class="SystemMenuCell">
+					<a onclick="document.getElementById('contents-frame').src='CHM_frame_toc.htm'; document.getElementById('main-frame').src='home.htm';"
+						title="Дерево оглавления" class="SystemMenuLink">Содержание</a>
+				</div>
+
+				<!-- INDEX MENU ITEM -->
+				<div class="SystemMenuCell">
+					<a onclick="document.getElementById('contents-frame').src='CHM_frame_index.htm'; document.getElementById('main-frame').src='index_home.htm';"
+						title="Список индексных статей" class="SystemMenuLink">Указатель</a>
+				</div>
+
+				<!-- HELP ON HELP LINK -->
+				<div class="SystemMenuCell">
+					<a onclick="document.getElementById('main-frame').src='CHM_frame_help.htm';"
+						title="Как работать с Help" class="SystemMenuLink">Помощь</a>
+				</div>
+
+				<!-- SEARCH BOX -->
+				<div class="SystemMenuCell">
+					<form onsubmit="return doSearch();" name="searchform">
+						<input type="text" name="searchtext" class="input" title="Укажите критерии поиска">
+					</form>
+				</div>
+
+				<!-- SEARCH LINK -->
+				<div class="SystemMenuCell">
+					<a onclick="doSearch();" title="Выполнить поиск" class="SystemMenuLink">Поиск</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- CONTENT AND MAIN SECTIONS -->
+		<div id="container" style="display: flex; height: calc(100vh - 80px);">
+			<!-- Contents Section -->
+			<div id="contents" style="width: 30%; border-right: 1px solid #ddd;">
+				<iframe id="contents-frame" src="CHM_frame_toc.htm"
+					style="width: 100%; height: 100%; border: none;"></iframe>
+			</div>
+
+			<!-- Main Section -->
+			<div id="main" style="width: 70%;">
+				<iframe id="main-frame" src="home.htm" style="width: 100%; height: 100%; border: none;"></iframe>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
+
+
+<!--html>
 <head>
 <title>GenHelp</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,10 +120,10 @@ return false;
 }
 </script>
 </head>
-<body onload="hideshow();showpanel();">
+<body onload="hideshow();showpanel();"-->
 
 <!--  SYSTEM NAME/LOGO -->
-<table class="SystemNameTable" border="0" cellpadding="0" cellspacing="0">
+<!--table class="SystemNameTable" border="0" cellpadding="0" cellspacing="0">
 <tbody>
 <tr class="SystemNameRow">
 <td class="SystemNameCell" nowrap rowspan="1" colspan="1">
@@ -29,44 +136,44 @@ return false;
 </td>
 </tr>
 </tbody>
-</table>
+</table-->
 
 <!--  HELP MENU BAR -->
-<table class="SystemMenuTable" border="0" nowrap cellpadding="0" cellspacing="0">
+<!--table class="SystemMenuTable" border="0" nowrap cellpadding="0" cellspacing="0">
 
 <tbody>
-<tr class="SystemMenuRow">
+<tr class="SystemMenuRow"-->
 
 <!--                     HIDE/UNHIDE CONTENTS SWITCH -->
-<td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
+<!--td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
 	<a href="#" id="opener" onclick="hideshow();"
 		title="Скрыть/отобразить панель содержания">
 		<-		
 	</a> 
-</td>
+</td-->
 
 <!--                     CONTENTS MENU ITEM -->
-<td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
+<!--td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
 	<a target="contents" onclick="showpanel();"
 		title="Дерево оглавления" 		
 		class="SystemMenuLink"
 		href="javascript:parent.contents.location.href='CHM_frame_toc.htm';parent.main.location.href='home.htm';parent.menu.document.searchform.searchtext.value = '';">	
 		Содержание
 	</a> 
-</td>
+</td-->
 
 <!--                     INDEX MENU ITEM -->
-<td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
+<!--td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
 	<a target="contents" onclick="showpanel();"
 		title="Список индексных статей"
 		class="SystemMenuLink"
 		href="javascript:parent.contents.location.href='CHM_frame_index.htm';parent.main.location.href='index_home.htm';parent.menu.document.searchform.searchtext.value = '&#32;';">	
 		Указатель
 	</a> 
-</td>
+</td-->
 
 <!--                     HELP ON HELP LINK -->
-<td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
+<!--td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
 	<a target="main"  onclick="showpanel();"
 		title="Как работать с Help"
 		class="SystemMenuLink"
@@ -75,39 +182,39 @@ return false;
 	</a> 
 </td>
 <td class="SystemMenuCell" rowspan="1" colspan="1" width="50%" align="left">
-</td>
+</td-->
 <!--                     BACKWARD BY CONTENTS LINK -->
-<td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
+<!--td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
 	<a name="backlink" target="main"
 		title="На предыдущий раздел"
 		class="SystemMenuLink"
 		href="javascript:parent.main.location.href='home.htm?back';">
 		&lt;
 	</a> 	
-</td>
+</td-->
 <!--                     FORWARD BY CONTENTS LINK -->
-<td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
+<!--td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
 	<a name="forwlink" target="main"
 		title="На следующий раздел"
 		class="SystemMenuLink"
 		href="javascript:parent.main.location.href='home.htm?forw';">
 		&gt;
 	</a> 	
-</td>
+</td-->
 
 
 <!--                     BACKWARD BY VIEWING HISTORY LINK -->
-<td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
+<!--td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
 	<a name="histback" target="main"
 		title="Назад по истории просмотра"
 		class="SystemMenuLink"
 		href="javascript:goback();">
 		Назад
 	</a> 
-</td>
+</td-->
 
 <!--                     FORWARD BY VIEWING HISTORY LINK -->
-<td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
+<!--td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
 	<a name="histforw" target="main"
 		title="Вперед по истории просмотра"
 		class="SystemMenuLink"
@@ -116,9 +223,9 @@ return false;
 	</a> 
 </td>
 <td class="SystemMenuCell" rowspan="1" colspan="1" width="50%" align="left">
-</td>
+</td-->
 <!--                     SEARCH BOX -->
-<td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
+<!--td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
 	<form class="SystemMenuCellSearchBox"
 		name="searchform"
 		onsubmit="javascript:return doSearch();">
@@ -128,19 +235,19 @@ return false;
 		value=""
 		title="Укажите критерии поиска">
 	</form>
-</td>
+</td-->
 
 <!--                     SEARCH LINK -->
-<td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
+<!--td class="SystemMenuCell" rowspan="1" nowrap colspan="1">
 	<a target="contents" onclick="showpanel(); javascript:return doSearch();" 
 		title="Выполнить поиск"
 		class="SystemMenuLink"
 		href="CHM_sffound.htm"  id="lbSearch">
 		Поиск
 	</a> 
-</td>
+</td-->
 <!--                     HIDDEN TEXTFIELD TO STORE COOKIES -->
-<td class="SystemMenuCell" style="width: 1px;" nowrap rowspan="1" colspan="1" nowrap>
+<!--td class="SystemMenuCell" style="width: 1px;" nowrap rowspan="1" colspan="1" nowrap>
 	<form name="jsf">
 		<input type="hidden" name="jsfstore" value=""/>
 		&nbsp;
@@ -152,6 +259,4 @@ return false;
 </table>
 
 </body>
-</html>
-
- 
+</html-->

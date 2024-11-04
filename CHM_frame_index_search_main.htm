@@ -4,9 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <title>GenHelp</title>
-    <!--link href="css_skin.css" rel="stylesheet" type="text/css"-->
+    <link href="css_skin.css" rel="stylesheet" type="text/css">
     <script src="js_findtext.js"></script>
     <script src="js_hidepanel.js"></script>
+    <style>
+        /* Flexbox layout for horizontal Help Menu Bar */
+        .SystemMenuTable {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+            width: 100%; /* Занять всю ширину */
+            /*background-color: #f9f9f9; /* для отладки */
+            box-sizing: border-box; /* Учитываем padding в ширине */
+        }
+
+        /* Элементы меню */
+        .SystemMenuCell {
+            /*background-color: #e0e0e0; /* Отладочный цвет */
+            padding: 5px;
+        }
+
+        /* Убедимся, что поисковое поле и кнопка поиска выравнены */
+        .SystemMenuCell form {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Ограничиваем ширину input для предотвращения растягивания */
+        .input {
+            width: 150px;
+        }
+    </style>
     
 </head>
 

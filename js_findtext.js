@@ -24,84 +24,291 @@ else {
 sibling.style.display=(sibling.style.display=='none')? 'block' : 'none';
 }
 
-function find_text() {
-//--------------------------------------------------------------------------------------------------------------------*
-// This function performs search of the text specified in input field of the parent form
-// The text (if found) is highlighted. The highlight style is '.bf' (see the chm.css file)
-// Works in IE4 (yellow or other specified highlight - see the code), 
-//          Netscape 4+ (highlights only first found text),
-//          and DOM browsers: IE5+, Mozilla 1+, Netscape 6+, Opera 7+ (may be, also 5 or 6 - not tested), 
-//
-// the text of the function for creating a .chm file should be:
-//
-// function find_text() {return ("-1");}
-//--------------------------------------------------------------------------------------------------------------------*
-//
+// function find_text() {
+// //--------------------------------------------------------------------------------------------------------------------*
+// // This function performs search of the text specified in input field of the parent form
+// // The text (if found) is highlighted. The highlight style is '.bf' (see the chm.css file)
+// // Works in IE4 (yellow or other specified highlight - see the code), 
+// //          Netscape 4+ (highlights only first found text),
+// //          and DOM browsers: IE5+, Mozilla 1+, Netscape 6+, Opera 7+ (may be, also 5 or 6 - not tested), 
+// //
+// // the text of the function for creating a .chm file should be:
+// //
+// // function find_text() {return ("-1");}
+// //--------------------------------------------------------------------------------------------------------------------*
+// //
 
-var txt, i, t, found;
-var str, sep, exprstr;
+// var txt, i, t, found;
+// var str, sep, exprstr;
 
-//browser definitions
-var isDOM=document.getElementById;
-var win = parent.main;
-str=""; //search string
+// //browser definitions
+// var isDOM=document.getElementById;
+// var win = parent.main;
+// str=""; //search string
 
-if( parent.menu && parent.menu.document.searchform && parent.menu.document.searchform.searchtext ) 
-{ 
-   	//shall work only in HTML
-   	str = parent.menu.document.searchform.searchtext.value; 
+// if( parent.menu && parent.menu.document.searchform && parent.menu.document.searchform.searchtext ) 
+// { 
+//    	//shall work only in HTML
+//    	str = parent.menu.document.searchform.searchtext.value; 
 
-	//process help-based cookie history
-	processHistoryCookies();
+// 	//process help-based cookie history
+// 	processHistoryCookies();
+// }
+// else
+// {
+//    //shall work only in CHM
+//    return ("-1");
+// }
+
+
+
+// if (trim(str) == "")
+//    return ("-1");
+
+// sep = "|";
+
+// exprstr = parseexpr(trim(str),sep);
+// var word_array = exprstr.split(sep);
+// var iword;
+// var nextword;
+// var nwords = word_array.length;
+
+
+
+// if (isDOM)
+//    {
+//    element = document.body;
+//    for(iword = 0;iword < word_array.length;iword++)    
+//       {
+//       str = word_array[iword];
+//       //spanAllTextNodes (str, 'bf', element); //old solution
+//       if (str.length > 1)
+//          {
+//          if (str.charAt(0) == "!" )
+//             {
+//             str = str.substring(1, str.length);
+//             $('body').highlight(str, { element: 'span', className: 'bf', caseSensitive: true });
+//             }
+//          else
+//             {
+//             $('body').highlight(str, { element: 'span', className: 'bf' });
+//             }
+//          }
+//       else
+//          {
+//          $('body').highlight(str, { element: 'span', className: 'bf' });
+//          }
+//       }
+//    return ("0");
+//    }
+// }
+
+// Функция для вызова поиска при нажатии кнопки "Выполнить поиск"
+
+// function doSearch() {
+//    // Проверка наличия поля поиска и его значения
+//    if (parent.menu && parent.menu.document.searchform && parent.menu.document.searchform.searchtext) {
+//        var searchText = parent.menu.document.searchform.searchtext.value.trim();
+//        if (searchText !== "") {
+//            find_text(searchText); // Вызов основной функции поиска
+//        } else {
+//            alert("Введите текст для поиска.");
+//        }
+//    } else {
+//        console.log("Поле поиска не найдено.");
+//    }
+//    return false; // Предотвращаем перезагрузку формы
+// }
+
+// function doSearch() {
+//    try {
+//        // Проверяем наличие формы и вводимого текста
+//        var searchText = document.querySelector("input[name='searchtext']").value.trim();
+
+//        if (searchText !== "") {
+//            find_text(searchText); // Запускаем основную функцию поиска с введённым текстом
+//        } else {
+//            alert("Введите текст для поиска.");
+//        }
+//    } catch (error) {
+//        console.error("Поле поиска не найдено:", error);
+//        alert("Поле поиска не найдено.");
+//    }
+//    return false; // Предотвращаем перезагрузку формы
+// }
+
+// // Основная функция поиска и подсветки текста
+// function find_text(searchText) {
+//    console.log('find_text');
+//    var sep = "|"; // Разделитель для слов
+//    var exprstr = parseexpr(searchText, sep); // Разделение строки поиска на слова
+//    var wordArray = exprstr.split(sep);
+//    console.log(`wordArray- ${wordArray}`);
+//    var isDOM = document.getElementById;
+
+//    //console.log(JSON.stringify(isDOM));
+
+//    // Очистка предыдущих выделений, если используется jQuery highlight
+//    $('span.bf').contents().unwrap(); 
+
+//    if (isDOM) {
+//       console.log('isDOM');
+//        var element = document.body;
+//        wordArray.forEach(function(word) {
+//            if (word.length > 1) {
+//                // Если слово начинается с "!", делаем поиск с учётом регистра
+//                if (word.charAt(0) === "!") {
+//                    word = word.substring(1);
+//                    $('body').highlight(word, { element: 'span', className: 'bf', caseSensitive: true });
+//                } else {
+//                    $('body').highlight(word, { element: 'span', className: 'bf' });
+//                }
+//            } else {
+//                $('body').highlight(word, { element: 'span', className: 'bf' });
+//            }
+//        });
+//        return "0";
+//    } else{
+//       console.log('isDOM - undefined');
+//    }
+
+// }
+
+// function doSearch() {
+//    try {
+//        // Получаем текст из поля поиска
+//        var searchText = document.querySelector("input[name='searchtext']").value.trim();
+
+//        if (searchText !== "") {
+//            find_text(searchText); // Запускаем поиск в секции main
+//        } else {
+//            alert("Введите текст для поиска.");
+//        }
+//    } catch (error) {
+//        console.error("Поле поиска не найдено:", error);
+//        alert("Поле поиска не найдено.");
+//    }
+//    return false; // Предотвращаем перезагрузку формы
+// }
+
+// function find_text(searchText) {
+//    console.log('find_text');
+//    // Получаем iframe с id 'main-frame' и его документ
+//    var iframe = document.getElementById("main-frame");
+//    console.log(iframe);
+
+//    var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+//    // Удаляем предыдущие выделения в секции main
+//    $(iframeDocument).find('span.bf').contents().unwrap();
+
+//    // Подсвечиваем текст внутри iframe main
+//    $(iframeDocument.body).highlight(searchText, { element: 'span', className: 'bf' });
+// }
+
+// function doSearch() {
+//    try {
+//       console.log('doSearch');
+//        // Получаем текст из поля поиска
+//        var searchText = document.querySelector("input[name='searchtext']").value.trim();
+//        console.log(`searchText - ${searchText}`);
+
+//        if (searchText !== "") {
+//            // Проверяем, что iframe загружен и запускаем поиск
+//            var iframe = document.getElementById("main-frame");
+//            console.log(`iframe - ${iframe}`)
+//            iframe.onload = function() {
+//                console.log('iframeLoad');
+//                find_text(searchText); // Запускаем поиск в загруженном файле
+//            };
+//            // Если iframe уже загружен, запускаем сразу
+//            if (iframe.contentDocument && iframe.contentDocument.readyState === 'complete') {
+//                console.log('iframeAlreadyLoad');
+//                find_text(searchText);
+//            }
+//            console.log('if searchText end');
+//        } else {
+//            alert("Введите текст для поиска.");
+//        }
+//    } catch (error) {
+//        console.error("Поле поиска не найдено:", error);
+//        alert("Поле поиска не найдено.");
+//    }
+//    return false; // Предотвращаем перезагрузку формы
+// }
+
+function doSearch() {
+   try {
+       console.log('doSearch');
+       // Получаем текст из поля поиска
+       var searchText = document.querySelector("input[name='searchtext']").value.trim();
+       console.log(`searchText - ${searchText}`);
+
+       if (searchText !== "") {
+           // Получаем iframe и проверяем его загрузку
+           var iframe = document.getElementById("main-frame");
+           console.log(`iframe - ${iframe.toString()}`);
+
+           // Устанавливаем обработчик загрузки iframe
+           iframe.onload = function() {
+               console.log('iframe onload event triggered');
+               find_text(searchText); // Запуск поиска при загрузке iframe
+           };
+
+           // Проверка состояния загрузки документа в iframe
+           if (iframe.contentDocument) {
+               console.log(`iframe contentDocument readyState - ${iframe.contentDocument.readyState}`);
+               if (iframe.contentDocument.readyState === 'complete') {
+                   console.log('iframeAlreadyLoaded');
+                   find_text(searchText); // Если уже загружен, запускаем поиск сразу
+               }
+           } else {
+               console.warn("iframe contentDocument недоступен. Возможно, проблема с CORS.");
+           }
+
+           console.log('if searchText end');
+       } else {
+           alert("Введите текст для поиска.");
+       }
+   } catch (error) {
+       console.error("Ошибка в doSearch:", error);
+       alert("Ошибка в функции поиска.");
+   }
+   return false; // Предотвращаем перезагрузку формы
 }
-else
-{
-   //shall work only in CHM
-   return ("-1");
-}
 
+function find_text(searchText) {
+   try {
+       var iframe = document.getElementById("main-frame");
+       var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+       console.log(`find_text in iframeDocument: ${iframeDocument}`);
 
+       // Удаляем предыдущие выделения
+       $(iframeDocument).find('span.bf').contents().unwrap();
 
-if (trim(str) == "")
-   return ("-1");
-
-sep = "|";
-
-exprstr = parseexpr(trim(str),sep);
-var word_array = exprstr.split(sep);
-var iword;
-var nextword;
-var nwords = word_array.length;
-
-
-
-if (isDOM)
-   {
-   element = document.body;
-   for(iword = 0;iword < word_array.length;iword++)    
-      {
-      str = word_array[iword];
-      //spanAllTextNodes (str, 'bf', element); //old solution
-      if (str.length > 1)
-         {
-         if (str.charAt(0) == "!" )
-            {
-            str = str.substring(1, str.length);
-            $('body').highlight(str, { element: 'span', className: 'bf', caseSensitive: true });
-            }
-         else
-            {
-            $('body').highlight(str, { element: 'span', className: 'bf' });
-            }
-         }
-      else
-         {
-         $('body').highlight(str, { element: 'span', className: 'bf' });
-         }
-      }
-   return ("0");
+       // Подсвечиваем текст внутри загруженного HTML-файла в iframe
+       $(iframeDocument.body).highlight(searchText, { element: 'span', className: 'bf' });
+   } catch (error) {
+       console.error("Ошибка в find_text:", error);
    }
 }
+
+
+function find_text(searchText) {
+   console.log('find_text');
+   // Получаем iframe с id 'main-frame' и его документ
+   var iframe = document.getElementById("main-frame");
+   console.log(iframe);
+   var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+   // Удаляем предыдущие выделения в загруженном HTML-файле
+   $(iframeDocument).find('span.bf').contents().unwrap();
+
+   // Подсвечиваем текст внутри загруженного HTML-файла в секции main
+   $(iframeDocument.body).highlight(searchText, { element: 'span', className: 'bf' });
+}
+
+
 
 function spanAllTextNodes (text_tofind, styleClass, element) {
 //This is the old solution to highlight text; now, the js_highlight.js JQuery plugin is used 
@@ -142,40 +349,62 @@ function spanAllTextNodes (text_tofind, styleClass, element) {
 }
 
 
-function parseexpr(expr,sep) {
-//parse 'expr' and make a character-delimited string (the 'sep' is the delimiter)  
-var pos_expr=0;
-var len_expr;
-var cur_subexpr = "";
-var cur_char;
-var out_expr = "";
+// function parseexpr(expr,sep) {
+// //parse 'expr' and make a character-delimited string (the 'sep' is the delimiter)  
+// var pos_expr=0;
+// var len_expr;
+// var cur_subexpr = "";
+// var cur_char;
+// var out_expr = "";
 
-len_expr = expr.length;
+// len_expr = expr.length;
 
-while (pos_expr <= len_expr-1)
-   {
-   cur_char = expr.charAt(pos_expr);
-   expr_break = 0;
-   if ((cur_char == " ") || (cur_char == "+"))
-      {
-      if (cur_subexpr != "") 
-         {
-         out_expr = out_expr + cur_subexpr + sep;
-         }
-      cur_subexpr = ""; 
-     }
-   else
-     {
-     cur_subexpr = cur_subexpr + cur_char;
-     }
-   pos_expr++;
+// while (pos_expr <= len_expr-1)
+//    {
+//    cur_char = expr.charAt(pos_expr);
+//    expr_break = 0;
+//    if ((cur_char == " ") || (cur_char == "+"))
+//       {
+//       if (cur_subexpr != "") 
+//          {
+//          out_expr = out_expr + cur_subexpr + sep;
+//          }
+//       cur_subexpr = ""; 
+//      }
+//    else
+//      {
+//      cur_subexpr = cur_subexpr + cur_char;
+//      }
+//    pos_expr++;
+//    }
+// if (cur_subexpr != "")
+//    {
+//    out_expr = out_expr + cur_subexpr;
+//    }
+
+// return(out_expr);
+// }
+
+// Пример функции parseexpr для разделения строки поиска на отдельные слова
+function parseexpr(expr, sep) {
+   var out_expr = "";
+   var cur_subexpr = "";
+
+   for (var pos = 0; pos < expr.length; pos++) {
+       var char = expr.charAt(pos);
+       if (char === " " || char === "+") {
+           if (cur_subexpr !== "") {
+               out_expr += cur_subexpr + sep;
+           }
+           cur_subexpr = "";
+       } else {
+           cur_subexpr += char;
+       }
    }
-if (cur_subexpr != "")
-   {
-   out_expr = out_expr + cur_subexpr;
+   if (cur_subexpr !== "") {
+       out_expr += cur_subexpr;
    }
-
-return(out_expr);
+   return out_expr;
 }
 
 function trim(inputString) {

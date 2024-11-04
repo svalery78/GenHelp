@@ -1,69 +1,83 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GenHelp</title>
-    <link href="css_skin.css" rel="stylesheet" type="text/css">
-    <style>
-        /* Основной контейнер, занимает всю страницу */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Контейнер для верхнего меню */
-        #menu {
-            height: 20%;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        /* Контейнер для основного содержимого */
-        #content {
-            display: flex;
-            flex: 1;
-            width: 100%;
-            height: calc(100% - 80px);
-        }
-
-        /* Левая панель контента (например, оглавление) */
-        #contents {
-            width: 30%;
-            overflow-y: auto;
-            border-right: 1px solid #ccc;
-        }
-
-        /* Правая панель для основного контента */
-        #main {
-            flex: 1;
-            overflow-y: auto;
-        }
-    </style>
+    <!--link href="css_skin.css" rel="stylesheet" type="text/css"-->
+    <script src="js_findtext.js"></script>
+    <script src="js_hidepanel.js"></script>
+    
 </head>
-<body>
-    <!-- Верхнее меню -->
-    <div id="menu">
-        <iframe src="CHM_frame_menu.htm" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
-    </div>
 
-    <!-- Основное содержимое -->
-    <div id="content">
-        <!-- Левая панель (оглавление) -->
-        <div id="contents">
-            <iframe src="CHM_frame_toc.htm" frameborder="0" width="100%" height="100%" scrolling="auto"></iframe>
+<body>
+    <div>
+        <!-- SYSTEM NAME/LOGO -->
+        <div class="SystemNameTable">
+            <div class="SystemNameRow">
+                <div class="SystemNameCell">
+                    <img src="./template_img/genhelp_logo.jpg" alt="GenHelp" class="SystemNameLogoText" />
+                </div>
+                <div class="SystemNameCell SystemNameText">GenHelp</div>
+            </div>
         </div>
 
-        <!-- Правая панель (основной контент) -->
-        <div id="main">
-            <iframe src="home.htm" frameborder="0" width="100%" height="100%" scrolling="auto"></iframe>
+        <!-- HELP MENU BAR -->
+        <div class="SystemMenuTable">
+            <!-- HIDE/UNHIDE CONTENTS SWITCH -->
+            <div class="SystemMenuCell">
+                <a href="#" id="opener" onclick="hideshow();" title="Скрыть/отобразить панель содержания">&lt;-</a>
+            </div>
+
+            <!-- CONTENTS MENU ITEM -->
+            <div class="SystemMenuCell">
+                <a onclick="document.getElementById('contents-frame').src='CHM_frame_toc.htm'; document.getElementById('main-frame').src='home.htm';"
+                   title="Дерево оглавления" class="SystemMenuLink">Содержание</a>
+            </div>
+
+            <!-- INDEX MENU ITEM -->
+            <div class="SystemMenuCell">
+                <a onclick="document.getElementById('contents-frame').src='CHM_frame_index.htm'; document.getElementById('main-frame').src='index_home.htm';"
+                   title="Список индексных статей" class="SystemMenuLink">Указатель</a>
+            </div>
+
+            <!-- HELP ON HELP LINK -->
+            <div class="SystemMenuCell">
+                <a onclick="document.getElementById('main-frame').src='CHM_frame_help.htm';" title="Как работать с Help"
+                   class="SystemMenuLink">Помощь</a>
+            </div>
+
+            <!-- SEARCH BOX -->
+            <div class="SystemMenuCell">
+                <form onsubmit="return doSearch();" name="searchform">
+                    <input type="text" name="searchtext" class="input" title="Укажите критерии поиска">
+                </form>
+            </div>
+
+            <!-- SEARCH LINK -->
+            <div class="SystemMenuCell">
+                <a onclick="doSearch();" title="Выполнить поиск" class="SystemMenuLink">Поиск</a>
+            </div>
+        </div>
+
+        <!-- CONTENT AND MAIN SECTIONS -->
+        <div id="container" style="display: flex; height: calc(100vh - 80px);">
+            <!-- Contents Section -->
+            <div id="contents" style="width: 30%; border-right: 1px solid #ddd;">
+                <iframe id="contents-frame" src="CHM_frame_toc.htm"
+                        style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+
+            <!-- Main Section -->
+            <div id="main" style="width: 70%;">
+                <iframe id="main-frame" src="home.htm" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
+
 
 
 <!-- <html>

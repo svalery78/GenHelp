@@ -58,36 +58,36 @@ tr.SystemNameRow {
 }
 /*------------------------------------- System Menu */
 
-.SystemMenuTable {
+/* .SystemMenuTable {
   background: #2bb7f5;
-  /* background color for menu table*/
+  /* background color for menu table*//*
   background: -moz-linear-gradient(top, #2bb7f5 0%, #26a3db 100%);
-  /* FF3.6+ */
+  /* FF3.6+ *//*
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2bb7f5), color-stop(100%, #26a3db));
-  /* Chrome,Safari4+ */
+  /* Chrome,Safari4+ *//*
   background: -webkit-linear-gradient(top, #2bb7f5 0%, #26a3db 100%);
-  /* Chrome10+,Safari5.1+ */
+  /* Chrome10+,Safari5.1+ *//*
   background: -o-linear-gradient(top, #2bb7f5 0%, #26a3db 100%);
-  /* Opera 11.10+ */
+  /* Opera 11.10+ *//*
   background: -ms-linear-gradient(top, #2bb7f5 0%, #26a3db 100%);
-  /* IE10+ */
+  /* IE10+ *//*
   background: linear-gradient(to bottom, #2bb7f5 0%, #26a3db 100%);
-  /* W3C */
+  /* W3C *//*
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2bb7f5', endColorstr='#26a3db', GradientType=0);
-  /* IE6-9 */
+  /* IE6-9 *//*
   text-align: left;
   width: 100%;
   position: relative;
   font-size: 12px;
-}
+} */
 .SystemMenuRow {
   position: relative;
 }
-.SystemMenuCell {
+/* .SystemMenuCell {
   vertical-align: top;
   padding-bottom: 0;
   padding-top: 0;
-}
+} */
 .SystemMenuCellHide {
   vertical-align: middle;
   background-color: #2bb7f5;

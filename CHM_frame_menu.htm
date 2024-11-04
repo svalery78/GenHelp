@@ -2,107 +2,99 @@
 <html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<title>GenHelp</title>
-	<link href="css_skin.css" rel="stylesheet" type="text/css">
-	<script src="js_findtext.js"></script>
-	<script src="js_hidepanel.js"></script>
-	<script>
-		function doSearch() {
-			document.getElementById('contents-frame').src = 'CHM_sffound.htm';
-			return false;
-		}
+    <meta charset="UTF-8">
+    <title>GenHelp</title>
+    <script src="js_findtext.js"></script>
+    <script src="js_hidepanel.js"></script>
+    <style>
+        /* Flexbox layout for horizontal Help Menu Bar */
+        .SystemMenuTable {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+            width: 100%; /* Занять всю ширину */
+            background-color: #f9f9f9; /* для отладки */
+            box-sizing: border-box; /* Учитываем padding в ширине */
+        }
 
-		function togglePanel() {
-			const contentsDiv = document.getElementById('contents');
-			const mainDiv = document.getElementById('main');
-			const opener = document.getElementById('opener');
+        /* Элементы меню */
+        .SystemMenuCell {
+            background-color: #e0e0e0; /* Отладочный цвет */
+            padding: 5px;
+        }
 
-			if (contentsDiv.style.display === 'none') {
-				contentsDiv.style.display = 'block';
-				mainDiv.style.width = '70%';
-				opener.textContent = '<-';
-			} else {
-				contentsDiv.style.display = 'none';
-				mainDiv.style.width = '100%';
-				opener.textContent = '->';
-			}
-		}
-	</script>
+        /* Убедимся, что поисковое поле и кнопка поиска выравнены */
+        .SystemMenuCell form {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Ограничиваем ширину input для предотвращения растягивания */
+        .input {
+            width: 150px;
+        }
+    </style>
 </head>
 
-<body onload="togglePanel();">
+<body>
+    <div>
+        <!-- HELP MENU BAR -->
+        <div class="SystemMenuTable">
+            <!-- Кнопка скрытия/показа -->
+            <div class="SystemMenuCell">
+                <a href="#" id="opener" onclick="hideshow();" title="Скрыть/отобразить панель содержания">&lt;-</a>
+            </div>
 
-	<div>
-		<!-- SYSTEM NAME/LOGO -->
-		<div class="SystemNameTable">
-			<div class="SystemNameRow">
-				<div class="SystemNameCell">
-					<img src="./template_img/genhelp_logo.jpg" alt="GenHelp" class="SystemNameLogoText" />
-				</div>
-				<div class="SystemNameCell SystemNameText">GenHelp</div>
-			</div>
-		</div>
+            <!-- Пункты меню -->
+            <div class="SystemMenuCell">
+                <a onclick="document.getElementById('contents-frame').src='CHM_frame_toc.htm'; document.getElementById('main-frame').src='home.htm';"
+                   title="Дерево оглавления">Содержание</a>
+            </div>
+            <div class="SystemMenuCell">
+                <a onclick="document.getElementById('contents-frame').src='CHM_frame_index.htm'; document.getElementById('main-frame').src='index_home.htm';"
+                   title="Список индексных статей">Указатель</a>
+            </div>
+            <div class="SystemMenuCell">
+                <a onclick="document.getElementById('main-frame').src='CHM_frame_help.htm';" title="Как работать с Help">Помощь</a>
+            </div>
 
-		<!-- HELP MENU BAR -->
-		<div class="SystemMenuTable">
-			<div class="SystemMenuRow">
-				<!-- HIDE/UNHIDE CONTENTS SWITCH -->
-				<div class="SystemMenuCell">
-					<a href="#" id="opener" onclick="togglePanel();"
-						title="Скрыть/отобразить панель содержания">&lt;-</a>
-				</div>
+            <!-- Поле поиска -->
+            <div class="SystemMenuCell">
+                <form onsubmit="return doSearch();" name="searchform">
+                    <input type="text" name="searchtext" class="input" title="Укажите критерии поиска">
+                </form>
+            </div>
 
-				<!-- CONTENTS MENU ITEM -->
-				<div class="SystemMenuCell">
-					<a onclick="document.getElementById('contents-frame').src='CHM_frame_toc.htm'; document.getElementById('main-frame').src='home.htm';"
-						title="Дерево оглавления" class="SystemMenuLink">Содержание</a>
-				</div>
+            <!-- Кнопка поиска -->
+            <div class="SystemMenuCell">
+                <a onclick="doSearch();" title="Выполнить поиск">Поиск</a>
+            </div>
+        </div>
 
-				<!-- INDEX MENU ITEM -->
-				<div class="SystemMenuCell">
-					<a onclick="document.getElementById('contents-frame').src='CHM_frame_index.htm'; document.getElementById('main-frame').src='index_home.htm';"
-						title="Список индексных статей" class="SystemMenuLink">Указатель</a>
-				</div>
+        <!-- CONTENT AND MAIN SECTIONS -->
+        <div id="container" style="display: flex; height: calc(100vh - 80px);">
+            <!-- Contents Section -->
+            <div id="contents" style="width: 30%; border-right: 1px solid #ddd;">
+                <iframe id="contents-frame" src="CHM_frame_toc.htm"
+                        style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
 
-				<!-- HELP ON HELP LINK -->
-				<div class="SystemMenuCell">
-					<a onclick="document.getElementById('main-frame').src='CHM_frame_help.htm';"
-						title="Как работать с Help" class="SystemMenuLink">Помощь</a>
-				</div>
-
-				<!-- SEARCH BOX -->
-				<div class="SystemMenuCell">
-					<form onsubmit="return doSearch();" name="searchform">
-						<input type="text" name="searchtext" class="input" title="Укажите критерии поиска">
-					</form>
-				</div>
-
-				<!-- SEARCH LINK -->
-				<div class="SystemMenuCell">
-					<a onclick="doSearch();" title="Выполнить поиск" class="SystemMenuLink">Поиск</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- CONTENT AND MAIN SECTIONS -->
-		<div id="container" style="display: flex; height: calc(100vh - 80px);">
-			<!-- Contents Section -->
-			<div id="contents" style="width: 30%; border-right: 1px solid #ddd;">
-				<iframe id="contents-frame" src="CHM_frame_toc.htm"
-					style="width: 100%; height: 100%; border: none;"></iframe>
-			</div>
-
-			<!-- Main Section -->
-			<div id="main" style="width: 70%;">
-				<iframe id="main-frame" src="home.htm" style="width: 100%; height: 100%; border: none;"></iframe>
-			</div>
-		</div>
-	</div>
-
+            <!-- Main Section -->
+            <div id="main" style="width: 70%;">
+                <iframe id="main-frame" src="home.htm" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
+
+
+
+
 
 
 <!--html>
